@@ -16,13 +16,9 @@ Pod::Spec.new do |s|
   s.author           = { "Kurt Treangen" => "kurt.treangen@metova.com" }
   s.source           = { :git => "https://github.com/metova/thundercats.git", :tag => s.version.to_s }
 
-  # s.platform     = :ios, '7.0'
-  # s.ios.deployment_target = '7.0'
+  s.platform     = :ios, '7.0'
+  s.ios.deployment_target = '7.0'
   s.requires_arc = true
-
-  s.source_files = 'Categories'
-
-  s.ios.exclude_files = 'Classes/osx'
-  s.osx.exclude_files = 'Classes/ios'
-  # s.public_header_files = 'Classes/**/*.h'
+  s.source_files = 'Categories/*.{h,m}'
+  s.public_header_files = 'Categories/*.h'
 end
