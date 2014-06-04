@@ -18,8 +18,27 @@
 		6E07B11B1937EA9600680D7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E07B1001937EA9600680D7E /* Foundation.framework */; };
 		6E07B11C1937EA9600680D7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E07B1041937EA9600680D7E /* UIKit.framework */; };
 		6E07B1241937EA9600680D7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E07B1221937EA9600680D7E /* InfoPlist.strings */; };
-		6E07B1261937EA9600680D7E /* ThunderCatsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E07B1251937EA9600680D7E /* ThunderCatsTests.m */; };
 		6E07B1311937EB5B00680D7E /* NSStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E07B1301937EB5B00680D7E /* NSStringTests.m */; };
+		A9780A651937F33300884268 /* NSString+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A541937F33300884268 /* NSString+TCAdditions.m */; };
+		A9780A661937F33300884268 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A561937F33300884268 /* NSString+Utils.m */; };
+		A9780A671937F33300884268 /* UIAlertView+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A581937F33300884268 /* UIAlertView+TCAdditions.m */; };
+		A9780A681937F33300884268 /* UICollectionViewCell+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A5A1937F33300884268 /* UICollectionViewCell+TCAdditions.m */; };
+		A9780A691937F33300884268 /* UIColor+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A5C1937F33300884268 /* UIColor+TCAdditions.m */; };
+		A9780A6A1937F33300884268 /* UIDevice+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A5E1937F33300884268 /* UIDevice+TCAdditions.m */; };
+		A9780A6B1937F33300884268 /* UIImage+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A601937F33300884268 /* UIImage+TCAdditions.m */; };
+		A9780A6C1937F33300884268 /* UITableViewCell+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A621937F33300884268 /* UITableViewCell+TCAdditions.m */; };
+		A9780A6D1937F33300884268 /* UIView+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A641937F33300884268 /* UIView+TCAdditions.m */; };
+		A9780A6E1937F35800884268 /* NSString+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A541937F33300884268 /* NSString+TCAdditions.m */; };
+		A9780A6F1937F35800884268 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A561937F33300884268 /* NSString+Utils.m */; };
+		A9780A701937F35800884268 /* UIAlertView+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A581937F33300884268 /* UIAlertView+TCAdditions.m */; };
+		A9780A711937F35800884268 /* UICollectionViewCell+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A5A1937F33300884268 /* UICollectionViewCell+TCAdditions.m */; };
+		A9780A721937F35800884268 /* UIColor+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A5C1937F33300884268 /* UIColor+TCAdditions.m */; };
+		A9780A731937F35800884268 /* UIDevice+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A5E1937F33300884268 /* UIDevice+TCAdditions.m */; };
+		A9780A741937F35800884268 /* UIImage+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A601937F33300884268 /* UIImage+TCAdditions.m */; };
+		A9780A751937F35800884268 /* UITableViewCell+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A621937F33300884268 /* UITableViewCell+TCAdditions.m */; };
+		A9780A761937F35800884268 /* UIView+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A641937F33300884268 /* UIView+TCAdditions.m */; };
+		A9A455E7193F958C00E14ED7 /* UIDeviceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A455E6193F958C00E14ED7 /* UIDeviceTests.m */; };
+		A9A455E9193F9E0C00E14ED7 /* UIColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A455E8193F9E0C00E14ED7 /* UIColorTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +67,27 @@
 		6E07B1191937EA9600680D7E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6E07B1211937EA9600680D7E /* ThunderCatsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ThunderCatsTests-Info.plist"; sourceTree = "<group>"; };
 		6E07B1231937EA9600680D7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6E07B1251937EA9600680D7E /* ThunderCatsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThunderCatsTests.m; sourceTree = "<group>"; };
 		6E07B1301937EB5B00680D7E /* NSStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringTests.m; sourceTree = "<group>"; };
+		A9780A531937F33300884268 /* NSString+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+TCAdditions.h"; path = "../Categories/NSString+TCAdditions.h"; sourceTree = "<group>"; };
+		A9780A541937F33300884268 /* NSString+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+TCAdditions.m"; path = "../Categories/NSString+TCAdditions.m"; sourceTree = "<group>"; };
+		A9780A551937F33300884268 /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Utils.h"; path = "../Categories/NSString+Utils.h"; sourceTree = "<group>"; };
+		A9780A561937F33300884268 /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Utils.m"; path = "../Categories/NSString+Utils.m"; sourceTree = "<group>"; };
+		A9780A571937F33300884268 /* UIAlertView+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+TCAdditions.h"; path = "../Categories/UIAlertView+TCAdditions.h"; sourceTree = "<group>"; };
+		A9780A581937F33300884268 /* UIAlertView+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+TCAdditions.m"; path = "../Categories/UIAlertView+TCAdditions.m"; sourceTree = "<group>"; };
+		A9780A591937F33300884268 /* UICollectionViewCell+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UICollectionViewCell+TCAdditions.h"; path = "../Categories/UICollectionViewCell+TCAdditions.h"; sourceTree = "<group>"; };
+		A9780A5A1937F33300884268 /* UICollectionViewCell+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UICollectionViewCell+TCAdditions.m"; path = "../Categories/UICollectionViewCell+TCAdditions.m"; sourceTree = "<group>"; };
+		A9780A5B1937F33300884268 /* UIColor+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+TCAdditions.h"; path = "../Categories/UIColor+TCAdditions.h"; sourceTree = "<group>"; };
+		A9780A5C1937F33300884268 /* UIColor+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+TCAdditions.m"; path = "../Categories/UIColor+TCAdditions.m"; sourceTree = "<group>"; };
+		A9780A5D1937F33300884268 /* UIDevice+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+TCAdditions.h"; path = "../Categories/UIDevice+TCAdditions.h"; sourceTree = "<group>"; };
+		A9780A5E1937F33300884268 /* UIDevice+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+TCAdditions.m"; path = "../Categories/UIDevice+TCAdditions.m"; sourceTree = "<group>"; };
+		A9780A5F1937F33300884268 /* UIImage+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+TCAdditions.h"; path = "../Categories/UIImage+TCAdditions.h"; sourceTree = "<group>"; };
+		A9780A601937F33300884268 /* UIImage+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+TCAdditions.m"; path = "../Categories/UIImage+TCAdditions.m"; sourceTree = "<group>"; };
+		A9780A611937F33300884268 /* UITableViewCell+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+TCAdditions.h"; path = "../Categories/UITableViewCell+TCAdditions.h"; sourceTree = "<group>"; };
+		A9780A621937F33300884268 /* UITableViewCell+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+TCAdditions.m"; path = "../Categories/UITableViewCell+TCAdditions.m"; sourceTree = "<group>"; };
+		A9780A631937F33300884268 /* UIView+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+TCAdditions.h"; path = "../Categories/UIView+TCAdditions.h"; sourceTree = "<group>"; };
+		A9780A641937F33300884268 /* UIView+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+TCAdditions.m"; path = "../Categories/UIView+TCAdditions.m"; sourceTree = "<group>"; };
+		A9A455E6193F958C00E14ED7 /* UIDeviceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDeviceTests.m; sourceTree = "<group>"; };
+		A9A455E8193F9E0C00E14ED7 /* UIColorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +117,7 @@
 		6E07B0F41937EA9600680D7E = {
 			isa = PBXGroup;
 			children = (
+				A9780A521937F2F100884268 /* Categories */,
 				6E07B1061937EA9600680D7E /* ThunderCats */,
 				6E07B11F1937EA9600680D7E /* ThunderCatsTests */,
 				6E07B0FF1937EA9600680D7E /* Frameworks */,
@@ -131,9 +170,10 @@
 		6E07B11F1937EA9600680D7E /* ThunderCatsTests */ = {
 			isa = PBXGroup;
 			children = (
-				6E07B1251937EA9600680D7E /* ThunderCatsTests.m */,
+				A9A455E6193F958C00E14ED7 /* UIDeviceTests.m */,
 				6E07B1301937EB5B00680D7E /* NSStringTests.m */,
 				6E07B1201937EA9600680D7E /* Supporting Files */,
+				A9A455E8193F9E0C00E14ED7 /* UIColorTests.m */,
 			);
 			path = ThunderCatsTests;
 			sourceTree = "<group>";
@@ -145,6 +185,31 @@
 				6E07B1221937EA9600680D7E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9780A521937F2F100884268 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A9780A531937F33300884268 /* NSString+TCAdditions.h */,
+				A9780A541937F33300884268 /* NSString+TCAdditions.m */,
+				A9780A551937F33300884268 /* NSString+Utils.h */,
+				A9780A561937F33300884268 /* NSString+Utils.m */,
+				A9780A571937F33300884268 /* UIAlertView+TCAdditions.h */,
+				A9780A581937F33300884268 /* UIAlertView+TCAdditions.m */,
+				A9780A591937F33300884268 /* UICollectionViewCell+TCAdditions.h */,
+				A9780A5A1937F33300884268 /* UICollectionViewCell+TCAdditions.m */,
+				A9780A5B1937F33300884268 /* UIColor+TCAdditions.h */,
+				A9780A5C1937F33300884268 /* UIColor+TCAdditions.m */,
+				A9780A5D1937F33300884268 /* UIDevice+TCAdditions.h */,
+				A9780A5E1937F33300884268 /* UIDevice+TCAdditions.m */,
+				A9780A5F1937F33300884268 /* UIImage+TCAdditions.h */,
+				A9780A601937F33300884268 /* UIImage+TCAdditions.m */,
+				A9780A611937F33300884268 /* UITableViewCell+TCAdditions.h */,
+				A9780A621937F33300884268 /* UITableViewCell+TCAdditions.m */,
+				A9780A631937F33300884268 /* UIView+TCAdditions.h */,
+				A9780A641937F33300884268 /* UIView+TCAdditions.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,8 +307,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9780A6A1937F33300884268 /* UIDevice+TCAdditions.m in Sources */,
 				6E07B1111937EA9600680D7E /* AppDelegate.m in Sources */,
+				A9780A681937F33300884268 /* UICollectionViewCell+TCAdditions.m in Sources */,
+				A9780A651937F33300884268 /* NSString+TCAdditions.m in Sources */,
 				6E07B10D1937EA9600680D7E /* main.m in Sources */,
+				A9780A6B1937F33300884268 /* UIImage+TCAdditions.m in Sources */,
+				A9780A6D1937F33300884268 /* UIView+TCAdditions.m in Sources */,
+				A9780A6C1937F33300884268 /* UITableViewCell+TCAdditions.m in Sources */,
+				A9780A671937F33300884268 /* UIAlertView+TCAdditions.m in Sources */,
+				A9780A691937F33300884268 /* UIColor+TCAdditions.m in Sources */,
+				A9780A661937F33300884268 /* NSString+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,8 +325,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E07B1261937EA9600680D7E /* ThunderCatsTests.m in Sources */,
+				A9780A731937F35800884268 /* UIDevice+TCAdditions.m in Sources */,
+				A9A455E9193F9E0C00E14ED7 /* UIColorTests.m in Sources */,
+				A9780A711937F35800884268 /* UICollectionViewCell+TCAdditions.m in Sources */,
+				A9780A6E1937F35800884268 /* NSString+TCAdditions.m in Sources */,
 				6E07B1311937EB5B00680D7E /* NSStringTests.m in Sources */,
+				A9780A741937F35800884268 /* UIImage+TCAdditions.m in Sources */,
+				A9780A761937F35800884268 /* UIView+TCAdditions.m in Sources */,
+				A9A455E7193F958C00E14ED7 /* UIDeviceTests.m in Sources */,
+				A9780A751937F35800884268 /* UITableViewCell+TCAdditions.m in Sources */,
+				A9780A701937F35800884268 /* UIAlertView+TCAdditions.m in Sources */,
+				A9780A721937F35800884268 /* UIColor+TCAdditions.m in Sources */,
+				A9780A6F1937F35800884268 /* NSString+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +525,7 @@
 				6E07B12B1937EA9600680D7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E07B12C1937EA9600680D7E /* Build configuration list for PBXNativeTarget "ThunderCatsTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +534,7 @@
 				6E07B12E1937EA9600680D7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
