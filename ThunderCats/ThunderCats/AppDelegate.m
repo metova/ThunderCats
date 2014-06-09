@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "TableViewController.h"
+#import "UITableViewCell+TCAdditions.h"
 
 @implementation AppDelegate
 
@@ -16,6 +18,12 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    TableViewController *vc = [[TableViewController alloc] initWithNibName:@"TableViewController" bundle:nil];
+    
+    self.window.rootViewController = vc;
+    
+    
     return YES;
 }
 
