@@ -1,22 +1,26 @@
 //
-//  ThunderCatsTests.m
-//  ThunderCatsTests
+//  UIDeviceTests.m
+//  ThunderCats
 //
-//  Created by lgauthier on 5/29/14.
+//  Created by William Grand on 6/4/14.
 //  Copyright (c) 2014 Metova. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
+#import "UIDevice+TCAdditions.h"
 
-@interface ThunderCatsTests : XCTestCase
+@interface UIDeviceTests : XCTestCase
+
+@property(strong, nonatomic)UIDevice *device;
 
 @end
 
-@implementation ThunderCatsTests
+@implementation UIDeviceTests
 
 - (void)setUp
 {
     [super setUp];
+    
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
@@ -26,9 +30,11 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testIsVersionEqualTo
 {
+    self.device = [UIDevice currentDevice];
     
+    XCTAssertTrue([UIDevice tc_isVersionEqualTo:[self.device systemVersion]]);
 }
 
 @end

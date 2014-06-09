@@ -31,14 +31,14 @@
 + (UINib *)tc_nib
 {
     return [UINib nibWithNibName:[self tc_nibName]
-                          bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[self tc_reuseIdentifier]
+                          bundle:[NSBundle mainBundle]];
 }
 
 
 + (UINib *)tc_iPadNib
 {
     return [UINib nibWithNibName:[self tc_iPadNibName]
-                          bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[self tc_reuseIdentifier]
+                          bundle:[NSBundle mainBundle]];
 }
 
 @end

@@ -11,5 +11,6 @@
 @interface UIColor (TCAdditions)
 
 + (UIColor *)tc_colorWithHexString:(NSString *)hexString;
+- (BOOL)tc_isEqualToColor:(UIColor *)color;
 
 @end
