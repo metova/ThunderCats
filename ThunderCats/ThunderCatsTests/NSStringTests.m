@@ -38,7 +38,7 @@
                            @"name+tag@example.com",
                            @"a.name+tag@example.com"];
     
-    for(int i = 0; i < addresses.count; i++){
+    for (int i = 0; i < addresses.count; i++) {
         NSString *currentAddress = [addresses objectAtIndex:i];
         
         XCTAssertTrue([currentAddress tc_isValidEmailAddressFormat], @"The following address should succeed: %@", currentAddress);
@@ -56,7 +56,7 @@
                            @"me@example..com",
                            @"me\\@example.com"];
     
-    for(int i = 0; i < addresses.count; i++){
+    for (int i = 0; i < addresses.count; i++) {
         NSString *currentAddress = [addresses objectAtIndex:i];
         
         XCTAssertFalse([currentAddress tc_isValidEmailAddressFormat], @"The following address should fail: %@", currentAddress);
@@ -154,7 +154,7 @@
     
     fullString = @"\n a \n a";
     
-        XCTAssertEqual([fullString tc_lineCount].intValue, 3, @"String has 3 lines, lineCount supplied %d", [fullString tc_lineCount].intValue);
+    XCTAssertEqual([fullString tc_lineCount].intValue, 3, @"String has 3 lines, lineCount supplied %d", [fullString tc_lineCount].intValue);
 }
 
 - (void)testSentenceCount
@@ -194,8 +194,6 @@
     fullString = @"I'm Ron Burgandy? This is a second sentence.";
     
     XCTAssertEqual([fullString tc_sentenceCount].intValue, 2, @"QUESTION MARK: String has 2 sentence, sentenceCount supplied %d", [fullString tc_sentenceCount].intValue);
-    
-    
 }
 
 

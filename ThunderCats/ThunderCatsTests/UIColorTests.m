@@ -80,7 +80,6 @@
     color2 = [UIColor blueColor];
     
     XCTAssertFalse([color1 tc_isEqualToColor:color2]);
-
 }
 
 @end
