@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:ThunderCats/ThunderCats.xcodeproj">
+   </FileRef>
+   <Group
+      location = "group:Categories"
+      name = "Categories">
+      <FileRef
+         location = "group:UIAlertView+TCAdditions.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIAlertView+TCAdditions.m">
+      </FileRef>
+      <FileRef
+         location = "group:UICollectionViewCell+TCAdditions.h">
+      </FileRef>
+      <FileRef
+         location = "group:UICollectionViewCell+TCAdditions.m">
+      </FileRef>
+      <FileRef
+         location = "group:UIDevice+TCAdditions.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIDevice+TCAdditions.m">
+      </FileRef>
+      <FileRef
+         location = "group:UITableViewCell+TCAdditions.h">
+      </FileRef>
+      <FileRef
+         location = "group:UITableViewCell+TCAdditions.m">
+      </FileRef>
+      <FileRef
+         location = "group:UIView+TCAdditions.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIView+TCAdditions.m">
+      </FileRef>
+      <FileRef
+         location = "group:NSString+TCAdditions.h">
+      </FileRef>
+      <FileRef
+         location = "group:NSString+TCAdditions.m">
+      </FileRef>
+      <FileRef
+         location = "group:UIImage+TCAdditions.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIImage+TCAdditions.m">
+      </FileRef>
+      <FileRef
+         location = "group:UIColor+TCAdditions.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIColor+TCAdditions.m">
+      </FileRef>
+   </Group>
+</Workspace>

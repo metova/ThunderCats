@@ -1,6 +1,6 @@
 //
-//  UIView+ViewUtils.h
-//  fineline
+//  UIView+TCAdditions.h
+//  ThunderCats
 //
 //  Created by Metova on 5/2/13.
 //  Copyright (c) 2013 Metova. All rights reserved.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (ViewUtils)
+@interface UIView (TCAdditions)
 
-- (void)findAndResignFirstResponder;
+- (void)tc_findAndResignFirstResponder;
 
 @end

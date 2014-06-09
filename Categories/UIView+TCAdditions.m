@@ -1,18 +1,18 @@
 //
-//  UIView+ViewUtils.m
-//  fineline
+//  UIView+TCAdditions.m
+//  ThunderCats
 //
 //  Created by Metova on 5/2/13.
 //  Copyright (c) 2013 Metova. All rights reserved.
 //
 
-#import "UIView+ViewUtils.h"
+#import "UIView+TCAdditions.h"
 
-@implementation UIView (ViewUtils)
+@implementation UIView (TCAdditions)
 
-- (void)findAndResignFirstResponder
+- (void)tc_findAndResignFirstResponder
 {
-    if ([self isFirstResponder] == YES)
+    if ([self isFirstResponder])
     {
         [self resignFirstResponder];
         return;
@@ -20,7 +20,7 @@
     
     for (UIView *subview in [self subviews])
     {
-        if ([subview isFirstResponder] == YES)
+        if ([subview isFirstResponder])
         {
             [subview resignFirstResponder];
             return;
