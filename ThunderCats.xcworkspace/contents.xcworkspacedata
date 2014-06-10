@@ -55,5 +55,8 @@
       <FileRef
          location = "group:UIColor+TCAdditions.m">
       </FileRef>
+      <FileRef
+         location = "group:Thundercats.h">
+      </FileRef>
    </Group>
 </Workspace>
