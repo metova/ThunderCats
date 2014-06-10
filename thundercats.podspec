@@ -5,7 +5,7 @@
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
 #
 Pod::Spec.new do |s|
-  s.name             = "thundercats"
+  s.name             = "ThunderCats"
   s.version          = "1.0.2"
   s.summary          = "Useful categories"
   s.description      = <<-DESC
