@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.homepage         = "http://metova.com"
   s.license          = 'MIT'
   s.authors           = { "Kurt Treangen" => "kurt.treangen@metova.com", "Logan Gauthier" => "logan.gauthier@metova.com" }
-  s.source           = { :git => "https://bitbucket.org/metovapods/thundercats.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://bitbucket.org/metova/thundercats.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '7.0'
   s.ios.deployment_target = '7.0'
