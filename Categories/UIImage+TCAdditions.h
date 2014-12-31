@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface UIImage (ImageEffects)
 
@@ -21,5 +22,9 @@
                        maskImage:(UIImage *)maskImage;
 
 + (UIImage *)imageWithColor:(UIColor *)color;
+
+- (UIImage *)tc_setImageOrientationUp;
+- (void)tc_imageFromAsset:(ALAsset *)asset scaledToCoverSize:(CGSize)size completion:(void (^)(UIImage *image))completion;
++ (UIImageOrientation)tc_imageOrientationFromAssetOrientation:(ALAssetOrientation)assetOrientation;
 
 @end

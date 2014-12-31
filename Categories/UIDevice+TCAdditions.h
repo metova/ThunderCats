@@ -16,6 +16,11 @@
 + (BOOL)tc_isScreenHeight480;
 + (BOOL)tc_isScreenHeight568;
 
++ (CGFloat)tc_screenHeight;
++ (CGFloat)tc_screenWidth;
++ (CGFloat)tc_navigationBarHeight;
++ (CGFloat)tc_statusBarHeight;
+
 + (BOOL)tc_isPad;
 + (BOOL)tc_isPhone;
 

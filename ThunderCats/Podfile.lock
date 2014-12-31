@@ -1,0 +1,10 @@
+PODS:
+  - NYXImagesKit (2.3)
+
+DEPENDENCIES:
+  - NYXImagesKit (~> 2.3)
+
+SPEC CHECKSUMS:
+  NYXImagesKit: 1c9f228ae78fab475d267b3b3a1308e0fba11731
+
+COCOAPODS: 0.35.0

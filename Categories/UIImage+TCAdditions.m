@@ -8,9 +8,9 @@
 
 #import "UIImage+TCAdditions.h"
 
+#import <NYXImagesKit/UIImage+Resizing.h>
 #import <Accelerate/Accelerate.h>
 #import <float.h>
-
 
 @implementation UIImage (TCAdditions)
 
@@ -206,5 +206,135 @@
     return outputImage;
 }
 
+// https://gist.github.com/alex-cellcity/1531596
+
+- (UIImage *)tc_setImageOrientationUp {
+    // No-op if the orientation is already correct
+    if (self.imageOrientation == UIImageOrientationUp) {
+        return self;
+    }
+    
+    // We need to calculate the proper transformation to make the image upright.
+    // We do it in 2 steps: Rotate if Left/Right/Down, and then flip if Mirrored.
+    CGAffineTransform transform = CGAffineTransformIdentity;
+    
+    switch (self.imageOrientation) {
+        case UIImageOrientationDown:
+        case UIImageOrientationDownMirrored:
+            transform = CGAffineTransformTranslate(transform, self.size.width, self.size.height);
+            transform = CGAffineTransformRotate(transform, M_PI);
+            break;
+            
+        case UIImageOrientationLeft:
+        case UIImageOrientationLeftMirrored:
+            transform = CGAffineTransformTranslate(transform, self.size.width, 0);
+            transform = CGAffineTransformRotate(transform, M_PI_2);
+            break;
+            
+        case UIImageOrientationRight:
+        case UIImageOrientationRightMirrored:
+            transform = CGAffineTransformTranslate(transform, 0, self.size.height);
+            transform = CGAffineTransformRotate(transform, -M_PI_2);
+            break;
+    }
+    
+    switch (self.imageOrientation) {
+        case UIImageOrientationUpMirrored:
+        case UIImageOrientationDownMirrored:
+            transform = CGAffineTransformTranslate(transform, self.size.width, 0);
+            transform = CGAffineTransformScale(transform, -1, 1);
+            break;
+            
+        case UIImageOrientationLeftMirrored:
+        case UIImageOrientationRightMirrored:
+            transform = CGAffineTransformTranslate(transform, self.size.height, 0);
+            transform = CGAffineTransformScale(transform, -1, 1);
+            break;
+    }
+    
+    // Now we draw the underlying CGImage into a new context, applying the transform
+    // calculated above.
+    CGContextRef ctx = CGBitmapContextCreate(NULL, self.size.width, self.size.height,
+                                             CGImageGetBitsPerComponent(self.CGImage), 0,
+                                             CGImageGetColorSpace(self.CGImage),
+                                             CGImageGetBitmapInfo(self.CGImage));
+    CGContextConcatCTM(ctx, transform);
+    switch (self.imageOrientation) {
+        case UIImageOrientationLeft:
+        case UIImageOrientationLeftMirrored:
+        case UIImageOrientationRight:
+        case UIImageOrientationRightMirrored:
+            // Grr...
+            CGContextDrawImage(ctx, CGRectMake(0,0,self.size.height,self.size.width), self.CGImage);
+            break;
+            
+        default:
+            CGContextDrawImage(ctx, CGRectMake(0,0,self.size.width,self.size.height), self.CGImage);
+            break;
+    }
+    
+    // And now we just create a new UIImage from the drawing context
+    CGImageRef cgimg = CGBitmapContextCreateImage(ctx);
+    UIImage *img = [UIImage imageWithCGImage:cgimg];
+    CGContextRelease(ctx);
+    CGImageRelease(cgimg);
+    
+    return img;
+}
+
++ (void)tc_imageFromAsset:(ALAsset *)asset scaledToCoverSize:(CGSize)size completion:(void (^)(UIImage *image))completion {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        CGImageRef imageRef = [[asset defaultRepresentation] fullResolutionImage];
+        UIImageOrientation orientation = [UIImage tc_imageOrientationFromAssetOrientation:[[asset defaultRepresentation] orientation]];
+        CGFloat scale = [[asset defaultRepresentation] scale];
+        
+        UIImage *image = [UIImage imageWithCGImage:imageRef scale:scale orientation:orientation];
+        
+//        imageRef does not need to be released because defaultRepresentation.fullResolutionImage does not increase the retain count
+//        http://stackoverflow.com/questions/9084161/wont-run-with-cfrelease-but-zombies-with-out-it
+//        CGImageRelease(imageRef);
+        
+        UIImage *scaledImage = [image scaleToCoverSize:size];
+        
+        UIImage *orientatedImage = [scaledImage tc_setImageOrientationUp];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (completion) {
+                completion(orientatedImage);
+            }
+        });
+    });
+}
+
++ (UIImageOrientation)tc_imageOrientationFromAssetOrientation:(ALAssetOrientation)assetOrientation {
+    switch (assetOrientation) {
+        case ALAssetOrientationUp:
+            return UIImageOrientationUp;
+            
+        case ALAssetOrientationUpMirrored:
+            return UIImageOrientationUpMirrored;
+            
+        case ALAssetOrientationLeft:
+            return UIImageOrientationLeft;
+            
+        case ALAssetOrientationLeftMirrored:
+            return UIImageOrientationLeftMirrored;
+            
+        case ALAssetOrientationRight:
+            return UIImageOrientationRight;
+            
+        case ALAssetOrientationRightMirrored:
+            return UIImageOrientationRightMirrored;
+            
+        case ALAssetOrientationDown:
+            return UIImageOrientationDown;
+            
+        case ALAssetOrientationDownMirrored:
+            return UIImageOrientationDownMirrored;
+            
+        default:
+            return UIImageOrientationUp;
+    }
+}
 
 @end
