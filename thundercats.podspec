@@ -6,7 +6,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = "thundercats"
-  s.version          = "1.0.2"
+  s.version          = "1.0.3"
   s.summary          = "Useful categories"
   s.description      = <<-DESC
                        Useful categories used by Metova
@@ -21,4 +21,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'Categories/*.{h,m}'
   s.public_header_files = 'Categories/*.h'
+  s.dependency 'NYXImagesKit', '~> 2.3'
 end
