@@ -17,5 +17,6 @@
 #import "UIImage+TCAdditions.h"
 #import "UITableViewCell+TCAdditions.h"
 #import "UIView+TCAdditions.h"
+#import "UIImageView+WebCacheBlur.m"
 
 #endif
