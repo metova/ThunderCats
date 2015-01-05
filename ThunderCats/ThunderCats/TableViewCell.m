@@ -7,19 +7,29 @@
 //
 
 #import "TableViewCell.h"
+#import "UIImageView+WebCacheBlur.h"
+
+@interface TableViewCell ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *testImageView;
+
+@end
 
 @implementation TableViewCell
 
-- (void)awakeFromNib
-{
-    // Initialization code
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setupWithUrl:(NSURL *)url indexPath:(NSIndexPath *)indexPath blur:(BOOL)isBlurred {
+    if (isBlurred) {
+        [self.testImageView sd_setBlurredImageWithURL:url completed:nil];
+    }
+    else {
+        [self.testImageView sd_setImageWithURL:url completed:nil];
+    }
+    
 }
 
 @end

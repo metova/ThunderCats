@@ -10,4 +10,6 @@
 
 @interface TableViewCell : UITableViewCell
 
+- (void)setupWithUrl:(NSURL *)url indexPath:(NSIndexPath *)indexPath blur:(BOOL)isBlurred;
+
 @end
