@@ -24,7 +24,7 @@
 
 - (void)setupWithUrl:(NSURL *)url indexPath:(NSIndexPath *)indexPath blur:(BOOL)isBlurred {
     if (isBlurred) {
-        [self.testImageView sd_setBlurredImageWithURL:url completed:nil];
+        [self.testImageView tc_setBlurredImageWithURL:url completed:nil];
     }
     else {
         [self.testImageView sd_setImageWithURL:url completed:nil];

@@ -15,19 +15,19 @@ static NSString * const kBlurPostFix = @"_blur";
 
 @implementation UIImageView (WebCacheBlur)
 
-- (void)sd_setBlurredImageWithURL:(NSURL *)url {
-    [self sd_setBlurredImageWithURL:url placeholderImage:nil completed:nil];
+- (void)tc_setBlurredImageWithURL:(NSURL *)url {
+    [self tc_setBlurredImageWithURL:url placeholderImage:nil completed:nil];
 }
 
-- (void)sd_setBlurredImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder {
-    [self sd_setBlurredImageWithURL:url placeholderImage:placeholder completed:nil];
+- (void)tc_setBlurredImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder {
+    [self tc_setBlurredImageWithURL:url placeholderImage:placeholder completed:nil];
 }
 
-- (void)sd_setBlurredImageWithURL:(NSURL *)url completed:(SDWebImageCompletionBlock)completedBlock {
-    [self sd_setBlurredImageWithURL:url placeholderImage:nil completed:completedBlock];
+- (void)tc_setBlurredImageWithURL:(NSURL *)url completed:(SDWebImageCompletionBlock)completedBlock {
+    [self tc_setBlurredImageWithURL:url placeholderImage:nil completed:completedBlock];
 }
 
-- (void)sd_setBlurredImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder completed:(SDWebImageCompletionBlock)completedBlock {
+- (void)tc_setBlurredImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder completed:(SDWebImageCompletionBlock)completedBlock {
     [self sd_cancelCurrentImageLoad];
     
     if (placeholder) {
