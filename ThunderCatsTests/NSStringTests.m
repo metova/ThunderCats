@@ -36,7 +36,10 @@
                            @"test.test@example.com",
                            @"a.nonymous@example.com",
                            @"name+tag@example.com",
-                           @"a.name+tag@example.com"];
+                           @"a.name+tag@example.com",
+                           @"Capital@lowercase.com",
+                           @"lowercase@Capital.com",
+                           @"case@test.Com"];
     
     for (int i = 0; i < addresses.count; i++) {
         NSString *currentAddress = [addresses objectAtIndex:i];
