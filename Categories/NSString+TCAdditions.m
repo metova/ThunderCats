@@ -15,7 +15,7 @@
     return [[NSUUID UUID] UUIDString];
 }
 
-//Regex changed based on RFC 5322. http://www.regular-expressions.info/email.html for more information
+// Regex changed based on RFC 5322. http://www.regular-expressions.info/email.html for more information
 - (BOOL)tc_isValidEmailAddressFormat
 {
     NSString *emailRegex = @"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])";
