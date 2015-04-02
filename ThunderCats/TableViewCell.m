@@ -9,18 +9,15 @@
 #import "TableViewCell.h"
 #import "UIImageView+WebCacheBlur.h"
 
+
 @interface TableViewCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *testImageView;
 
 @end
 
-@implementation TableViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    
-}
+@implementation TableViewCell
 
 - (void)setupWithUrl:(NSURL *)url indexPath:(NSIndexPath *)indexPath blur:(BOOL)isBlurred {
     if (isBlurred) {

@@ -8,14 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-#define kVersionStringIOS6 @"6.0"
-#define kVersionStringIOS7 @"7.0"
+FOUNDATION_EXPORT NSString *const kVersionStringIOS6;
+FOUNDATION_EXPORT NSString *const kVersionStringIOS7;
+FOUNDATION_EXPORT NSString *const kVersionStringIOS8;
 
 @interface UIDevice (TCAdditions)
 
-+ (BOOL)tc_isScreenHeight480;
-+ (BOOL)tc_isScreenHeight568;
++ (BOOL)tc_isScreenHeight480 __deprecated_msg("We were silly to think that this was a good idea. It will be removed in 2.0.");
++ (BOOL)tc_isScreenHeight568 __deprecated_msg("We were silly to think that this was a good idea. It will be removed in 2.0.");
 
++ (CGSize)tc_screenSize;
++ (CGSize)tc_statusBarSize;
 + (CGFloat)tc_screenHeight;
 + (CGFloat)tc_screenWidth;
 + (CGFloat)tc_navigationBarHeight;

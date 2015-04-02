@@ -11,6 +11,10 @@
 static const CGFloat kNavigationBarHeightPortrait = 44.0;
 static const CGFloat kNavigationBarHeightLandscape = 32.0;
 
+NSString *const kVersionStringIOS6 = @"6.0";
+NSString *const kVersionStringIOS7 = @"7.0";
+NSString *const kVersionStringIOS8 = @"8.0";
+
 @implementation UIDevice (TCAdditions)
 
 #pragma mark - Screen Dimension Checking Methods
@@ -28,38 +32,87 @@ static const CGFloat kNavigationBarHeightLandscape = 32.0;
     return screenSize.size.height == 568;
 }
 
+
+
 #pragma mark - Screen Dimensions
 
-+ (CGFloat)tc_screenHeight {
-    if (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)) {
++ (CGSize)tc_screenSize
+{
+    CGRect screenBounds = [UIScreen mainScreen].bounds;
+    
+    if ([UIDevice tc_isVersionLessThan:kVersionStringIOS8] &&
+        UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation))
+    {
+        return CGSizeMake(CGRectGetHeight(screenBounds), CGRectGetWidth(screenBounds));
+    }
+    else
+    {
+        return screenBounds.size;
+    }
+}
+
+
++ (CGSize)tc_statusBarSize
+{
+    CGSize size = [UIApplication sharedApplication].statusBarFrame.size;
+    
+    if ([UIDevice tc_isVersionLessThan:kVersionStringIOS8] &&
+        UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation))
+    {
+        return CGSizeMake(size.height, size.width);
+    }
+    else
+    {
+        return size;
+    }
+}
+
+
++ (CGFloat)tc_screenHeight
+{
+    if (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation))
+    {
         return CGRectGetHeight([UIScreen mainScreen].bounds);
     }
-    else {
+    else
+    {
         return CGRectGetWidth([UIScreen mainScreen].bounds);
     }
 }
 
-+ (CGFloat)tc_screenWidth {
-    if (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)) {
+
++ (CGFloat)tc_screenWidth
+{
+    if (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation))
+    {
         return CGRectGetWidth([UIScreen mainScreen].bounds);
     }
-    else {
+    else
+    {
         return CGRectGetHeight([UIScreen mainScreen].bounds);
     }
 }
 
-+ (CGFloat)tc_navigationBarHeight {
-    if (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)) {
+
++ (CGFloat)tc_navigationBarHeight
+{
+    if (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation))
+    {
         return kNavigationBarHeightPortrait;
     }
-    else {
+    else
+    {
         return kNavigationBarHeightLandscape;
     }
 }
 
-+ (CGFloat)tc_statusBarHeight {
+
++ (CGFloat)tc_statusBarHeight
+{
     return CGRectGetHeight([UIApplication sharedApplication].statusBarFrame);
 }
+
+
 
 #pragma mark - iPad/iPhone Checking Methods
 
