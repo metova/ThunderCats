@@ -21,7 +21,7 @@ FOUNDATION_EXPORT NSString *const kVersionStringIOS8;
 + (CGSize)tc_statusBarSize;
 + (CGFloat)tc_screenHeight;
 + (CGFloat)tc_screenWidth;
-+ (CGFloat)tc_navigationBarHeight;
++ (CGFloat)tc_navigationBarHeight __deprecated_msg("We were silly to think that this was a good idea. It will be removed in 2.0.");
 + (CGFloat)tc_statusBarHeight;
 
 + (BOOL)tc_isPad;
