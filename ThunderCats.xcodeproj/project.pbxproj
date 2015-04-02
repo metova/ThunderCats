@@ -71,7 +71,7 @@
 		6E7964A31A7BF6BF00378E9B /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 		6E7964A61A7BF73900378E9B /* NSString+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+TCAdditions.h"; path = "Categories/NSString+TCAdditions.h"; sourceTree = "<group>"; };
 		6E7964A71A7BF73900378E9B /* NSString+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+TCAdditions.m"; path = "Categories/NSString+TCAdditions.m"; sourceTree = "<group>"; };
-		6E7964A81A7BF73900378E9B /* Thundercats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Thundercats.h; path = Categories/Thundercats.h; sourceTree = "<group>"; };
+		6E7964A81A7BF73900378E9B /* ThunderCats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThunderCats.h; path = Categories/ThunderCats.h; sourceTree = "<group>"; };
 		6E7964A91A7BF73900378E9B /* UIAlertView+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+TCAdditions.h"; path = "Categories/UIAlertView+TCAdditions.h"; sourceTree = "<group>"; };
 		6E7964AA1A7BF73900378E9B /* UIAlertView+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+TCAdditions.m"; path = "Categories/UIAlertView+TCAdditions.m"; sourceTree = "<group>"; };
 		6E7964AB1A7BF73900378E9B /* UICollectionViewCell+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UICollectionViewCell+TCAdditions.h"; path = "Categories/UICollectionViewCell+TCAdditions.h"; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 			children = (
 				6E7964A61A7BF73900378E9B /* NSString+TCAdditions.h */,
 				6E7964A71A7BF73900378E9B /* NSString+TCAdditions.m */,
-				6E7964A81A7BF73900378E9B /* Thundercats.h */,
+				6E7964A81A7BF73900378E9B /* ThunderCats.h */,
 				6E7964A91A7BF73900378E9B /* UIAlertView+TCAdditions.h */,
 				6E7964AA1A7BF73900378E9B /* UIAlertView+TCAdditions.m */,
 				6E7964AB1A7BF73900378E9B /* UICollectionViewCell+TCAdditions.h */,

@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef _Thundercats_h
-#define _Thundercats_h
+#ifndef _ThunderCats_h
+#define _ThunderCats_h
 
 #import "NSString+TCAdditions.h"
 #import "UIAlertView+TCAdditions.h"
