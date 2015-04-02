@@ -10,6 +10,9 @@
 
 @interface UIView (TCAdditions)
 
+/**
+ *  Calls resignFirstResponder on this view or its subviews (1 level down) if the view is the first responder.
+ */
 - (void)tc_findAndResignFirstResponder;
 
 @end
