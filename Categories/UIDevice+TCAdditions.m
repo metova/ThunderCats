@@ -3,10 +3,11 @@
 //  ThunderCats
 //
 //  Created by Metova on 11/10/13.
-//  Copyright (c) 2013 Metova. All rights reserved.
+//  Copyright (c) 2015 Metova. All rights reserved.
 //
 
 #import "UIDevice+TCAdditions.h"
+
 
 static const CGFloat kNavigationBarHeightPortrait = 44.0;
 static const CGFloat kNavigationBarHeightLandscape = 32.0;
@@ -14,6 +15,11 @@ static const CGFloat kNavigationBarHeightLandscape = 32.0;
 NSString *const kVersionStringIOS6 = @"6.0";
 NSString *const kVersionStringIOS7 = @"7.0";
 NSString *const kVersionStringIOS8 = @"8.0";
+
+NSString *const TCIOSVersionStringIOS6 = @"6.0";
+NSString *const TCIOSVersionStringIOS7 = @"7.0";
+NSString *const TCIOSVersionStringIOS8 = @"8.0";
+
 
 @implementation UIDevice (TCAdditions)
 
@@ -40,7 +46,7 @@ NSString *const kVersionStringIOS8 = @"8.0";
 {
     CGRect screenBounds = [UIScreen mainScreen].bounds;
     
-    if ([UIDevice tc_isVersionLessThan:kVersionStringIOS8] &&
+    if ([UIDevice tc_isVersionLessThan:TCIOSVersionStringIOS8] &&
         UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation))
     {
         return CGSizeMake(CGRectGetHeight(screenBounds), CGRectGetWidth(screenBounds));
@@ -52,11 +58,23 @@ NSString *const kVersionStringIOS8 = @"8.0";
 }
 
 
++ (CGFloat)tc_screenHeight
+{
+    return [UIDevice tc_screenSize].height;
+}
+
+
++ (CGFloat)tc_screenWidth
+{
+    return [UIDevice tc_screenSize].width;
+}
+
+
 + (CGSize)tc_statusBarSize
 {
     CGSize size = [UIApplication sharedApplication].statusBarFrame.size;
     
-    if ([UIDevice tc_isVersionLessThan:kVersionStringIOS8] &&
+    if ([UIDevice tc_isVersionLessThan:TCIOSVersionStringIOS8] &&
         UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation))
     {
         return CGSizeMake(size.height, size.width);
@@ -68,29 +86,9 @@ NSString *const kVersionStringIOS8 = @"8.0";
 }
 
 
-+ (CGFloat)tc_screenHeight
++ (CGFloat)tc_statusBarHeight
 {
-    if (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation))
-    {
-        return CGRectGetHeight([UIScreen mainScreen].bounds);
-    }
-    else
-    {
-        return CGRectGetWidth([UIScreen mainScreen].bounds);
-    }
-}
-
-
-+ (CGFloat)tc_screenWidth
-{
-    if (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation))
-    {
-        return CGRectGetWidth([UIScreen mainScreen].bounds);
-    }
-    else
-    {
-        return CGRectGetHeight([UIScreen mainScreen].bounds);
-    }
+    return CGRectGetHeight([UIApplication sharedApplication].statusBarFrame);
 }
 
 
@@ -104,12 +102,6 @@ NSString *const kVersionStringIOS8 = @"8.0";
     {
         return kNavigationBarHeightLandscape;
     }
-}
-
-
-+ (CGFloat)tc_statusBarHeight
-{
-    return CGRectGetHeight([UIApplication sharedApplication].statusBarFrame);
 }
 
 

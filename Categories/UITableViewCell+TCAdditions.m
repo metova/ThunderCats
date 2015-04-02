@@ -3,7 +3,7 @@
 //  ThunderCats
 //
 //  Created by Metova on 11/10/13.
-//  Copyright (c) 2013 Metova. All rights reserved.
+//  Copyright (c) 2015 Metova. All rights reserved.
 //
 
 #import "UITableViewCell+TCAdditions.h"

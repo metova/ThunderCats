@@ -3,7 +3,7 @@
 //  ThunderCats
 //
 //  Created by Metova on 5/15/14.
-//  Copyright (c) 2013 Metova. All rights reserved.
+//  Copyright (c) 2015 Metova. All rights reserved.
 //
 
 #import "UIImage+TCAdditions.h"
@@ -13,6 +13,21 @@
 #import <float.h>
 
 @implementation UIImage (TCAdditions)
+
++ (UIImage *)imageWithColor:(UIColor *)color
+{
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
 
 
 - (UIImage *)applyLightEffect
@@ -41,35 +56,25 @@
     const CGFloat EffectColorAlpha = 0.6;
     UIColor *effectColor = tintColor;
     unsigned long componentCount = CGColorGetNumberOfComponents(tintColor.CGColor);
-    if (componentCount == 2) {
+    
+    if (componentCount == 2)
+    {
         CGFloat b;
-        if ([tintColor getWhite:&b alpha:NULL]) {
+        if ([tintColor getWhite:&b alpha:NULL])
+        {
             effectColor = [UIColor colorWithWhite:b alpha:EffectColorAlpha];
         }
     }
-    else {
+    else
+    {
         CGFloat r, g, b;
-        if ([tintColor getRed:&r green:&g blue:&b alpha:NULL]) {
+        if ([tintColor getRed:&r green:&g blue:&b alpha:NULL])
+        {
             effectColor = [UIColor colorWithRed:r green:g blue:b alpha:EffectColorAlpha];
         }
     }
+    
     return [self applyBlurWithRadius:10 tintColor:effectColor saturationDeltaFactor:-1.0 maskImage:nil];
-}
-
-
-+ (UIImage *)imageWithColor:(UIColor *)color
-{
-    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGContextSetFillColorWithColor(context, [color CGColor]);
-    CGContextFillRect(context, rect);
-    
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return image;
 }
 
 
@@ -79,15 +84,18 @@
                        maskImage:(UIImage *)maskImage
 {
     // Check pre-conditions.
-    if (self.size.width < 1 || self.size.height < 1) {
+    if (self.size.width < 1 || self.size.height < 1)
+    {
         NSLog (@"*** error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@", self.size.width, self.size.height, self);
         return nil;
     }
-    if (!self.CGImage) {
+    if (!self.CGImage)
+    {
         NSLog (@"*** error: image must be backed by a CGImage: %@", self);
         return nil;
     }
-    if (maskImage && !maskImage.CGImage) {
+    if (maskImage && !maskImage.CGImage)
+    {
         NSLog (@"*** error: maskImage must be backed by a CGImage: %@", maskImage);
         return nil;
     }
@@ -97,7 +105,9 @@
     
     BOOL hasBlur = blurRadius > __FLT_EPSILON__;
     BOOL hasSaturationChange = fabs(saturationDeltaFactor - 1.) > __FLT_EPSILON__;
-    if (hasBlur || hasSaturationChange) {
+    
+    if (hasBlur || hasSaturationChange)
+    {
         UIGraphicsBeginImageContextWithOptions(self.size, NO, [[UIScreen mainScreen] scale]);
         CGContextRef effectInContext = UIGraphicsGetCurrentContext();
         CGContextScaleCTM(effectInContext, 1.0, -1.0);
@@ -118,7 +128,8 @@
         effectOutBuffer.height   = CGBitmapContextGetHeight(effectOutContext);
         effectOutBuffer.rowBytes = CGBitmapContextGetBytesPerRow(effectOutContext);
 
-        if (hasBlur) {
+        if (hasBlur)
+        {
             // A description of how to compute the box kernel width from the Gaussian
             // radius (aka standard deviation) appears in the SVG spec:
             // http://www.w3.org/TR/SVG/filters.html#feGaussianBlurElement
@@ -133,15 +144,21 @@
             // 
             CGFloat inputRadius = blurRadius * [[UIScreen mainScreen] scale];
             uint32_t radius = floor(inputRadius * 3. * sqrt(2 * M_PI) / 4 + 0.5);
-            if (radius % 2 != 1) {
+            
+            if (radius % 2 != 1)
+            {
                 radius += 1; // force radius to be odd so that the three box-blur methodology works.
             }
+            
             vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);
             vImageBoxConvolve_ARGB8888(&effectOutBuffer, &effectInBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);
             vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);
         }
+        
         BOOL effectImageBuffersAreSwapped = NO;
-        if (hasSaturationChange) {
+        
+        if (hasSaturationChange)
+        {
             CGFloat s = saturationDeltaFactor;
             CGFloat floatingPointSaturationMatrix[] = {
                 0.0722 + 0.9278 * s,  0.0722 - 0.0722 * s,  0.0722 - 0.0722 * s,  0,
@@ -149,26 +166,39 @@
                 0.2126 - 0.2126 * s,  0.2126 - 0.2126 * s,  0.2126 + 0.7873 * s,  0,
                                   0,                    0,                    0,  1,
             };
+            
             const int32_t divisor = 256;
             NSUInteger matrixSize = sizeof(floatingPointSaturationMatrix)/sizeof(floatingPointSaturationMatrix[0]);
             int16_t saturationMatrix[matrixSize];
-            for (NSUInteger i = 0; i < matrixSize; ++i) {
+            
+            for (NSUInteger i = 0; i < matrixSize; ++i)
+            {
                 saturationMatrix[i] = (int16_t)roundf(floatingPointSaturationMatrix[i] * divisor);
             }
-            if (hasBlur) {
+            
+            if (hasBlur)
+            {
                 vImageMatrixMultiply_ARGB8888(&effectOutBuffer, &effectInBuffer, saturationMatrix, divisor, NULL, NULL, kvImageNoFlags);
                 effectImageBuffersAreSwapped = YES;
             }
-            else {
+            else
+            {
                 vImageMatrixMultiply_ARGB8888(&effectInBuffer, &effectOutBuffer, saturationMatrix, divisor, NULL, NULL, kvImageNoFlags);
             }
         }
+        
         if (!effectImageBuffersAreSwapped)
+        {
             effectImage = UIGraphicsGetImageFromCurrentImageContext();
+        }
+        
         UIGraphicsEndImageContext();
 
         if (effectImageBuffersAreSwapped)
+        {
             effectImage = UIGraphicsGetImageFromCurrentImageContext();
+        }
+        
         UIGraphicsEndImageContext();
     }
 
@@ -182,17 +212,22 @@
     CGContextDrawImage(outputContext, imageRect, self.CGImage);
 
     // Draw effect image.
-    if (hasBlur) {
+    if (hasBlur)
+    {
         CGContextSaveGState(outputContext);
-        if (maskImage) {
+        
+        if (maskImage)
+        {
             CGContextClipToMask(outputContext, imageRect, maskImage.CGImage);
         }
+        
         CGContextDrawImage(outputContext, imageRect, effectImage.CGImage);
         CGContextRestoreGState(outputContext);
     }
 
     // Add in color tint.
-    if (tintColor) {
+    if (tintColor)
+    {
         CGContextSaveGState(outputContext);
         CGContextSetFillColorWithColor(outputContext, tintColor.CGColor);
         CGContextFillRect(outputContext, imageRect);
@@ -206,11 +241,14 @@
     return outputImage;
 }
 
+
 // https://gist.github.com/alex-cellcity/1531596
 
-- (UIImage *)tc_setImageOrientationUp {
+- (UIImage *)tc_setImageOrientationUp
+{
     // No-op if the orientation is already correct
-    if (self.imageOrientation == UIImageOrientationUp) {
+    if (self.imageOrientation == UIImageOrientationUp)
+    {
         return self;
     }
     
@@ -218,7 +256,8 @@
     // We do it in 2 steps: Rotate if Left/Right/Down, and then flip if Mirrored.
     CGAffineTransform transform = CGAffineTransformIdentity;
     
-    switch (self.imageOrientation) {
+    switch (self.imageOrientation)
+    {
         case UIImageOrientationDown:
         case UIImageOrientationDownMirrored:
             transform = CGAffineTransformTranslate(transform, self.size.width, self.size.height);
@@ -240,7 +279,8 @@
             break;
     }
     
-    switch (self.imageOrientation) {
+    switch (self.imageOrientation)
+    {
         case UIImageOrientationUpMirrored:
         case UIImageOrientationDownMirrored:
             transform = CGAffineTransformTranslate(transform, self.size.width, 0);
@@ -263,7 +303,8 @@
                                              CGImageGetColorSpace(self.CGImage),
                                              CGImageGetBitmapInfo(self.CGImage));
     CGContextConcatCTM(ctx, transform);
-    switch (self.imageOrientation) {
+    switch (self.imageOrientation)
+    {
         case UIImageOrientationLeft:
         case UIImageOrientationLeftMirrored:
         case UIImageOrientationRight:
@@ -286,7 +327,11 @@
     return img;
 }
 
-+ (void)tc_imageFromAsset:(ALAsset *)asset scaledToCoverSize:(CGSize)size completion:(void (^)(UIImage *image))completion {
+
++ (void)tc_imageFromAsset:(ALAsset *)asset
+        scaledToCoverSize:(CGSize)size
+               completion:(void (^)(UIImage *image))completion
+{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         CGImageRef imageRef = [[asset defaultRepresentation] fullResolutionImage];
         UIImageOrientation orientation = [UIImage tc_imageOrientationFromAssetOrientation:[[asset defaultRepresentation] orientation]];
@@ -294,24 +339,30 @@
         
         UIImage *image = [UIImage imageWithCGImage:imageRef scale:scale orientation:orientation];
         
-//        imageRef does not need to be released because defaultRepresentation.fullResolutionImage does not increase the retain count
-//        http://stackoverflow.com/questions/9084161/wont-run-with-cfrelease-but-zombies-with-out-it
-//        CGImageRelease(imageRef);
+        /*  
+         * imageRef does not need to be released because defaultRepresentation.fullResolutionImage does not increase the retain count
+         * http://stackoverflow.com/questions/9084161/wont-run-with-cfrelease-but-zombies-with-out-it
+         * CGImageRelease(imageRef);
+         */
         
         UIImage *scaledImage = [image scaleToCoverSize:size];
         
         UIImage *orientatedImage = [scaledImage tc_setImageOrientationUp];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            if (completion) {
+            if (completion)
+            {
                 completion(orientatedImage);
             }
         });
     });
 }
 
-+ (UIImageOrientation)tc_imageOrientationFromAssetOrientation:(ALAssetOrientation)assetOrientation {
-    switch (assetOrientation) {
+
++ (UIImageOrientation)tc_imageOrientationFromAssetOrientation:(ALAssetOrientation)assetOrientation
+{
+    switch (assetOrientation)
+    {
         case ALAssetOrientationUp:
             return UIImageOrientationUp;
             
