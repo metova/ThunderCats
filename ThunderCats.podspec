@@ -23,4 +23,4 @@ Pod::Spec.new do |s|
   s.public_header_files = 'Categories/*.h'
   s.dependency 'NYXImagesKit', '~> 2.3'
   s.dependency 'SDWebImage', '~> 3.7.1'
-end
+end 
