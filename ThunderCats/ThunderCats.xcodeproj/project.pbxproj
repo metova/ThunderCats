@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E07B1011937EA9600680D7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E07B1001937EA9600680D7E /* Foundation.framework */; };
+		6E07B1031937EA9600680D7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E07B1021937EA9600680D7E /* CoreGraphics.framework */; };
+		6E07B1051937EA9600680D7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E07B1041937EA9600680D7E /* UIKit.framework */; };
+		6E07B10B1937EA9600680D7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E07B1091937EA9600680D7E /* InfoPlist.strings */; };
+		6E07B10D1937EA9600680D7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E07B10C1937EA9600680D7E /* main.m */; };
+		6E07B1111937EA9600680D7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E07B1101937EA9600680D7E /* AppDelegate.m */; };
+		6E07B1131937EA9600680D7E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E07B1121937EA9600680D7E /* Images.xcassets */; };
+		6E07B11A1937EA9600680D7E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E07B1191937EA9600680D7E /* XCTest.framework */; };
+		6E07B11B1937EA9600680D7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E07B1001937EA9600680D7E /* Foundation.framework */; };
+		6E07B11C1937EA9600680D7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E07B1041937EA9600680D7E /* UIKit.framework */; };
+		6E07B1241937EA9600680D7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E07B1221937EA9600680D7E /* InfoPlist.strings */; };
+		6E07B1311937EB5B00680D7E /* NSStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E07B1301937EB5B00680D7E /* NSStringTests.m */; };
+		A95248E619461B5F0080CD74 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A95248E419461B5F0080CD74 /* TableViewController.m */; };
+		A95248E719461B5F0080CD74 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A95248E519461B5F0080CD74 /* TableViewController.xib */; };
+		A95248EB19461E2C0080CD74 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A95248E919461E2C0080CD74 /* TableViewCell.m */; };
+		A95248EC19461E2C0080CD74 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A95248EA19461E2C0080CD74 /* TableViewCell.xib */; };
+		A9780A651937F33300884268 /* NSString+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A541937F33300884268 /* NSString+TCAdditions.m */; };
+		A9780A671937F33300884268 /* UIAlertView+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A581937F33300884268 /* UIAlertView+TCAdditions.m */; };
+		A9780A681937F33300884268 /* UICollectionViewCell+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A5A1937F33300884268 /* UICollectionViewCell+TCAdditions.m */; };
+		A9780A691937F33300884268 /* UIColor+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A5C1937F33300884268 /* UIColor+TCAdditions.m */; };
+		A9780A6A1937F33300884268 /* UIDevice+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A5E1937F33300884268 /* UIDevice+TCAdditions.m */; };
+		A9780A6B1937F33300884268 /* UIImage+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A601937F33300884268 /* UIImage+TCAdditions.m */; };
+		A9780A6C1937F33300884268 /* UITableViewCell+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A621937F33300884268 /* UITableViewCell+TCAdditions.m */; };
+		A9780A6D1937F33300884268 /* UIView+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A641937F33300884268 /* UIView+TCAdditions.m */; };
+		A9780A6E1937F35800884268 /* NSString+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A541937F33300884268 /* NSString+TCAdditions.m */; };
+		A9780A701937F35800884268 /* UIAlertView+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A581937F33300884268 /* UIAlertView+TCAdditions.m */; };
+		A9780A711937F35800884268 /* UICollectionViewCell+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A5A1937F33300884268 /* UICollectionViewCell+TCAdditions.m */; };
+		A9780A721937F35800884268 /* UIColor+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A5C1937F33300884268 /* UIColor+TCAdditions.m */; };
+		A9780A731937F35800884268 /* UIDevice+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A5E1937F33300884268 /* UIDevice+TCAdditions.m */; };
+		A9780A741937F35800884268 /* UIImage+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A601937F33300884268 /* UIImage+TCAdditions.m */; };
+		A9780A751937F35800884268 /* UITableViewCell+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A621937F33300884268 /* UITableViewCell+TCAdditions.m */; };
+		A9780A761937F35800884268 /* UIView+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9780A641937F33300884268 /* UIView+TCAdditions.m */; };
+		A9A455E7193F958C00E14ED7 /* UIDeviceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A455E6193F958C00E14ED7 /* UIDeviceTests.m */; };
+		A9A455E9193F9E0C00E14ED7 /* UIColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A455E8193F9E0C00E14ED7 /* UIColorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E07B11D1937EA9600680D7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E07B0F51937EA9600680D7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E07B0FC1937EA9600680D7E;
+			remoteInfo = ThunderCats;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6E07B0FD1937EA9600680D7E /* ThunderCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThunderCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E07B1001937EA9600680D7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6E07B1021937EA9600680D7E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6E07B1041937EA9600680D7E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6E07B1081937EA9600680D7E /* ThunderCats-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ThunderCats-Info.plist"; sourceTree = "<group>"; };
+		6E07B10A1937EA9600680D7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6E07B10C1937EA9600680D7E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6E07B10E1937EA9600680D7E /* ThunderCats-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThunderCats-Prefix.pch"; sourceTree = "<group>"; };
+		6E07B10F1937EA9600680D7E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6E07B1101937EA9600680D7E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6E07B1121937EA9600680D7E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6E07B1181937EA9600680D7E /* ThunderCatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThunderCatsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E07B1191937EA9600680D7E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6E07B1211937EA9600680D7E /* ThunderCatsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ThunderCatsTests-Info.plist"; sourceTree = "<group>"; };
+		6E07B1231937EA9600680D7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6E07B1301937EB5B00680D7E /* NSStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringTests.m; sourceTree = "<group>"; };
+		6E726E39194698D10002BA02 /* Thundercats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thundercats.h; sourceTree = "<group>"; };
+		A95248E319461B5F0080CD74 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = ../../TableViewController.h; sourceTree = "<group>"; };
+		A95248E419461B5F0080CD74 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = ../../TableViewController.m; sourceTree = "<group>"; };
+		A95248E519461B5F0080CD74 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableViewController.xib; path = ../../TableViewController.xib; sourceTree = "<group>"; };
+		A95248E819461E2C0080CD74 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		A95248E919461E2C0080CD74 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		A95248EA19461E2C0080CD74 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		A9780A531937F33300884268 /* NSString+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+TCAdditions.h"; path = "../Categories/NSString+TCAdditions.h"; sourceTree = "<group>"; };
+		A9780A541937F33300884268 /* NSString+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+TCAdditions.m"; path = "../Categories/NSString+TCAdditions.m"; sourceTree = "<group>"; };
+		A9780A571937F33300884268 /* UIAlertView+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+TCAdditions.h"; path = "../Categories/UIAlertView+TCAdditions.h"; sourceTree = "<group>"; };
+		A9780A581937F33300884268 /* UIAlertView+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+TCAdditions.m"; path = "../Categories/UIAlertView+TCAdditions.m"; sourceTree = "<group>"; };
+		A9780A591937F33300884268 /* UICollectionViewCell+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UICollectionViewCell+TCAdditions.h"; path = "../Categories/UICollectionViewCell+TCAdditions.h"; sourceTree = "<group>"; };
+		A9780A5A1937F33300884268 /* UICollectionViewCell+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UICollectionViewCell+TCAdditions.m"; path = "../Categories/UICollectionViewCell+TCAdditions.m"; sourceTree = "<group>"; };
+		A9780A5B1937F33300884268 /* UIColor+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+TCAdditions.h"; path = "../Categories/UIColor+TCAdditions.h"; sourceTree = "<group>"; };
+		A9780A5C1937F33300884268 /* UIColor+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+TCAdditions.m"; path = "../Categories/UIColor+TCAdditions.m"; sourceTree = "<group>"; };
+		A9780A5D1937F33300884268 /* UIDevice+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+TCAdditions.h"; path = "../Categories/UIDevice+TCAdditions.h"; sourceTree = "<group>"; };
+		A9780A5E1937F33300884268 /* UIDevice+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+TCAdditions.m"; path = "../Categories/UIDevice+TCAdditions.m"; sourceTree = "<group>"; };
+		A9780A5F1937F33300884268 /* UIImage+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+TCAdditions.h"; path = "../Categories/UIImage+TCAdditions.h"; sourceTree = "<group>"; };
+		A9780A601937F33300884268 /* UIImage+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+TCAdditions.m"; path = "../Categories/UIImage+TCAdditions.m"; sourceTree = "<group>"; };
+		A9780A611937F33300884268 /* UITableViewCell+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+TCAdditions.h"; path = "../Categories/UITableViewCell+TCAdditions.h"; sourceTree = "<group>"; };
+		A9780A621937F33300884268 /* UITableViewCell+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+TCAdditions.m"; path = "../Categories/UITableViewCell+TCAdditions.m"; sourceTree = "<group>"; };
+		A9780A631937F33300884268 /* UIView+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+TCAdditions.h"; path = "../Categories/UIView+TCAdditions.h"; sourceTree = "<group>"; };
+		A9780A641937F33300884268 /* UIView+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+TCAdditions.m"; path = "../Categories/UIView+TCAdditions.m"; sourceTree = "<group>"; };
+		A9A455E6193F958C00E14ED7 /* UIDeviceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDeviceTests.m; sourceTree = "<group>"; };
+		A9A455E8193F9E0C00E14ED7 /* UIColorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E07B0FA1937EA9600680D7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E07B1031937EA9600680D7E /* CoreGraphics.framework in Frameworks */,
+				6E07B1051937EA9600680D7E /* UIKit.framework in Frameworks */,
+				6E07B1011937EA9600680D7E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E07B1151937EA9600680D7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E07B11A1937EA9600680D7E /* XCTest.framework in Frameworks */,
+				6E07B11C1937EA9600680D7E /* UIKit.framework in Frameworks */,
+				6E07B11B1937EA9600680D7E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E07B0F41937EA9600680D7E = {
+			isa = PBXGroup;
+			children = (
+				A9780A521937F2F100884268 /* Categories */,
+				6E07B1061937EA9600680D7E /* ThunderCats */,
+				6E07B11F1937EA9600680D7E /* ThunderCatsTests */,
+				6E07B0FF1937EA9600680D7E /* Frameworks */,
+				6E07B0FE1937EA9600680D7E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6E07B0FE1937EA9600680D7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E07B0FD1937EA9600680D7E /* ThunderCats.app */,
+				6E07B1181937EA9600680D7E /* ThunderCatsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E07B0FF1937EA9600680D7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E07B1001937EA9600680D7E /* Foundation.framework */,
+				6E07B1021937EA9600680D7E /* CoreGraphics.framework */,
+				6E07B1041937EA9600680D7E /* UIKit.framework */,
+				6E07B1191937EA9600680D7E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E07B1061937EA9600680D7E /* ThunderCats */ = {
+			isa = PBXGroup;
+			children = (
+				6E07B10F1937EA9600680D7E /* AppDelegate.h */,
+				6E07B1101937EA9600680D7E /* AppDelegate.m */,
+				A95248E319461B5F0080CD74 /* TableViewController.h */,
+				A95248E419461B5F0080CD74 /* TableViewController.m */,
+				A95248E519461B5F0080CD74 /* TableViewController.xib */,
+				A95248E819461E2C0080CD74 /* TableViewCell.h */,
+				A95248E919461E2C0080CD74 /* TableViewCell.m */,
+				A95248EA19461E2C0080CD74 /* TableViewCell.xib */,
+				6E07B1121937EA9600680D7E /* Images.xcassets */,
+				6E07B1071937EA9600680D7E /* Supporting Files */,
+			);
+			path = ThunderCats;
+			sourceTree = "<group>";
+		};
+		6E07B1071937EA9600680D7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6E07B1081937EA9600680D7E /* ThunderCats-Info.plist */,
+				6E07B1091937EA9600680D7E /* InfoPlist.strings */,
+				6E07B10C1937EA9600680D7E /* main.m */,
+				6E07B10E1937EA9600680D7E /* ThunderCats-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6E07B11F1937EA9600680D7E /* ThunderCatsTests */ = {
+			isa = PBXGroup;
+			children = (
+				A9A455E6193F958C00E14ED7 /* UIDeviceTests.m */,
+				6E07B1301937EB5B00680D7E /* NSStringTests.m */,
+				A9A455E8193F9E0C00E14ED7 /* UIColorTests.m */,
+				6E07B1201937EA9600680D7E /* Supporting Files */,
+			);
+			path = ThunderCatsTests;
+			sourceTree = "<group>";
+		};
+		6E07B1201937EA9600680D7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6E07B1211937EA9600680D7E /* ThunderCatsTests-Info.plist */,
+				6E07B1221937EA9600680D7E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9780A521937F2F100884268 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6E726E39194698D10002BA02 /* Thundercats.h */,
+				A9780A531937F33300884268 /* NSString+TCAdditions.h */,
+				A9780A541937F33300884268 /* NSString+TCAdditions.m */,
+				A9780A571937F33300884268 /* UIAlertView+TCAdditions.h */,
+				A9780A581937F33300884268 /* UIAlertView+TCAdditions.m */,
+				A9780A591937F33300884268 /* UICollectionViewCell+TCAdditions.h */,
+				A9780A5A1937F33300884268 /* UICollectionViewCell+TCAdditions.m */,
+				A9780A5B1937F33300884268 /* UIColor+TCAdditions.h */,
+				A9780A5C1937F33300884268 /* UIColor+TCAdditions.m */,
+				A9780A5D1937F33300884268 /* UIDevice+TCAdditions.h */,
+				A9780A5E1937F33300884268 /* UIDevice+TCAdditions.m */,
+				A9780A5F1937F33300884268 /* UIImage+TCAdditions.h */,
+				A9780A601937F33300884268 /* UIImage+TCAdditions.m */,
+				A9780A611937F33300884268 /* UITableViewCell+TCAdditions.h */,
+				A9780A621937F33300884268 /* UITableViewCell+TCAdditions.m */,
+				A9780A631937F33300884268 /* UIView+TCAdditions.h */,
+				A9780A641937F33300884268 /* UIView+TCAdditions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E07B0FC1937EA9600680D7E /* ThunderCats */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E07B1291937EA9600680D7E /* Build configuration list for PBXNativeTarget "ThunderCats" */;
+			buildPhases = (
+				6E07B0F91937EA9600680D7E /* Sources */,
+				6E07B0FA1937EA9600680D7E /* Frameworks */,
+				6E07B0FB1937EA9600680D7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThunderCats;
+			productName = ThunderCats;
+			productReference = 6E07B0FD1937EA9600680D7E /* ThunderCats.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6E07B1171937EA9600680D7E /* ThunderCatsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E07B12C1937EA9600680D7E /* Build configuration list for PBXNativeTarget "ThunderCatsTests" */;
+			buildPhases = (
+				6E07B1141937EA9600680D7E /* Sources */,
+				6E07B1151937EA9600680D7E /* Frameworks */,
+				6E07B1161937EA9600680D7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E07B11E1937EA9600680D7E /* PBXTargetDependency */,
+			);
+			name = ThunderCatsTests;
+			productName = ThunderCatsTests;
+			productReference = 6E07B1181937EA9600680D7E /* ThunderCatsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E07B0F51937EA9600680D7E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Metova;
+				TargetAttributes = {
+					6E07B1171937EA9600680D7E = {
+						TestTargetID = 6E07B0FC1937EA9600680D7E;
+					};
+				};
+			};
+			buildConfigurationList = 6E07B0F81937EA9600680D7E /* Build configuration list for PBXProject "ThunderCats" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6E07B0F41937EA9600680D7E;
+			productRefGroup = 6E07B0FE1937EA9600680D7E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E07B0FC1937EA9600680D7E /* ThunderCats */,
+				6E07B1171937EA9600680D7E /* ThunderCatsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6E07B0FB1937EA9600680D7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A95248E719461B5F0080CD74 /* TableViewController.xib in Resources */,
+				A95248EC19461E2C0080CD74 /* TableViewCell.xib in Resources */,
+				6E07B10B1937EA9600680D7E /* InfoPlist.strings in Resources */,
+				6E07B1131937EA9600680D7E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E07B1161937EA9600680D7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E07B1241937EA9600680D7E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E07B0F91937EA9600680D7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9780A6A1937F33300884268 /* UIDevice+TCAdditions.m in Sources */,
+				6E07B1111937EA9600680D7E /* AppDelegate.m in Sources */,
+				A9780A681937F33300884268 /* UICollectionViewCell+TCAdditions.m in Sources */,
+				A9780A651937F33300884268 /* NSString+TCAdditions.m in Sources */,
+				6E07B10D1937EA9600680D7E /* main.m in Sources */,
+				A9780A6B1937F33300884268 /* UIImage+TCAdditions.m in Sources */,
+				A95248EB19461E2C0080CD74 /* TableViewCell.m in Sources */,
+				A9780A6D1937F33300884268 /* UIView+TCAdditions.m in Sources */,
+				A95248E619461B5F0080CD74 /* TableViewController.m in Sources */,
+				A9780A6C1937F33300884268 /* UITableViewCell+TCAdditions.m in Sources */,
+				A9780A671937F33300884268 /* UIAlertView+TCAdditions.m in Sources */,
+				A9780A691937F33300884268 /* UIColor+TCAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E07B1141937EA9600680D7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9780A731937F35800884268 /* UIDevice+TCAdditions.m in Sources */,
+				A9A455E9193F9E0C00E14ED7 /* UIColorTests.m in Sources */,
+				A9780A711937F35800884268 /* UICollectionViewCell+TCAdditions.m in Sources */,
+				A9780A6E1937F35800884268 /* NSString+TCAdditions.m in Sources */,
+				6E07B1311937EB5B00680D7E /* NSStringTests.m in Sources */,
+				A9780A741937F35800884268 /* UIImage+TCAdditions.m in Sources */,
+				A9780A761937F35800884268 /* UIView+TCAdditions.m in Sources */,
+				A9A455E7193F958C00E14ED7 /* UIDeviceTests.m in Sources */,
+				A9780A751937F35800884268 /* UITableViewCell+TCAdditions.m in Sources */,
+				A9780A701937F35800884268 /* UIAlertView+TCAdditions.m in Sources */,
+				A9780A721937F35800884268 /* UIColor+TCAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6E07B11E1937EA9600680D7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E07B0FC1937EA9600680D7E /* ThunderCats */;
+			targetProxy = 6E07B11D1937EA9600680D7E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6E07B1091937EA9600680D7E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E07B10A1937EA9600680D7E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6E07B1221937EA9600680D7E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E07B1231937EA9600680D7E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6E07B1271937EA9600680D7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6E07B1281937EA9600680D7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6E07B12A1937EA9600680D7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ThunderCats/ThunderCats-Prefix.pch";
+				INFOPLIST_FILE = "ThunderCats/ThunderCats-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6E07B12B1937EA9600680D7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ThunderCats/ThunderCats-Prefix.pch";
+				INFOPLIST_FILE = "ThunderCats/ThunderCats-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6E07B12D1937EA9600680D7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ThunderCats.app/ThunderCats";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ThunderCats/ThunderCats-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ThunderCatsTests/ThunderCatsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6E07B12E1937EA9600680D7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ThunderCats.app/ThunderCats";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ThunderCats/ThunderCats-Prefix.pch";
+				INFOPLIST_FILE = "ThunderCatsTests/ThunderCatsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E07B0F81937EA9600680D7E /* Build configuration list for PBXProject "ThunderCats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E07B1271937EA9600680D7E /* Debug */,
+				6E07B1281937EA9600680D7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E07B1291937EA9600680D7E /* Build configuration list for PBXNativeTarget "ThunderCats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E07B12A1937EA9600680D7E /* Debug */,
+				6E07B12B1937EA9600680D7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E07B12C1937EA9600680D7E /* Build configuration list for PBXNativeTarget "ThunderCatsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E07B12D1937EA9600680D7E /* Debug */,
+				6E07B12E1937EA9600680D7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6E07B0F51937EA9600680D7E /* Project object */;
+}
