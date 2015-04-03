@@ -29,11 +29,43 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, TCSearchStrategy) {
+    TCSearchStrategyBreadthFirst,
+    TCSearchStrategyDepthFirst
+};
+
 @interface UIView (TCAdditions)
 
 /**
  *  Calls resignFirstResponder on this view or its subviews (1 level down) if the view is the first responder.
  */
 - (void)tc_findAndResignFirstResponder;
+
+/**
+ *  Returns a flattened subview hierarchy. All subviews within this view's subview hierarchy are returned.
+ *
+ *  @return An array of all the view's subviews in its subview hierarchy.
+ */
+- (NSArray *)tc_getAllSubviewsRecursively;
+
+/**
+ *  Returns the first subview it encounters that satisfies the condition block. This method uses a breadth first search strategy.
+ *
+ *  @param conditionBlock The block to apply to each subview.
+ *
+ *  @return The first subview encountered that satisfies the condition block.
+ */
+- (UIView *)tc_subviewThatSatisfiesBlock:(BOOL (^)(UIView *))conditionBlock;
+
+/**
+ *  Returns the first subview it encounters that satisfies the condition block. This method can perform a breadth first search strategy or a depth first search strategy.
+ *
+ *  @param searchStrategy The search strategy to use.
+ *  @param conditionBlock The block to apply to each subview.
+ *
+ *  @return The first subview encountered that satisfies the condition block.
+ */
+- (UIView *)tc_findSubviewUsingSearchStrategy:(TCSearchStrategy)searchStrategy
+                           thatSatisfiesBlock:(BOOL (^)(UIView *view))conditionBlock;
 
 @end

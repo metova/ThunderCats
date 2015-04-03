@@ -1,4 +1,7 @@
 //
+//  NSURL+TCAdditions.m
+//  ThunderCats
+//
 //  Copyright (c) 2015 Metova Inc.
 //
 //  MIT License
@@ -23,13 +26,24 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <Availability.h>
+#import "NSURL+TCAdditions.h"
 
-#ifndef __IPHONE_3_0
-#warning "This project uses features only available in iOS SDK 3.0 and later."
-#endif
+@implementation NSURL (TCAdditions)
 
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-#endif
+- (BOOL)tc_addExcludeBackupAttribute
+{
+    NSError *error = nil;
+    BOOL success = [self setResourceValue:@YES forKey:NSURLIsExcludedFromBackupKey error:&error];
+    
+    if (!success)
+    {
+        NSLog(@"ThunderCats > Failed to add NSURLIsExcludedFromBackupKey to url, %@, with error: %@", self.absoluteString, error);
+        return NO;
+    }
+    else
+    {
+        return YES;
+    }
+}
+
+@end

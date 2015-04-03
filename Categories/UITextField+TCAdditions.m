@@ -1,4 +1,7 @@
 //
+//  UITextField+TCAdditions.m
+//  ThunderCats
+//
 //  Copyright (c) 2015 Metova Inc.
 //
 //  MIT License
@@ -23,13 +26,18 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <Availability.h>
+#import "UITextField+TCAdditions.h"
 
-#ifndef __IPHONE_3_0
-#warning "This project uses features only available in iOS SDK 3.0 and later."
-#endif
+@implementation UITextField (TCAdditions)
 
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-#endif
+- (void)tc_setLeftAndRightPadding:(CGFloat)paddingWidth
+{
+    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, paddingWidth, self.frame.size.height)];
+    
+    self.leftView = paddingView;
+    self.leftViewMode = UITextFieldViewModeAlways;
+    self.rightView = paddingView;
+    self.rightViewMode = UITextFieldViewModeUnlessEditing;
+}
+
+@end

@@ -49,4 +49,85 @@
     }
 }
 
+
+- (NSArray *)tc_getAllSubviewsRecursively
+{
+    NSMutableArray *subviews = [NSMutableArray new];
+    for (UIView *subview in self.subviews)
+    {
+        [subviews addObject:subview];
+        [subviews addObjectsFromArray:[subview tc_getAllSubviewsRecursively]];
+    }
+    
+    return subviews;
+}
+
+
+- (UIView *)tc_subviewThatSatisfiesBlock:(BOOL (^)(UIView *))conditionBlock
+{
+    return [self tc_findSubviewUsingSearchStrategy:TCSearchStrategyBreadthFirst
+                                thatSatisfiesBlock:conditionBlock];
+}
+
+
+- (UIView *)tc_findSubviewUsingSearchStrategy:(TCSearchStrategy)searchStrategy
+                           thatSatisfiesBlock:(BOOL (^)(UIView *))conditionBlock
+{
+    switch (searchStrategy)
+    {
+        case TCSearchStrategyBreadthFirst:
+            return [self tc_breadthFirstSubviewThatSatisfiesBlock:conditionBlock];
+    
+        case TCSearchStrategyDepthFirst:
+            return [self tc_depthFirstSubviewThatSatisfiesBlock:conditionBlock];
+    }
+}
+
+
+- (UIView *)tc_depthFirstSubviewThatSatisfiesBlock:(BOOL (^)(UIView *))conditionBlock
+{
+    for (UIView *subview in self.subviews)
+    {
+        if (conditionBlock(subview))
+        {
+            return subview;
+        }
+        else
+        {
+            UIView *view = [subview tc_depthFirstSubviewThatSatisfiesBlock:conditionBlock];
+            
+            if (view)
+            {
+                return view;
+            }
+        }
+    }
+    
+    return nil;
+}
+
+
+- (UIView *)tc_breadthFirstSubviewThatSatisfiesBlock:(BOOL (^)(UIView *))conditionBlock
+{
+    NSMutableArray *nextViewsToCheck = [self.subviews mutableCopy];
+    
+    NSInteger i = 0;
+    while (i < nextViewsToCheck.count)
+    {
+        UIView *view = nextViewsToCheck[i];
+        if (conditionBlock(view))
+        {
+            return view;
+        }
+        else
+        {
+            i++;
+            [nextViewsToCheck addObjectsFromArray:view.subviews];
+        }
+    }
+    
+    return nil;
+}
+
+
 @end
