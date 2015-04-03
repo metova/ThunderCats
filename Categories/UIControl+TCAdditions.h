@@ -1,4 +1,7 @@
 //
+//  UIControl+TCAdditions.h
+//  ThunderCats
+//
 //  Copyright (c) 2015 Metova Inc.
 //
 //  MIT License
@@ -23,13 +26,21 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <Availability.h>
+#import <UIKit/UIKit.h>
 
-#ifndef __IPHONE_3_0
-#warning "This project uses features only available in iOS SDK 3.0 and later."
-#endif
+@interface UIControl (TCAdditions)
 
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-#endif
+/**
+ *  Returns a Boolean value that indicates whether the control has an IBAction wired to a target for a particular control event.
+ *
+ *  @param target           The target of the action.
+ *  @param ibactionSelector The IBAction selector.
+ *  @param controlEvent     The control event to check for.
+ *
+ *  @return YES if the control has the target for the control event.
+ */
+- (BOOL)tc_isControlWiredToTarget:(id)target
+              forIBActionSelector:(SEL)ibactionSelector
+                  forControlEvent:(UIControlEvents)controlEvent;
+
+@end

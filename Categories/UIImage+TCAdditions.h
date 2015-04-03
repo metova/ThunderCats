@@ -113,6 +113,39 @@
  */
 + (UIImageOrientation)tc_imageOrientationFromAssetOrientation:(ALAssetOrientation)assetOrientation;
 
+/**
+ *  Creates a new image that is scaled to the size that fully fits within a specific size (aspect fit).
+ *
+ *  @param image The original image.
+ *  @param size  The size that the new image should be scaled to fit within.
+ *
+ *  @return An image scaled to fit within the provided size.
+ */
++ (UIImage *)tc_imageWithImage:(UIImage *)image
+               scaledToFitSize:(CGSize)size;
+
+/**
+ *  Creates a new image that is scaled to the size that fully fills a specific size (aspect fill).
+ *
+ *  @param image The original image.
+ *  @param size  The size that the new image should be scaled to fill.
+ *
+ *  @return An image scaled to fill the provided size.
+ */
++ (UIImage *)tc_imageWithImage:(UIImage *)image
+              scaledToFillSize:(CGSize)size;
+
+/**
+ *  Creates a new image that is scaled to the size that fully fills a specific size (aspect fill). The portions of the image that don't fit within the size after scaling are cropped.
+ *
+ *  @param image The original image.
+ *  @param size  The size that the new image should be scaled to fill and then cropped to.
+ *
+ *  @return An image scaled and cropped to fill the provided size.
+ */
++ (UIImage *)tc_imageWithImage:(UIImage *)image
+    scaledAndCroppedToFillSize:(CGSize)size;
+
 
 
 #pragma mark - Deprecated Methods

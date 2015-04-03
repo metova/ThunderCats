@@ -1,4 +1,7 @@
 //
+//  NSDictionary+TCAdditions.h
+//  ThunderCats
+//
 //  Copyright (c) 2015 Metova Inc.
 //
 //  MIT License
@@ -23,13 +26,15 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <Availability.h>
+#import <Foundation/Foundation.h>
 
-#ifndef __IPHONE_3_0
-#warning "This project uses features only available in iOS SDK 3.0 and later."
-#endif
+@interface NSDictionary (TCAdditions)
 
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-#endif
+/**
+ *  Returns a string with the contents of the dictionary interpreted as JSON. The JSON is pretty printed so it's easier to read. This is particularly useful for debugging network requests and responses.
+ *
+ *  @return A JSON string.
+ */
+- (NSString *)tc_getJSONString;
+
+@end

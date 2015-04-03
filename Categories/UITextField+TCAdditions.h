@@ -1,4 +1,7 @@
 //
+//  UITextField+TCAdditions.h
+//  ThunderCats
+//
 //  Copyright (c) 2015 Metova Inc.
 //
 //  MIT License
@@ -23,13 +26,15 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <Availability.h>
+#import <UIKit/UIKit.h>
 
-#ifndef __IPHONE_3_0
-#warning "This project uses features only available in iOS SDK 3.0 and later."
-#endif
+@interface UITextField (TCAdditions)
 
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-#endif
+/**
+ *  Sets the padding to the left and right sides of the text field.
+ *
+ *  @param paddingWidth The width to use for the padding.
+ */
+- (void)tc_setLeftAndRightPadding:(CGFloat)paddingWidth;
+
+@end

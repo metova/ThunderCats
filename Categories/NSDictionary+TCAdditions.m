@@ -1,4 +1,7 @@
 //
+//  NSDictionary+TCAdditions.m
+//  ThunderCats
+//
 //  Copyright (c) 2015 Metova Inc.
 //
 //  MIT License
@@ -23,13 +26,24 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <Availability.h>
+#import "NSDictionary+TCAdditions.h"
 
-#ifndef __IPHONE_3_0
-#warning "This project uses features only available in iOS SDK 3.0 and later."
-#endif
+@implementation NSDictionary (TCAdditions)
 
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-#endif
+- (NSString *)tc_getJSONString
+{
+    NSError *e = nil;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:self
+                                                   options:NSJSONWritingPrettyPrinted
+                                                     error:&e];
+    
+    if (e)
+    {
+        NSLog(@"ThunderCats > Error creating JSON string from dictionary.");
+        return [self description];
+    }
+    
+    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+}
+
+@end

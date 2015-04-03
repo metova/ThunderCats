@@ -1,4 +1,7 @@
 //
+//  UIControl+TCAdditions.m
+//  ThunderCats
+//
 //  Copyright (c) 2015 Metova Inc.
 //
 //  MIT License
@@ -23,13 +26,26 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <Availability.h>
+#import "UIControl+TCAdditions.h"
 
-#ifndef __IPHONE_3_0
-#warning "This project uses features only available in iOS SDK 3.0 and later."
-#endif
+@implementation UIControl (TCAdditions)
 
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-#endif
+- (BOOL)tc_isControlWiredToTarget:(id)target
+              forIBActionSelector:(SEL)ibactionSelector
+                  forControlEvent:(UIControlEvents)controlEvent
+{
+    NSString *actionSelectorString = NSStringFromSelector(ibactionSelector);
+    NSArray *actionsForTarget = [self actionsForTarget:target forControlEvent:controlEvent];
+    
+    for (NSString *action in actionsForTarget)
+    {
+        if ([actionSelectorString isEqualToString:action] == YES)
+        {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
+@end
