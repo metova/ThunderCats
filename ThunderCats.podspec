@@ -6,14 +6,14 @@
 #
 Pod::Spec.new do |s|
   s.name             = "ThunderCats"
-  s.version          = "1.0.11"
+  s.version          = "1.0.12"
   s.summary          = "Useful categories"
   s.description      = <<-DESC
                        Useful categories used by Metova
                        DESC
   s.homepage         = "http://metova.com"
   s.license          = 'MIT'
-  s.authors           = { "Kurt Treangen" => "kurt.treangen@metova.com", "Logan Gauthier" => "logan.gauthier@metova.com" }
+  s.authors           = { "Logan Gauthier" => "logan.gauthier@metova.com", "Kurt Treangen" => "kurt.treangen@metova.com", "William Grand" => "william.grand@metova.com" }
   s.source           = { :git => "https://github.com/metova/ThunderCats.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '7.0'

@@ -33,13 +33,17 @@
 
 + (NSString *)tc_reuseIdentifier
 {
-    return NSStringFromClass(self);
+    NSString *className = NSStringFromClass(self);
+    NSString *classNameWithoutSwiftModule = [className componentsSeparatedByString:@"."].lastObject;
+    return classNameWithoutSwiftModule;
 }
 
 
 + (NSString *)tc_nibName
 {
-    return NSStringFromClass(self);
+    NSString *className = NSStringFromClass(self);
+    NSString *classNameWithoutSwiftModule = [className componentsSeparatedByString:@"."].lastObject;
+    return classNameWithoutSwiftModule;
 }
 
 
