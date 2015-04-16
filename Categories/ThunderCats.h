@@ -39,5 +39,9 @@
 #import "UITableViewCell+TCAdditions.h"
 #import "UIView+TCAdditions.h"
 #import "UIImageView+WebCacheBlur.h"
+#import "UITextField+TCAdditions.h"
+#import "NSDictionary+TCAdditions.h"
+#import "NSURL+TCAdditions.h"
+#import "UIControl+TCAdditions.h"
 
 #endif
