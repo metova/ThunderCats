@@ -28,6 +28,7 @@
 
 
 #import <Foundation/Foundation.h>
+#import "TCNullabilityMacros.h"
 
 @interface NSString (TCAdditions)
 
@@ -36,7 +37,7 @@
  *
  *  @return A UUID string.
  */
-+ (NSString *)tc_UUID;
++ (NSString * __tc_nonnull)tc_UUID;
 
 /**
  *  Performs a regex match to see whether the email address is a valid format. Specifically, it performs a case-insensitive match with the following regex:
@@ -53,27 +54,27 @@
  *
  *  @return A Boolean value that indicates whether the substring is present.
  */
-- (BOOL)tc_containsString:(NSString *)substring;
+- (BOOL)tc_containsString:(NSString * __tc_nonnull)substring;
 
 /**
  *  Returns a count of the number of words in the string.
  *
  *  @return The number of words in the string.
  */
-- (NSNumber *)tc_wordCount;
+- (NSNumber * __tc_nonnull)tc_wordCount;
 
 /**
  *  Returns a count of the number of lines in the string.
  *
  *  @return The number of lines in the string.
  */
-- (NSNumber *)tc_lineCount;
+- (NSNumber * __tc_nonnull)tc_lineCount;
 
 /**
  *  Returns a count of the number of sentences in the string.
  *
  *  @return The number of sentences in the string.
  */
-- (NSNumber *)tc_sentenceCount;
+- (NSNumber * __tc_nonnull)tc_sentenceCount;
 
 @end

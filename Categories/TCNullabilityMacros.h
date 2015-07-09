@@ -1,5 +1,5 @@
 //
-//  NSDictionary+TCAdditions.h
+//  TCNullabilityMacros.h
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,16 +26,29 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-#import "TCNullabilityMacros.h"
+#ifndef ThunderCats_TCNullabilityMacros_h
+#define ThunderCats_TCNullabilityMacros_h
 
-@interface NSDictionary (TCAdditions)
+#if __has_feature(nullability)
+#define TC_ASSUME_NONNULL_BEGIN _Pragma("clang assume_nonnull begin")
+#define TC_ASSUME_NONNULL_END _Pragma("clang assume_nonnull end")
+#define tc_nullable nullable
+#define tc_nonnull nonnull
+#define tc_null_unspecified null_unspecified
+#define tc_null_resettable null_resettable
+#define __tc_nullable __nullable
+#define __tc_nonnull __nonnull
+#define __tc_null_unspecified __null_unspecified
+#else
+#define TC_ASSUME_NONNULL_BEGIN
+#define TC_ASSUME_NONNULL_END
+#define tc_nullable
+#define tc_nonnull
+#define tc_null_unspecified
+#define tc_null_resettable
+#define __tc_nullable
+#define __tc_nonnull
+#define __tc_null_unspecified
+#endif
 
-/**
- *  Returns a string with the contents of the dictionary interpreted as JSON. The JSON is pretty printed so it's easier to read. This is particularly useful for debugging network requests and responses.
- *
- *  @return A JSON string.
- */
-- (NSString * __tc_nullable)tc_getJSONString;
-
-@end
+#endif

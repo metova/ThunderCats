@@ -28,6 +28,7 @@
 
 
 #import <UIKit/UIKit.h>
+#import "TCNullabilityMacros.h"
 
 typedef NS_ENUM(NSUInteger, TCSearchStrategy) {
     TCSearchStrategyBreadthFirst,
@@ -46,7 +47,7 @@ typedef NS_ENUM(NSUInteger, TCSearchStrategy) {
  *
  *  @return An array of all the view's subviews in its subview hierarchy.
  */
-- (NSArray *)tc_getAllSubviewsRecursively;
+- (NSArray * __tc_nonnull)tc_getAllSubviewsRecursively;
 
 /**
  *  Returns the first subview it encounters that satisfies the condition block. This method uses a breadth first search strategy.
@@ -55,7 +56,7 @@ typedef NS_ENUM(NSUInteger, TCSearchStrategy) {
  *
  *  @return The first subview encountered that satisfies the condition block.
  */
-- (UIView *)tc_subviewThatSatisfiesBlock:(BOOL (^)(UIView *))conditionBlock;
+- (UIView * __tc_nullable)tc_subviewThatSatisfiesBlock:( BOOL (^ __tc_nonnull)(UIView * __tc_nonnull view))conditionBlock;
 
 /**
  *  Returns the first subview it encounters that satisfies the condition block. This method can perform a breadth first search strategy or a depth first search strategy.
@@ -65,7 +66,7 @@ typedef NS_ENUM(NSUInteger, TCSearchStrategy) {
  *
  *  @return The first subview encountered that satisfies the condition block.
  */
-- (UIView *)tc_findSubviewUsingSearchStrategy:(TCSearchStrategy)searchStrategy
-                           thatSatisfiesBlock:(BOOL (^)(UIView *view))conditionBlock;
+- (UIView * __tc_nullable)tc_findSubviewUsingSearchStrategy:(TCSearchStrategy)searchStrategy
+                                         thatSatisfiesBlock:(BOOL (^ __tc_nonnull)(UIView * __tc_nonnull view))conditionBlock;
 
 @end

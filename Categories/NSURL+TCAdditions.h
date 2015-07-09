@@ -27,6 +27,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TCNullabilityMacros.h"
 
 @interface NSURL (TCAdditions)
 
