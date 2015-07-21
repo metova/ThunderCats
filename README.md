@@ -3,7 +3,7 @@
 [![Version](http://cocoapod-badges.herokuapp.com/v/thundercats/badge.png)](http://cocoadocs.org/docsets/thundercats)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/thundercats/badge.png)](http://cocoadocs.org/docsets/thundercats)
 
-Thundercats is a small, lightweight collection of useful utility extensions added to existing Foundation & UIKit classes.
+Thundercats is a lightweight collection of utility extensions added to existing Foundation & UIKit classes.
 
 ## Usage
 
