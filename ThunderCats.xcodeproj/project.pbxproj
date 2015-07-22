@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4ABAE1E31B60321600DDE05D /* UIAlertController+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABAE1E21B60321600DDE05D /* UIAlertController+TCAdditions.m */; };
 		6E07B1011937EA9600680D7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E07B1001937EA9600680D7E /* Foundation.framework */; };
 		6E07B1031937EA9600680D7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E07B1021937EA9600680D7E /* CoreGraphics.framework */; };
 		6E07B1051937EA9600680D7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E07B1041937EA9600680D7E /* UIKit.framework */; };
@@ -56,6 +57,8 @@
 /* Begin PBXFileReference section */
 		042DEAF0B0D885C5277B6255 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C4F0E421011D439694D874A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		4ABAE1E11B60321600DDE05D /* UIAlertController+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertController+TCAdditions.h"; path = "Categories/UIAlertController+TCAdditions.h"; sourceTree = "<group>"; };
+		4ABAE1E21B60321600DDE05D /* UIAlertController+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertController+TCAdditions.m"; path = "Categories/UIAlertController+TCAdditions.m"; sourceTree = "<group>"; };
 		6E07B0FD1937EA9600680D7E /* ThunderCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThunderCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E07B1001937EA9600680D7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6E07B1021937EA9600680D7E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -260,6 +263,8 @@
 				6EFC4A741ACEF79D00E2A84B /* NSURL+TCAdditions.m */,
 				6EFC4A7B1ACF072E00E2A84B /* UIControl+TCAdditions.h */,
 				6EFC4A7C1ACF072E00E2A84B /* UIControl+TCAdditions.m */,
+				4ABAE1E11B60321600DDE05D /* UIAlertController+TCAdditions.h */,
+				4ABAE1E21B60321600DDE05D /* UIAlertController+TCAdditions.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -403,6 +408,7 @@
 				6EFC4A721ACEF36C00E2A84B /* NSDictionary+TCAdditions.m in Sources */,
 				6E7964BF1A7BF73900378E9B /* UIImageView+WebCacheBlur.m in Sources */,
 				6E07B10D1937EA9600680D7E /* main.m in Sources */,
+				4ABAE1E31B60321600DDE05D /* UIAlertController+TCAdditions.m in Sources */,
 				6E7964C11A7BF73900378E9B /* UIView+TCAdditions.m in Sources */,
 				A95248EB19461E2C0080CD74 /* TableViewCell.m in Sources */,
 				6E7964BE1A7BF73900378E9B /* UIImage+TCAdditions.m in Sources */,
