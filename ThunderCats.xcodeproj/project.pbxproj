@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		272C1F5D1B67D897008B256E /* UINavigationControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 272C1F5C1B67D897008B256E /* UINavigationControllerTests.m */; };
+		27E12F071B67D593009D2ED6 /* UINavigationController+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E12F061B67D593009D2ED6 /* UINavigationController+TCAdditions.m */; };
 		6E07B1011937EA9600680D7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E07B1001937EA9600680D7E /* Foundation.framework */; };
 		6E07B1031937EA9600680D7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E07B1021937EA9600680D7E /* CoreGraphics.framework */; };
 		6E07B1051937EA9600680D7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E07B1041937EA9600680D7E /* UIKit.framework */; };
@@ -40,6 +42,7 @@
 		A95248EC19461E2C0080CD74 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A95248EA19461E2C0080CD74 /* TableViewCell.xib */; };
 		A9A455E7193F958C00E14ED7 /* UIDeviceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A455E6193F958C00E14ED7 /* UIDeviceTests.m */; };
 		A9A455E9193F9E0C00E14ED7 /* UIColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A455E8193F9E0C00E14ED7 /* UIColorTests.m */; };
+		D5DE919A0E9BB6F6CBB94B9E /* libPods-ThunderCatsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 994DB24C4C9D0CF91C41A82D /* libPods-ThunderCatsTests.a */; };
 		EA1294BB9FAB8B80B9E6BE16 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 042DEAF0B0D885C5277B6255 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +59,10 @@
 /* Begin PBXFileReference section */
 		042DEAF0B0D885C5277B6255 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C4F0E421011D439694D874A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		272C1F5C1B67D897008B256E /* UINavigationControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationControllerTests.m; sourceTree = "<group>"; };
+		27E12F051B67D593009D2ED6 /* UINavigationController+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+TCAdditions.h"; path = "Categories/UINavigationController+TCAdditions.h"; sourceTree = "<group>"; };
+		27E12F061B67D593009D2ED6 /* UINavigationController+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+TCAdditions.m"; path = "Categories/UINavigationController+TCAdditions.m"; sourceTree = "<group>"; };
+		3948216B34EA9B26E468A091 /* Pods-ThunderCatsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThunderCatsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThunderCatsTests/Pods-ThunderCatsTests.release.xcconfig"; sourceTree = "<group>"; };
 		6E07B0FD1937EA9600680D7E /* ThunderCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThunderCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E07B1001937EA9600680D7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6E07B1021937EA9600680D7E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -105,12 +112,14 @@
 		6EFC4A7C1ACF072E00E2A84B /* UIControl+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIControl+TCAdditions.m"; path = "Categories/UIControl+TCAdditions.m"; sourceTree = "<group>"; };
 		6EFC4A7E1ACF077E00E2A84B /* UIControlTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIControlTests.m; sourceTree = "<group>"; };
 		6EFEBE8C1B4EF3F600B55426 /* TCNullabilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCNullabilityMacros.h; path = Categories/TCNullabilityMacros.h; sourceTree = "<group>"; };
+		994DB24C4C9D0CF91C41A82D /* libPods-ThunderCatsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThunderCatsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95248E819461E2C0080CD74 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		A95248E919461E2C0080CD74 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		A95248EA19461E2C0080CD74 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		A9A455E6193F958C00E14ED7 /* UIDeviceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDeviceTests.m; sourceTree = "<group>"; };
 		A9A455E8193F9E0C00E14ED7 /* UIColorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorTests.m; sourceTree = "<group>"; };
 		E13AD5E8197A480CB8724730 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EBFAC5E064BC5F4812735B18 /* Pods-ThunderCatsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThunderCatsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThunderCatsTests/Pods-ThunderCatsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +141,7 @@
 				6E07B11A1937EA9600680D7E /* XCTest.framework in Frameworks */,
 				6E07B11C1937EA9600680D7E /* UIKit.framework in Frameworks */,
 				6E07B11B1937EA9600680D7E /* Foundation.framework in Frameworks */,
+				D5DE919A0E9BB6F6CBB94B9E /* libPods-ThunderCatsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +177,7 @@
 				6E07B1041937EA9600680D7E /* UIKit.framework */,
 				6E07B1191937EA9600680D7E /* XCTest.framework */,
 				042DEAF0B0D885C5277B6255 /* libPods.a */,
+				994DB24C4C9D0CF91C41A82D /* libPods-ThunderCatsTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,6 +220,7 @@
 				6E07B1301937EB5B00680D7E /* NSStringTests.m */,
 				A9A455E8193F9E0C00E14ED7 /* UIColorTests.m */,
 				6EFC4A7E1ACF077E00E2A84B /* UIControlTests.m */,
+				272C1F5C1B67D897008B256E /* UINavigationControllerTests.m */,
 			);
 			path = ThunderCatsTests;
 			sourceTree = "<group>";
@@ -227,6 +239,8 @@
 			children = (
 				1C4F0E421011D439694D874A /* Pods.debug.xcconfig */,
 				E13AD5E8197A480CB8724730 /* Pods.release.xcconfig */,
+				EBFAC5E064BC5F4812735B18 /* Pods-ThunderCatsTests.debug.xcconfig */,
+				3948216B34EA9B26E468A091 /* Pods-ThunderCatsTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -249,6 +263,8 @@
 				6E7964B21A7BF73900378E9B /* UIImage+TCAdditions.m */,
 				6E7964B31A7BF73900378E9B /* UIImageView+WebCacheBlur.h */,
 				6E7964B41A7BF73900378E9B /* UIImageView+WebCacheBlur.m */,
+				27E12F051B67D593009D2ED6 /* UINavigationController+TCAdditions.h */,
+				27E12F061B67D593009D2ED6 /* UINavigationController+TCAdditions.m */,
 				6E7964B51A7BF73900378E9B /* UITableViewCell+TCAdditions.h */,
 				6E7964B61A7BF73900378E9B /* UITableViewCell+TCAdditions.m */,
 				6E7964B71A7BF73900378E9B /* UIView+TCAdditions.h */,
@@ -292,9 +308,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E07B12C1937EA9600680D7E /* Build configuration list for PBXNativeTarget "ThunderCatsTests" */;
 			buildPhases = (
+				FAB909529752EAC2C063CBEE /* Check Pods Manifest.lock */,
 				6E07B1141937EA9600680D7E /* Sources */,
 				6E07B1151937EA9600680D7E /* Frameworks */,
 				6E07B1161937EA9600680D7E /* Resources */,
+				4ADA4E913334998DDB3C2322 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -376,6 +394,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		4ADA4E913334998DDB3C2322 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThunderCatsTests/Pods-ThunderCatsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CF4EBA9A1B775E51315F561B /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -389,6 +422,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAB909529752EAC2C063CBEE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -406,6 +454,7 @@
 				6E7964BF1A7BF73900378E9B /* UIImageView+WebCacheBlur.m in Sources */,
 				6E07B10D1937EA9600680D7E /* main.m in Sources */,
 				6E7964C11A7BF73900378E9B /* UIView+TCAdditions.m in Sources */,
+				27E12F071B67D593009D2ED6 /* UINavigationController+TCAdditions.m in Sources */,
 				A95248EB19461E2C0080CD74 /* TableViewCell.m in Sources */,
 				6E7964BE1A7BF73900378E9B /* UIImage+TCAdditions.m in Sources */,
 				6E7964C01A7BF73900378E9B /* UITableViewCell+TCAdditions.m in Sources */,
@@ -425,6 +474,7 @@
 				6EFC4A6C1ACEEED500E2A84B /* UIViewTests.m in Sources */,
 				6EFC4A7F1ACF077E00E2A84B /* UIControlTests.m in Sources */,
 				A9A455E9193F9E0C00E14ED7 /* UIColorTests.m in Sources */,
+				272C1F5D1B67D897008B256E /* UINavigationControllerTests.m in Sources */,
 				6E07B1311937EB5B00680D7E /* NSStringTests.m in Sources */,
 				A9A455E7193F958C00E14ED7 /* UIDeviceTests.m in Sources */,
 			);
@@ -560,6 +610,7 @@
 		};
 		6E07B12D1937EA9600680D7E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBFAC5E064BC5F4812735B18 /* Pods-ThunderCatsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ThunderCats.app/ThunderCats";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -582,6 +633,7 @@
 		};
 		6E07B12E1937EA9600680D7E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3948216B34EA9B26E468A091 /* Pods-ThunderCatsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ThunderCats.app/ThunderCats";
 				FRAMEWORK_SEARCH_PATHS = (
