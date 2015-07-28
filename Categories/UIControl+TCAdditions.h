@@ -27,6 +27,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TCNullabilityMacros.h"
 
 @interface UIControl (TCAdditions)
 
@@ -39,8 +40,8 @@
  *
  *  @return YES if the control has the target for the control event.
  */
-- (BOOL)tc_isControlWiredToTarget:(id)target
-              forIBActionSelector:(SEL)ibactionSelector
+- (BOOL)tc_isControlWiredToTarget:(id __tc_nonnull)target
+              forIBActionSelector:(SEL __tc_nonnull)ibactionSelector
                   forControlEvent:(UIControlEvents)controlEvent;
 
 @end

@@ -28,6 +28,7 @@
 
 
 #import <UIKit/UIKit.h>
+#import "TCNullabilityMacros.h"
 
 @interface UICollectionViewCell (TCAdditions)
 
@@ -36,34 +37,34 @@
  *
  *  @return A reuse identifier that is equal to the class name.
  */
-+ (NSString *)tc_reuseIdentifier;
++ (NSString * __tc_null_unspecified)tc_reuseIdentifier;
 
 /**
  *  Returns a string equal to the class name.
  *
  *  @return A string equal to the class name.
  */
-+ (NSString *)tc_nibName;
++ (NSString * __tc_null_unspecified)tc_nibName;
 
 /**
  *  Returns a string that is equal to the class name with "_iPad" appended to it.
  *
  *  @return A string that is equal to the class name with "_iPad" appended to it.
  */
-+ (NSString *)tc_iPadNibName;
++ (NSString * __tc_null_unspecified)tc_iPadNibName;
 
 /**
  *  Returns a nib for the cell subclass if one exists and is named after the class.
  *
  *  @return The nib for the cell subclass.
  */
-+ (UINib *)tc_nib;
++ (UINib * __tc_null_unspecified)tc_nib;
 
 /**
  *  Returns a nib for the cell subclass if one exists and is named after the class with "_iPad" appended to it.
  *
  *  @return The iPad nib for the cell subclass.
  */
-+ (UINib *)tc_iPadNib;
++ (UINib * __tc_null_unspecified)tc_iPadNib;
 
 @end

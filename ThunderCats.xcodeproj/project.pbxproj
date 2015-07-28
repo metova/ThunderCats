@@ -104,6 +104,7 @@
 		6EFC4A7B1ACF072E00E2A84B /* UIControl+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIControl+TCAdditions.h"; path = "Categories/UIControl+TCAdditions.h"; sourceTree = "<group>"; };
 		6EFC4A7C1ACF072E00E2A84B /* UIControl+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIControl+TCAdditions.m"; path = "Categories/UIControl+TCAdditions.m"; sourceTree = "<group>"; };
 		6EFC4A7E1ACF077E00E2A84B /* UIControlTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIControlTests.m; sourceTree = "<group>"; };
+		6EFEBE8C1B4EF3F600B55426 /* TCNullabilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCNullabilityMacros.h; path = Categories/TCNullabilityMacros.h; sourceTree = "<group>"; };
 		A95248E819461E2C0080CD74 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		A95248E919461E2C0080CD74 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		A95248EA19461E2C0080CD74 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
@@ -260,6 +261,7 @@
 				6EFC4A741ACEF79D00E2A84B /* NSURL+TCAdditions.m */,
 				6EFC4A7B1ACF072E00E2A84B /* UIControl+TCAdditions.h */,
 				6EFC4A7C1ACF072E00E2A84B /* UIControl+TCAdditions.m */,
+				6EFEBE8C1B4EF3F600B55426 /* TCNullabilityMacros.h */,
 			);
 			name = Categories;
 			sourceTree = "<group>";

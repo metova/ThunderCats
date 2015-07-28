@@ -26,6 +26,7 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#import "TCNullabilityMacros.h"
 
 @interface UIColor (TCAdditions)
 
@@ -36,7 +37,7 @@
  *
  *  @return A UIColor for the provided hex color code.
  */
-+ (UIColor *)tc_colorWithHexString:(NSString *)hexString;
++ (UIColor * __tc_nonnull)tc_colorWithHexString:(NSString * __tc_nonnull)hexString;
 
 /**
  *  Returns a Boolean value that indicates whether a given color is equal to the receiver.
@@ -45,6 +46,6 @@
  *
  *  @return YES if aColor's RGBA values are equivalent to the receiver's, otherwise NO.
  */
-- (BOOL)tc_isEqualToColor:(UIColor *)aColor;
+- (BOOL)tc_isEqualToColor:(UIColor * __tc_nonnull)aColor;
 
 @end
