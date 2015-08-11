@@ -1,17 +1,14 @@
 PODS:
-  - NYXImagesKit (2.3)
   - OCMock (3.1.2)
   - SDWebImage (3.7.1):
     - SDWebImage/Core (= 3.7.1)
   - SDWebImage/Core (3.7.1)
 
 DEPENDENCIES:
-  - NYXImagesKit (~> 2.3)
   - OCMock
   - SDWebImage (~> 3.7.1)
 
 SPEC CHECKSUMS:
-  NYXImagesKit: 8163e3335a40eaa173ca5bbbf81fafb57d3947eb
   OCMock: a10ea9f0a6e921651f96f78b6faee95ebc813b92
   SDWebImage: ed3095af2ff88b436426037444979b917f6c5575
 

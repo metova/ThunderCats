@@ -32,6 +32,7 @@
 		6E7964BF1A7BF73900378E9B /* UIImageView+WebCacheBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7964B41A7BF73900378E9B /* UIImageView+WebCacheBlur.m */; };
 		6E7964C01A7BF73900378E9B /* UITableViewCell+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7964B61A7BF73900378E9B /* UITableViewCell+TCAdditions.m */; };
 		6E7964C11A7BF73900378E9B /* UIView+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7964B81A7BF73900378E9B /* UIView+TCAdditions.m */; };
+		6E8605DA1B7A8A6E004DAEA8 /* NSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8605D91B7A8A6E004DAEA8 /* NSDictionaryTests.m */; };
 		6EFC4A6C1ACEEED500E2A84B /* UIViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC4A6B1ACEEED500E2A84B /* UIViewTests.m */; };
 		6EFC4A6F1ACEF25100E2A84B /* UITextField+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC4A6E1ACEF25100E2A84B /* UITextField+TCAdditions.m */; };
 		6EFC4A721ACEF36C00E2A84B /* NSDictionary+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFC4A711ACEF36C00E2A84B /* NSDictionary+TCAdditions.m */; };
@@ -101,6 +102,7 @@
 		6E7964B61A7BF73900378E9B /* UITableViewCell+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+TCAdditions.m"; path = "Categories/UITableViewCell+TCAdditions.m"; sourceTree = "<group>"; };
 		6E7964B71A7BF73900378E9B /* UIView+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+TCAdditions.h"; path = "Categories/UIView+TCAdditions.h"; sourceTree = "<group>"; };
 		6E7964B81A7BF73900378E9B /* UIView+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+TCAdditions.m"; path = "Categories/UIView+TCAdditions.m"; sourceTree = "<group>"; };
+		6E8605D91B7A8A6E004DAEA8 /* NSDictionaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryTests.m; sourceTree = "<group>"; };
 		6EFC4A6B1ACEEED500E2A84B /* UIViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewTests.m; sourceTree = "<group>"; };
 		6EFC4A6D1ACEF25100E2A84B /* UITextField+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+TCAdditions.h"; path = "Categories/UITextField+TCAdditions.h"; sourceTree = "<group>"; };
 		6EFC4A6E1ACEF25100E2A84B /* UITextField+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextField+TCAdditions.m"; path = "Categories/UITextField+TCAdditions.m"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				A9A455E8193F9E0C00E14ED7 /* UIColorTests.m */,
 				6EFC4A7E1ACF077E00E2A84B /* UIControlTests.m */,
 				272C1F5C1B67D897008B256E /* UINavigationControllerTests.m */,
+				6E8605D91B7A8A6E004DAEA8 /* NSDictionaryTests.m */,
 			);
 			path = ThunderCatsTests;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				6EFC4A6C1ACEEED500E2A84B /* UIViewTests.m in Sources */,
 				6EFC4A7F1ACF077E00E2A84B /* UIControlTests.m in Sources */,
 				A9A455E9193F9E0C00E14ED7 /* UIColorTests.m in Sources */,
+				6E8605DA1B7A8A6E004DAEA8 /* NSDictionaryTests.m in Sources */,
 				272C1F5D1B67D897008B256E /* UINavigationControllerTests.m in Sources */,
 				6E07B1311937EB5B00680D7E /* NSStringTests.m in Sources */,
 				A9A455E7193F958C00E14ED7 /* UIDeviceTests.m in Sources */,

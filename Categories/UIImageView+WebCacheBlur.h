@@ -38,7 +38,7 @@
  *
  *  @param url <#url description#>
  */
-- (void)tc_setBlurredImageWithURL:(NSURL *)url;
+- (void)tc_setBlurredImageWithURL:(NSURL *)url __deprecated_msg("This method will be removed so we can drop the SDWebImage dependency. You might consider using Pinterest's image blur cache manager PINRemoteImage instead: https://github.com/pinterest/PINRemoteImage");
 
 /**
  *  Documentation needed.
@@ -47,7 +47,7 @@
  *  @param placeholder <#placeholder description#>
  */
 - (void)tc_setBlurredImageWithURL:(NSURL *)url
-                 placeholderImage:(UIImage *)placeholder;
+                 placeholderImage:(UIImage *)placeholder __deprecated_msg("This method will be removed so we can drop the SDWebImage dependency. You might consider using Pinterest's image blur cache manager PINRemoteImage instead: https://github.com/pinterest/PINRemoteImage");
 
 /**
  *  Documentation needed.
@@ -56,7 +56,7 @@
  *  @param completedBlock <#completedBlock description#>
  */
 - (void)tc_setBlurredImageWithURL:(NSURL *)url
-                        completed:(SDWebImageCompletionBlock)completedBlock;
+                        completed:(SDWebImageCompletionBlock)completedBlock __deprecated_msg("This method will be removed so we can drop the SDWebImage dependency. You might consider using Pinterest's image blur cache manager PINRemoteImage instead: https://github.com/pinterest/PINRemoteImage");
 
 /**
  *  Documentation needed.
@@ -67,6 +67,6 @@
  */
 - (void)tc_setBlurredImageWithURL:(NSURL *)url
                  placeholderImage:(UIImage *)placeholder
-                        completed:(SDWebImageCompletionBlock)completedBlock;
+                        completed:(SDWebImageCompletionBlock)completedBlock __deprecated_msg("This method will be removed so we can drop the SDWebImage dependency. You might consider using Pinterest's image blur cache manager PINRemoteImage instead: https://github.com/pinterest/PINRemoteImage");
 
 @end
