@@ -11,6 +11,10 @@
 		27E12F071B67D593009D2ED6 /* UINavigationController+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E12F061B67D593009D2ED6 /* UINavigationController+TCAdditions.m */; };
 		6E0746871B863B76000480F9 /* UICollectionReusableView+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0746861B863B76000480F9 /* UICollectionReusableView+TCAdditions.m */; };
 		6E0746881B863B76000480F9 /* UICollectionReusableView+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0746861B863B76000480F9 /* UICollectionReusableView+TCAdditions.m */; };
+		6E07468D1B86404C000480F9 /* UIAlertController+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E07468B1B86404C000480F9 /* UIAlertController+TCAdditions.m */; };
+		6E07468E1B86404C000480F9 /* UIAlertController+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E07468B1B86404C000480F9 /* UIAlertController+TCAdditions.m */; };
+		6E07468F1B86404C000480F9 /* UIViewController+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E07468C1B86404C000480F9 /* UIViewController+TCAdditions.m */; };
+		6E0746901B86404C000480F9 /* UIViewController+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E07468C1B86404C000480F9 /* UIViewController+TCAdditions.m */; };
 		6E07B1011937EA9600680D7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E07B1001937EA9600680D7E /* Foundation.framework */; };
 		6E07B1031937EA9600680D7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E07B1021937EA9600680D7E /* CoreGraphics.framework */; };
 		6E07B1051937EA9600680D7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E07B1041937EA9600680D7E /* UIKit.framework */; };
@@ -68,6 +72,10 @@
 		3948216B34EA9B26E468A091 /* Pods-ThunderCatsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThunderCatsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThunderCatsTests/Pods-ThunderCatsTests.release.xcconfig"; sourceTree = "<group>"; };
 		6E0746851B863B76000480F9 /* UICollectionReusableView+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UICollectionReusableView+TCAdditions.h"; path = "Categories/UICollectionReusableView+TCAdditions.h"; sourceTree = "<group>"; };
 		6E0746861B863B76000480F9 /* UICollectionReusableView+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UICollectionReusableView+TCAdditions.m"; path = "Categories/UICollectionReusableView+TCAdditions.m"; sourceTree = "<group>"; };
+		6E0746891B86404C000480F9 /* UIAlertController+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertController+TCAdditions.h"; path = "Categories/UIAlertController+TCAdditions.h"; sourceTree = "<group>"; };
+		6E07468A1B86404C000480F9 /* UIViewController+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+TCAdditions.h"; path = "Categories/UIViewController+TCAdditions.h"; sourceTree = "<group>"; };
+		6E07468B1B86404C000480F9 /* UIAlertController+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertController+TCAdditions.m"; path = "Categories/UIAlertController+TCAdditions.m"; sourceTree = "<group>"; };
+		6E07468C1B86404C000480F9 /* UIViewController+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+TCAdditions.m"; path = "Categories/UIViewController+TCAdditions.m"; sourceTree = "<group>"; };
 		6E07B0FD1937EA9600680D7E /* ThunderCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThunderCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E07B1001937EA9600680D7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6E07B1021937EA9600680D7E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -286,6 +294,10 @@
 				6EFC4A741ACEF79D00E2A84B /* NSURL+TCAdditions.m */,
 				6EFC4A7B1ACF072E00E2A84B /* UIControl+TCAdditions.h */,
 				6EFC4A7C1ACF072E00E2A84B /* UIControl+TCAdditions.m */,
+				6E0746891B86404C000480F9 /* UIAlertController+TCAdditions.h */,
+				6E07468B1B86404C000480F9 /* UIAlertController+TCAdditions.m */,
+				6E07468A1B86404C000480F9 /* UIViewController+TCAdditions.h */,
+				6E07468C1B86404C000480F9 /* UIViewController+TCAdditions.m */,
 				6EFEBE8C1B4EF3F600B55426 /* TCNullabilityMacros.h */,
 			);
 			name = Categories;
@@ -455,11 +467,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E07468F1B86404C000480F9 /* UIViewController+TCAdditions.m in Sources */,
 				6E0746871B863B76000480F9 /* UICollectionReusableView+TCAdditions.m in Sources */,
 				6E07B1111937EA9600680D7E /* AppDelegate.m in Sources */,
 				6E7964B91A7BF73900378E9B /* NSString+TCAdditions.m in Sources */,
 				6EFC4A6F1ACEF25100E2A84B /* UITextField+TCAdditions.m in Sources */,
 				6EFC4A751ACEF79D00E2A84B /* NSURL+TCAdditions.m in Sources */,
+				6E07468D1B86404C000480F9 /* UIAlertController+TCAdditions.m in Sources */,
 				6EFC4A721ACEF36C00E2A84B /* NSDictionary+TCAdditions.m in Sources */,
 				6E7964BF1A7BF73900378E9B /* UIImageView+WebCacheBlur.m in Sources */,
 				6E07B10D1937EA9600680D7E /* main.m in Sources */,
@@ -484,6 +498,8 @@
 				6EFC4A6C1ACEEED500E2A84B /* UIViewTests.m in Sources */,
 				6EFC4A7F1ACF077E00E2A84B /* UIControlTests.m in Sources */,
 				6E0746881B863B76000480F9 /* UICollectionReusableView+TCAdditions.m in Sources */,
+				6E0746901B86404C000480F9 /* UIViewController+TCAdditions.m in Sources */,
+				6E07468E1B86404C000480F9 /* UIAlertController+TCAdditions.m in Sources */,
 				A9A455E9193F9E0C00E14ED7 /* UIColorTests.m in Sources */,
 				6E8605DA1B7A8A6E004DAEA8 /* NSDictionaryTests.m in Sources */,
 				272C1F5D1B67D897008B256E /* UINavigationControllerTests.m in Sources */,
