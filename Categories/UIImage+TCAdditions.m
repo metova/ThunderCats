@@ -29,7 +29,6 @@
 
 #import "UIImage+TCAdditions.h"
 
-#import <NYXImagesKit/UIImage+Resizing.h>
 #import <Accelerate/Accelerate.h>
 #import <float.h>
 
@@ -366,7 +365,7 @@
          * CGImageRelease(imageRef);
          */
         
-        UIImage *scaledImage = [image scaleToCoverSize:size];
+        UIImage *scaledImage = [UIImage tc_imageWithImage:image scaledToFillSize:size];
         
         UIImage *orientatedImage = [scaledImage tc_setImageOrientationUp];
         
@@ -417,6 +416,9 @@
 + (UIImage *)tc_imageWithImage:(UIImage *)image
                scaledToFitSize:(CGSize)size
 {
+    NSAssert(image.size.height != 0, @"Invalid image height. You must pass an image with a height greater than zero.");
+    NSAssert(image.size.width != 0, @"Invalid image width. You must pass an image with a width greater than zero.");
+    
     CGFloat scale = MIN(size.width/image.size.width, size.height/image.size.height);
     CGFloat width = image.size.width * scale;
     CGFloat height = image.size.height * scale;
@@ -433,6 +435,9 @@
 + (UIImage *)tc_imageWithImage:(UIImage *)image
               scaledToFillSize:(CGSize)size
 {
+    NSAssert(image.size.height != 0, @"Invalid image height. You must pass an image with a height greater than zero.");
+    NSAssert(image.size.width != 0, @"Invalid image width. You must pass an image with a width greater than zero.");
+    
     CGFloat scale = MAX(size.width/image.size.width, size.height/image.size.height);
     CGFloat width = image.size.width * scale;
     CGFloat height = image.size.height * scale;
@@ -449,6 +454,9 @@
 + (UIImage *)tc_imageWithImage:(UIImage *)image
     scaledAndCroppedToFillSize:(CGSize)size
 {
+    NSAssert(image.size.height != 0, @"Invalid image height. You must pass an image with a height greater than zero.");
+    NSAssert(image.size.width != 0, @"Invalid image width. You must pass an image with a width greater than zero.");
+    
     CGFloat scale = MAX(size.width/image.size.width, size.height/image.size.height);
     CGFloat width = image.size.width * scale;
     CGFloat height = image.size.height * scale;

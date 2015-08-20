@@ -31,7 +31,8 @@
 
 @implementation UIViewController (TCAdditions)
 
-- (void)tc_displayNotImplementedAlert {
+- (void)tc_displayNotImplementedAlert
+{
     [self presentViewController:[UIAlertController tc_notImplementedAlert] animated:YES completion:nil];
 }
 

@@ -30,6 +30,9 @@
 
 @interface UIAlertController (TCAdditions)
 
+/**
+ *  This is a convenient method that returns an alert controller with the title, "Not Implemented", and message, "This feature is not yet implemented."
+ */
 + (instancetype)tc_notImplementedAlert;
 
 @end

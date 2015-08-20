@@ -1,5 +1,5 @@
 //
-//  UIAlertController+TCAdditions.m
+//  UICollectionReusableView+TCAdditions.h
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,21 +26,31 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "UIAlertController+TCAdditions.h"
 
-@implementation UIAlertController (TCAdditions)
+#import <UIKit/UIKit.h>
+#import "TCNullabilityMacros.h"
 
-+ (instancetype)tc_notImplementedAlert
-{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Not Implemented"
-                                                                   message:@"This feature is not yet implemented."
-                                                            preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction *okay = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
-    
-    [alert addAction:okay];
-    
-    return alert;
-}
+@interface UICollectionReusableView (TCAdditions)
+
+/**
+ *  Returns a string equal to the class name for use as a reuse identifier.
+ *
+ *  @return A reuse identifier that is equal to the class name.
+ */
++ (NSString * __tc_null_unspecified)tc_reuseIdentifier;
+
+/**
+ *  Returns a string equal to the class name.
+ *
+ *  @return A string equal to the class name.
+ */
++ (NSString * __tc_null_unspecified)tc_nibName;
+
+/**
+ *  Returns a nib for the cell subclass if one exists and is named after the class.
+ *
+ *  @return The nib for the cell subclass.
+ */
++ (UINib * __tc_null_unspecified)tc_nib;
 
 @end

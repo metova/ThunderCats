@@ -33,6 +33,7 @@
 #import "NSString+TCAdditions.h"
 #import "UIAlertView+TCAdditions.h"
 #import "UICollectionViewCell+TCAdditions.h"
+#import "UICollectionReusableView+TCAdditions.h"
 #import "UIColor+TCAdditions.h"
 #import "UIDevice+TCAdditions.h"
 #import "UIImage+TCAdditions.h"
@@ -43,5 +44,6 @@
 #import "NSDictionary+TCAdditions.h"
 #import "NSURL+TCAdditions.h"
 #import "UIControl+TCAdditions.h"
+#import "UINavigationController+TCAdditions.h"
 
 #endif

@@ -27,6 +27,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TCNullabilityMacros.h"
 
 @interface UITextField (TCAdditions)
 

@@ -30,7 +30,7 @@
 
 @implementation NSDictionary (TCAdditions)
 
-- (NSString *)tc_getJSONString
+- (NSString *)tc_JSONString
 {
     NSError *e = nil;
     NSData *data = [NSJSONSerialization dataWithJSONObject:self
@@ -39,11 +39,18 @@
     
     if (e)
     {
-        NSLog(@"ThunderCats > Error creating JSON string from dictionary.");
-        return [self description];
+#if DEBUG
+        NSLog(@"ThunderCats > Error creating JSON string from dictionary: %@.", [e localizedDescription]);
+#endif
+        return nil;
     }
     
     return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+}
+
+- (NSString *)tc_getJSONString
+{
+    return [self tc_JSONString];
 }
 
 @end

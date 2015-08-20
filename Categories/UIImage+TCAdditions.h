@@ -29,6 +29,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "TCNullabilityMacros.h"
 
 @interface UIImage (ImageEffects)
 
@@ -39,28 +40,28 @@
  *
  *  @return An image consisting of the provided color.
  */
-+ (UIImage *)tc_imageWithColor:(UIColor *)color;
++ (UIImage * __tc_null_unspecified)tc_imageWithColor:(UIColor * __tc_nonnull)color;
 
 /**
  *  Returns a new image resulting from applying a blur and light effect to the original image. This method does not alter the original image.
  *
  *  @return An image with a blur and light effect applied to it.
  */
-- (UIImage *)tc_imageWithLightEffect;
+- (UIImage * __tc_null_unspecified)tc_imageWithLightEffect;
 
 /**
  *  Returns a new image resulting from applying a blur and extra light effect to the original image. This method does not alter the original image.
  *
  *  @return An image with a blur and extra light effect applied to it.
  */
-- (UIImage *)tc_imageWithExtraLightEffect;
+- (UIImage * __tc_null_unspecified)tc_imageWithExtraLightEffect;
 
 /**
  *  Returns a new image resulting from applying a blur and dark effect to the original image. This method does not alter the original image.
  *
  *  @return An image with a blur and dark effect applied to it.
  */
-- (UIImage *)tc_imageWithDarkEffect;
+- (UIImage * __tc_null_unspecified)tc_imageWithDarkEffect;
 
 /**
  *  Returns a new image resulting from applying a blur and tint effect to the original image. This method does not alter the original image.
@@ -69,7 +70,7 @@
  *
  *  @return An image with a blur and tint effect applied to it.
  */
-- (UIImage *)tc_imageWithTintEffectUsingColor:(UIColor *)tintColor;
+- (UIImage * __tc_null_unspecified)tc_imageWithTintEffectUsingColor:(UIColor * __tc_nonnull)tintColor;
 
 /**
  *  Returns a new image resulting from applying effects to the original image. This method does not alter the original image.
@@ -81,17 +82,17 @@
  *
  *  @return An image with effects applied to it.
  */
-- (UIImage *)tc_imageWithBlurUsingRadius:(CGFloat)blurRadius
-                               tintColor:(UIColor *)tintColor
-                   saturationDeltaFactor:(CGFloat)saturationDeltaFactor
-                               maskImage:(UIImage *)maskImage;
+- (UIImage * __tc_null_unspecified)tc_imageWithBlurUsingRadius:(CGFloat)blurRadius
+                                                     tintColor:(UIColor * __tc_nullable)tintColor
+                                         saturationDeltaFactor:(CGFloat)saturationDeltaFactor
+                                                     maskImage:(UIImage * __tc_nullable)maskImage;
 
 /**
  *  I don't really know what this method does.
  *
  *  @return An image...
  */
-- (UIImage *)tc_setImageOrientationUp;
+- (UIImage * __tc_null_unspecified)tc_setImageOrientationUp;
 
 /**
  *  Generates a UIImage that is scaled to cover the specified size given an ALAsset.
@@ -100,9 +101,9 @@
  *  @param size       The size that the resulting image should cover.
  *  @param completion Completion block that is called once the image is generated.
  */
-- (void)tc_imageFromAsset:(ALAsset *)asset
+- (void)tc_imageFromAsset:(ALAsset * __tc_nonnull)asset
         scaledToCoverSize:(CGSize)size
-               completion:(void (^)(UIImage *image))completion;
+               completion:(void (^ __tc_nonnull)(UIImage * __tc_null_unspecified image))completion;
 
 /**
  *  Converts an ALAssetOrientation to the equivalent UIImageOrientation.
@@ -121,8 +122,8 @@
  *
  *  @return An image scaled to fit within the provided size.
  */
-+ (UIImage *)tc_imageWithImage:(UIImage *)image
-               scaledToFitSize:(CGSize)size;
++ (UIImage * __tc_null_unspecified)tc_imageWithImage:(UIImage * __tc_nonnull)image
+                                     scaledToFitSize:(CGSize)size;
 
 /**
  *  Creates a new image that is scaled to the size that fully fills a specific size (aspect fill).
@@ -132,8 +133,8 @@
  *
  *  @return An image scaled to fill the provided size.
  */
-+ (UIImage *)tc_imageWithImage:(UIImage *)image
-              scaledToFillSize:(CGSize)size;
++ (UIImage * __tc_null_unspecified)tc_imageWithImage:(UIImage * __tc_nonnull)image
+                                    scaledToFillSize:(CGSize)size;
 
 /**
  *  Creates a new image that is scaled to the size that fully fills a specific size (aspect fill). The portions of the image that don't fit within the size after scaling are cropped.
@@ -143,8 +144,8 @@
  *
  *  @return An image scaled and cropped to fill the provided size.
  */
-+ (UIImage *)tc_imageWithImage:(UIImage *)image
-    scaledAndCroppedToFillSize:(CGSize)size;
++ (UIImage * __tc_null_unspecified)tc_imageWithImage:(UIImage * __tc_nonnull)image
+                          scaledAndCroppedToFillSize:(CGSize)size;
 
 
 
@@ -157,28 +158,28 @@
  *
  *  @return An image consisting of the provided color.
  */
-+ (UIImage *)imageWithColor:(UIColor *)color __deprecated_msg("This method is susceptible to naming conflicts because it is missing the tc prefix. Use +tc_imageWithColor: instead.");
++ (UIImage * __tc_null_unspecified)imageWithColor:(UIColor * __tc_nonnull)color __deprecated_msg("This method is susceptible to naming conflicts because it is missing the tc prefix. Use +tc_imageWithColor: instead.");
 
 /**
  *  Returns a new image resulting from applying a blur and light effect to the original image. This method does not alter the original image.
  *
  *  @return An image with a blur and light effect applied to it.
  */
-- (UIImage *)applyLightEffect __deprecated_msg("This method is susceptible to naming conflicts because it is missing the tc prefix. The name is also confusing because it implies that the effect will be applied to this image when really it generates a new image with the effect applied to it. Use -tc_imageWithLightEffect instead.");
+- (UIImage * __tc_null_unspecified)applyLightEffect __deprecated_msg("This method is susceptible to naming conflicts because it is missing the tc prefix. The name is also confusing because it implies that the effect will be applied to this image when really it generates a new image with the effect applied to it. Use -tc_imageWithLightEffect instead.");
 
 /**
  *  Returns a new image resulting from applying a blur and extra light effect to the original image. This method does not alter the original image.
  *
  *  @return An image with a blur and extra light effect applied to it.
  */
-- (UIImage *)applyExtraLightEffect __deprecated_msg("This method is susceptible to naming conflicts because it is missing the tc prefix. The name is also confusing because it implies that the effect will be applied to this image when really it generates a new image with the effect applied to it. Use -tc_imageWithExtraLightEffect instead.");
+- (UIImage * __tc_null_unspecified)applyExtraLightEffect __deprecated_msg("This method is susceptible to naming conflicts because it is missing the tc prefix. The name is also confusing because it implies that the effect will be applied to this image when really it generates a new image with the effect applied to it. Use -tc_imageWithExtraLightEffect instead.");
 
 /**
  *  Returns a new image resulting from applying a blur and dark effect to the original image. This method does not alter the original image.
  *
  *  @return An image with a blur and dark effect applied to it.
  */
-- (UIImage *)applyDarkEffect __deprecated_msg("This method is susceptible to naming conflicts because it is missing the tc prefix. The name is also confusing because it implies that the effect will be applied to this image when really it generates a new image with the effect applied to it. Use -tc_imageWithDarkEffect instead.");
+- (UIImage * __tc_null_unspecified)applyDarkEffect __deprecated_msg("This method is susceptible to naming conflicts because it is missing the tc prefix. The name is also confusing because it implies that the effect will be applied to this image when really it generates a new image with the effect applied to it. Use -tc_imageWithDarkEffect instead.");
 
 /**
  *  Returns a new image resulting from applying a blur and tint effect to the original image. This method does not alter the original image.
@@ -187,7 +188,7 @@
  *
  *  @return An image with a blur and tint effect applied to it.
  */
-- (UIImage *)applyTintEffectWithColor:(UIColor *)tintColor __deprecated_msg("This method is susceptible to naming conflicts because it is missing the tc prefix. The name is also confusing because it implies that the effect will be applied to this image when really it generates a new image with the effect applied to it. Use -tc_imageWithTintEffectUsingColor: instead.");
+- (UIImage * __tc_null_unspecified)applyTintEffectWithColor:(UIColor * __tc_nonnull)tintColor __deprecated_msg("This method is susceptible to naming conflicts because it is missing the tc prefix. The name is also confusing because it implies that the effect will be applied to this image when really it generates a new image with the effect applied to it. Use -tc_imageWithTintEffectUsingColor: instead.");
 
 /**
  *  Returns a new image resulting from applying effects to the original image. This method does not alter the original image.
@@ -199,10 +200,10 @@
  *
  *  @return An image with effects applied to it.
  */
-- (UIImage *)applyBlurWithRadius:(CGFloat)blurRadius
-                       tintColor:(UIColor *)tintColor
-           saturationDeltaFactor:(CGFloat)saturationDeltaFactor
-                       maskImage:(UIImage *)maskImage __deprecated_msg("This method is susceptible to naming conflicts because it is missing the tc prefix. The name is also confusing because it implies that the effect will be applied to this image when really it generates a new image with the effect applied to it. Use -tc_imageWithBlurUsingRadius:tintColor:saturationDeltaFactor:maskImage: instead.");
+- (UIImage * __tc_null_unspecified)applyBlurWithRadius:(CGFloat)blurRadius
+                                             tintColor:(UIColor * __tc_nullable)tintColor
+                                 saturationDeltaFactor:(CGFloat)saturationDeltaFactor
+                                             maskImage:(UIImage * __tc_nullable)maskImage __deprecated_msg("This method is susceptible to naming conflicts because it is missing the tc prefix. The name is also confusing because it implies that the effect will be applied to this image when really it generates a new image with the effect applied to it. Use -tc_imageWithBlurUsingRadius:tintColor:saturationDeltaFactor:maskImage: instead.");
 
 
 @end

@@ -1,5 +1,5 @@
 //
-//  UIAlertController+TCAdditions.m
+//  TCNullabilityMacros.h
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,21 +26,29 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "UIAlertController+TCAdditions.h"
+#ifndef ThunderCats_TCNullabilityMacros_h
+#define ThunderCats_TCNullabilityMacros_h
 
-@implementation UIAlertController (TCAdditions)
+#if __has_feature(nullability)
+#define TC_ASSUME_NONNULL_BEGIN _Pragma("clang assume_nonnull begin")
+#define TC_ASSUME_NONNULL_END _Pragma("clang assume_nonnull end")
+#define tc_nullable nullable
+#define tc_nonnull nonnull
+#define tc_null_unspecified null_unspecified
+#define tc_null_resettable null_resettable
+#define __tc_nullable __nullable
+#define __tc_nonnull __nonnull
+#define __tc_null_unspecified __null_unspecified
+#else
+#define TC_ASSUME_NONNULL_BEGIN
+#define TC_ASSUME_NONNULL_END
+#define tc_nullable
+#define tc_nonnull
+#define tc_null_unspecified
+#define tc_null_resettable
+#define __tc_nullable
+#define __tc_nonnull
+#define __tc_null_unspecified
+#endif
 
-+ (instancetype)tc_notImplementedAlert
-{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Not Implemented"
-                                                                   message:@"This feature is not yet implemented."
-                                                            preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction *okay = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
-    
-    [alert addAction:okay];
-    
-    return alert;
-}
-
-@end
+#endif

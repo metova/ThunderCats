@@ -37,13 +37,12 @@
     
     if (!success)
     {
-        NSLog(@"ThunderCats > Failed to add NSURLIsExcludedFromBackupKey to url, %@, with error: %@", self.absoluteString, error);
-        return NO;
+#if DEBUG
+        NSLog(@"ThunderCats > Failed to add NSURLIsExcludedFromBackupKey to url, %@, with error: %@", self.absoluteString, [error localizedDescription]);
+#endif
     }
-    else
-    {
-        return YES;
-    }
+    
+    return success;
 }
 
 @end
