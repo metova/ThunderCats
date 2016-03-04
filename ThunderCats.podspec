@@ -6,7 +6,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = "ThunderCats"
-  s.version          = "1.0.13"
+  s.version          = "1.0.14"
   s.summary          = "Useful categories"
   s.description      = <<-DESC
                        Useful categories used by Metova
