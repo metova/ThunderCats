@@ -41,7 +41,9 @@
     {
         if ([actionSelectorString isEqualToString:action])
         {
-            return YES;
+            if ([target respondsToSelector:ibactionSelector]) {
+                return YES;
+            }
         }
     }
     
