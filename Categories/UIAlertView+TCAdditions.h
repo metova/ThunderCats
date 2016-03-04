@@ -28,6 +28,7 @@
 
 
 #import <UIKit/UIKit.h>
+#import "TCNullabilityMacros.h"
 
 @interface UIAlertView (TCAdditions)
 

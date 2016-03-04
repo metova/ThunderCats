@@ -27,6 +27,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TCNullabilityMacros.h"
 
 @interface NSDictionary (TCAdditions)
 
@@ -35,6 +36,13 @@
  *
  *  @return A JSON string.
  */
-- (NSString *)tc_getJSONString;
+- (NSString * __tc_nullable)tc_JSONString;
+
+/**
+ *  Returns a string with the contents of the dictionary interpreted as JSON. The JSON is pretty printed so it's easier to read. This is particularly useful for debugging network requests and responses.
+ *
+ *  @return A JSON string.
+ */
+- (NSString * __tc_nullable)tc_getJSONString __deprecated_msg("This is deprecated in favor of `-tc_JSONString:`.");
 
 @end

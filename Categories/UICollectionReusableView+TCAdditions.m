@@ -1,5 +1,5 @@
 //
-//  NSURL+TCAdditions.m
+//  UICollectionReusableView+TCAdditions.m
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,23 +26,31 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "NSURL+TCAdditions.h"
 
-@implementation NSURL (TCAdditions)
+#import "UICollectionReusableView+TCAdditions.h"
 
-- (BOOL)tc_addExcludeBackupAttribute
+@implementation UICollectionReusableView (TCAdditions)
+
++ (NSString *)tc_reuseIdentifier
 {
-    NSError *error = nil;
-    BOOL success = [self setResourceValue:@YES forKey:NSURLIsExcludedFromBackupKey error:&error];
-    
-    if (!success)
-    {
-#if DEBUG
-        NSLog(@"ThunderCats > Failed to add NSURLIsExcludedFromBackupKey to url, %@, with error: %@", self.absoluteString, [error localizedDescription]);
-#endif
-    }
-    
-    return success;
+    NSString *className = NSStringFromClass(self);
+    NSString *classNameWithoutSwiftModule = [className componentsSeparatedByString:@"."].lastObject;
+    return classNameWithoutSwiftModule;
+}
+
+
++ (NSString *)tc_nibName
+{
+    NSString *className = NSStringFromClass(self);
+    NSString *classNameWithoutSwiftModule = [className componentsSeparatedByString:@"."].lastObject;
+    return classNameWithoutSwiftModule;
+}
+
+
++ (UINib *)tc_nib
+{
+    return [UINib nibWithNibName:[self tc_nibName]
+                          bundle:[NSBundle mainBundle]];
 }
 
 @end

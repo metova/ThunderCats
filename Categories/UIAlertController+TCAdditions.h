@@ -1,5 +1,5 @@
 //
-//  NSURL+TCAdditions.m
+//  UIAlertController+TCAdditions.h
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,23 +26,13 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "NSURL+TCAdditions.h"
+#import <UIKit/UIKit.h>
 
-@implementation NSURL (TCAdditions)
+@interface UIAlertController (TCAdditions)
 
-- (BOOL)tc_addExcludeBackupAttribute
-{
-    NSError *error = nil;
-    BOOL success = [self setResourceValue:@YES forKey:NSURLIsExcludedFromBackupKey error:&error];
-    
-    if (!success)
-    {
-#if DEBUG
-        NSLog(@"ThunderCats > Failed to add NSURLIsExcludedFromBackupKey to url, %@, with error: %@", self.absoluteString, [error localizedDescription]);
-#endif
-    }
-    
-    return success;
-}
+/**
+ *  This is a convenient method that returns an alert controller with the title, "Not Implemented", and message, "This feature is not yet implemented."
+ */
++ (instancetype)tc_notImplementedAlert;
 
 @end

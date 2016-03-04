@@ -39,9 +39,11 @@
     
     for (NSString *action in actionsForTarget)
     {
-        if ([actionSelectorString isEqualToString:action] == YES)
+        if ([actionSelectorString isEqualToString:action])
         {
-            return YES;
+            if ([target respondsToSelector:ibactionSelector]) {
+                return YES;
+            }
         }
     }
     

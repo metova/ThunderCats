@@ -1,5 +1,5 @@
 //
-//  NSURL+TCAdditions.m
+//  UICollectionReusableView+TCAdditions.h
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,23 +26,31 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "NSURL+TCAdditions.h"
 
-@implementation NSURL (TCAdditions)
+#import <UIKit/UIKit.h>
+#import "TCNullabilityMacros.h"
 
-- (BOOL)tc_addExcludeBackupAttribute
-{
-    NSError *error = nil;
-    BOOL success = [self setResourceValue:@YES forKey:NSURLIsExcludedFromBackupKey error:&error];
-    
-    if (!success)
-    {
-#if DEBUG
-        NSLog(@"ThunderCats > Failed to add NSURLIsExcludedFromBackupKey to url, %@, with error: %@", self.absoluteString, [error localizedDescription]);
-#endif
-    }
-    
-    return success;
-}
+@interface UICollectionReusableView (TCAdditions)
+
+/**
+ *  Returns a string equal to the class name for use as a reuse identifier.
+ *
+ *  @return A reuse identifier that is equal to the class name.
+ */
++ (NSString * __tc_null_unspecified)tc_reuseIdentifier;
+
+/**
+ *  Returns a string equal to the class name.
+ *
+ *  @return A string equal to the class name.
+ */
++ (NSString * __tc_null_unspecified)tc_nibName;
+
+/**
+ *  Returns a nib for the cell subclass if one exists and is named after the class.
+ *
+ *  @return The nib for the cell subclass.
+ */
++ (UINib * __tc_null_unspecified)tc_nib;
 
 @end

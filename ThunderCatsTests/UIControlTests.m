@@ -71,6 +71,13 @@
         NSUInteger controlEvent = [event unsignedIntegerValue];
         XCTAssertTrue([control tc_isControlWiredToTarget:self forIBActionSelector:@selector(testControlAction) forControlEvent:controlEvent]);
     }
+    
+    for (NSNumber *event in controlEvents)
+    {
+        NSUInteger controlEvent = [event unsignedIntegerValue];
+        
+        XCTAssertFalse([control tc_isControlWiredToTarget:self forIBActionSelector:NSSelectorFromString(@"aMethodThatIsNotImplemented") forControlEvent:controlEvent]);
+    }
 }
 
 @end
