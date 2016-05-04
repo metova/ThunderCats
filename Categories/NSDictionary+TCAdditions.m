@@ -48,9 +48,4 @@
     return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 
-- (NSString *)tc_getJSONString
-{
-    return [self tc_JSONString];
-}
-
 @end
