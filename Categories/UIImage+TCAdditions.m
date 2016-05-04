@@ -472,49 +472,4 @@
     return newImage;
 }
 
-
-
-#pragma mark - Deprecated Methods
-
-+ (UIImage *)imageWithColor:(UIColor *)color
-{
-    return [UIImage tc_imageWithColor:color];
-}
-
-
-- (UIImage *)applyLightEffect
-{
-    return [self tc_imageWithLightEffect];
-}
-
-
-- (UIImage *)applyExtraLightEffect
-{
-    return [self tc_imageWithExtraLightEffect];
-}
-
-
-- (UIImage *)applyDarkEffect
-{
-    return [self tc_imageWithDarkEffect];
-}
-
-
-- (UIImage *)applyTintEffectWithColor:(UIColor *)tintColor
-{
-    return [self tc_imageWithTintEffectUsingColor:tintColor];
-}
-
-
-- (UIImage *)applyBlurWithRadius:(CGFloat)blurRadius
-                       tintColor:(UIColor *)tintColor
-           saturationDeltaFactor:(CGFloat)saturationDeltaFactor
-                       maskImage:(UIImage *)maskImage
-{
-    return [self tc_imageWithBlurUsingRadius:blurRadius
-                                   tintColor:tintColor
-                       saturationDeltaFactor:saturationDeltaFactor
-                                   maskImage:maskImage];
-}
-
 @end

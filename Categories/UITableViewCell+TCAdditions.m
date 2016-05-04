@@ -46,23 +46,9 @@
     return classNameWithoutSwiftModule;
 }
 
-
-+ (NSString *)tc_iPadNibName
-{
-    return [NSString stringWithFormat:@"%@_iPad", [self tc_nibName]];
-}
-
-
 + (UINib *)tc_nib
 {
     return [UINib nibWithNibName:[self tc_nibName]
-                          bundle:[NSBundle mainBundle]];
-}
-
-
-+ (UINib *)tc_iPadNib
-{
-    return [UINib nibWithNibName:[self tc_iPadNibName]
                           bundle:[NSBundle mainBundle]];
 }
 

@@ -29,37 +29,12 @@
 
 #import "UIDevice+TCAdditions.h"
 
-
-static const CGFloat kNavigationBarHeightPortrait = 44.0;
-static const CGFloat kNavigationBarHeightLandscape = 32.0;
-
-NSString *const kVersionStringIOS6 = @"6.0";
-NSString *const kVersionStringIOS7 = @"7.0";
-NSString *const kVersionStringIOS8 = @"8.0";
-
 NSString *const TCIOSVersionStringIOS6 = @"6.0";
 NSString *const TCIOSVersionStringIOS7 = @"7.0";
 NSString *const TCIOSVersionStringIOS8 = @"8.0";
 
 
 @implementation UIDevice (TCAdditions)
-
-#pragma mark - Screen Dimension Checking Methods
-
-+ (BOOL)tc_isScreenHeight480
-{
-    CGRect screenSize = [[UIScreen mainScreen] bounds];
-    return screenSize.size.height == 480;
-}
-
-
-+ (BOOL)tc_isScreenHeight568
-{
-    CGRect screenSize = [[UIScreen mainScreen] bounds];
-    return screenSize.size.height == 568;
-}
-
-
 
 #pragma mark - Screen Dimensions
 
@@ -111,21 +86,6 @@ NSString *const TCIOSVersionStringIOS8 = @"8.0";
 {
     return CGRectGetHeight([UIApplication sharedApplication].statusBarFrame);
 }
-
-
-+ (CGFloat)tc_navigationBarHeight
-{
-    if (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation))
-    {
-        return kNavigationBarHeightPortrait;
-    }
-    else
-    {
-        return kNavigationBarHeightLandscape;
-    }
-}
-
-
 
 #pragma mark - iPad/iPhone Checking Methods
 
