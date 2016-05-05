@@ -1,5 +1,5 @@
 //
-//  ThunderCats.h
+//  UIAlertView+TCAdditions.h
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -27,22 +27,14 @@
 //
 
 
-#ifndef _ThunderCats_h
-#define _ThunderCats_h
+#import <UIKit/UIKit.h>
+#import "TCNullabilityMacros.h"
 
-#import "NSString+TCAdditions.h"
-#import "UIAlertView+TCAdditions.h"
-#import "UICollectionViewCell+TCAdditions.h"
-#import "UICollectionReusableView+TCAdditions.h"
-#import "UIColor+TCAdditions.h"
-#import "UIDevice+TCAdditions.h"
-#import "UIImage+TCAdditions.h"
-#import "UITableViewCell+TCAdditions.h"
-#import "UIView+TCAdditions.h"
-#import "UITextField+TCAdditions.h"
-#import "NSDictionary+TCAdditions.h"
-#import "NSURL+TCAdditions.h"
-#import "UIControl+TCAdditions.h"
-#import "UINavigationController+TCAdditions.h"
+@interface UIAlertView (TCAdditions)
 
-#endif
+/**
+ *  This is a convenient method that displays an alert with the title, "Not Implemented", and message, "This feature is not yet implemented."
+ */
++ (void)tc_displayNotImplementedAlert;
+
+@end

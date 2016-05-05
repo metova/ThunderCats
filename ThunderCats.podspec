@@ -13,14 +13,17 @@ Pod::Spec.new do |s|
                        DESC
   s.homepage         = "http://metova.com"
   s.license          = 'MIT'
-  s.authors           = { "Logan Gauthier" => "logan.gauthier@metova.com", "Kurt Treangen" => "kurt.treangen@metova.com", "William Grand" => "william.grand@metova.com" }
+  s.authors           = {
+        "Logan Gauthier" => "logan.gauthier@metova.com",
+        "Kurt Treangen" => "kurt.treangen@metova.com",
+        "William Grand" => "william.grand@metova.com",
+        "Nick Griffith" => "nick.griffith@metova.com"
+    }
   s.source           = { :git => "https://github.com/metova/ThunderCats.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '7.0'
-  s.ios.deployment_target = '7.0'
-  s.requires_arc = true
-  s.source_files = 'Categories/*.{h,m}'
-  s.public_header_files = 'Categories/*.h'
-  s.dependency 'NYXImagesKit', '~> 2.3'
-  s.dependency 'SDWebImage', '~> 3.7.1'
+  s.platform                = :ios, '7.0'
+  s.ios.deployment_target   = '7.0'
+  s.requires_arc            = true
+  s.source_files            = 'Categories/*.{h,m}'
+  s.public_header_files     = 'Categories/*.h'
 end 

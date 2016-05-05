@@ -1,5 +1,5 @@
 //
-//  ThunderCats.h
+//  UITableViewCell+TCAdditions.h
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -27,22 +27,30 @@
 //
 
 
-#ifndef _ThunderCats_h
-#define _ThunderCats_h
+#import <UIKit/UIKit.h>
+#import "TCNullabilityMacros.h"
 
-#import "NSString+TCAdditions.h"
-#import "UIAlertView+TCAdditions.h"
-#import "UICollectionViewCell+TCAdditions.h"
-#import "UICollectionReusableView+TCAdditions.h"
-#import "UIColor+TCAdditions.h"
-#import "UIDevice+TCAdditions.h"
-#import "UIImage+TCAdditions.h"
-#import "UITableViewCell+TCAdditions.h"
-#import "UIView+TCAdditions.h"
-#import "UITextField+TCAdditions.h"
-#import "NSDictionary+TCAdditions.h"
-#import "NSURL+TCAdditions.h"
-#import "UIControl+TCAdditions.h"
-#import "UINavigationController+TCAdditions.h"
+@interface UITableViewCell (TCAdditions)
 
-#endif
+/**
+ *  Returns a string equal to the class name for use as a reuse identifier.
+ *
+ *  @return A reuse identifier that is equal to the class name.
+ */
++ (NSString * __tc_null_unspecified)tc_reuseIdentifier;
+
+/**
+ *  Returns a string equal to the class name.
+ *
+ *  @return A string equal to the class name.
+ */
++ (NSString * __tc_null_unspecified)tc_nibName;
+
+/**
+ *  Returns a nib for the cell subclass if one exists and is named after the class.
+ *
+ *  @return The nib for the cell subclass.
+ */
++ (UINib * __tc_null_unspecified)tc_nib;
+
+@end

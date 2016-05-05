@@ -1,5 +1,5 @@
 //
-//  ThunderCats.h
+//  NSDictionary+TCAdditions.m
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,23 +26,26 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-
-#ifndef _ThunderCats_h
-#define _ThunderCats_h
-
-#import "NSString+TCAdditions.h"
-#import "UIAlertView+TCAdditions.h"
-#import "UICollectionViewCell+TCAdditions.h"
-#import "UICollectionReusableView+TCAdditions.h"
-#import "UIColor+TCAdditions.h"
-#import "UIDevice+TCAdditions.h"
-#import "UIImage+TCAdditions.h"
-#import "UITableViewCell+TCAdditions.h"
-#import "UIView+TCAdditions.h"
-#import "UITextField+TCAdditions.h"
 #import "NSDictionary+TCAdditions.h"
-#import "NSURL+TCAdditions.h"
-#import "UIControl+TCAdditions.h"
-#import "UINavigationController+TCAdditions.h"
 
+@implementation NSDictionary (TCAdditions)
+
+- (NSString *)tc_JSONString
+{
+    NSError *e = nil;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:self
+                                                   options:NSJSONWritingPrettyPrinted
+                                                     error:&e];
+    
+    if (e)
+    {
+#if DEBUG
+        NSLog(@"ThunderCats > Error creating JSON string from dictionary: %@.", [e localizedDescription]);
 #endif
+        return nil;
+    }
+    
+    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+}
+
+@end

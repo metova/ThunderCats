@@ -1,28 +1,40 @@
 # ThunderCats
 
-[![Version](http://cocoapod-badges.herokuapp.com/v/thundercats/badge.png)](http://cocoadocs.org/docsets/thundercats)
-[![Platform](http://cocoapod-badges.herokuapp.com/p/thundercats/badge.png)](http://cocoadocs.org/docsets/thundercats)
+[![Twitter](https://img.shields.io/badge/twitter-@Metova-3CAC84.svg)](http://twitter.com/metova)
+[![Build Status](https://travis-ci.org/metova/thundercats.svg)](https://travis-ci.org/metova/thundercats)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/thundercats.svg)](https://img.shields.io/cocoapods/v/thundercats.svg)
+[![Platform](https://img.shields.io/cocoapods/p/thundercats.svg?style=flat)](http://cocoadocs.org/docsets/thundercats)
+[![Documentation](https://img.shields.io/cocoapods/metrics/doc-percent/thundercats.svg)](http://cocoadocs.org/docsets/thundercats/)
+[![Coverage Status](https://coveralls.io/repos/github/metova/thundercats/badge.svg?branch=master)](https://coveralls.io/github/metova/thundercats?branch=master)
 
-Thundercats is a lightweight collection of utility extensions added to existing Foundation & UIKit classes.
-
-## Usage
-
-To run the example project; clone the repo, and run `pod install` from the Example directory first.
+ThunderCats is a lightweight collection of utility extensions added to existing Foundation & UIKit classes.
 
 ## Requirements
 
+- iOS 7.0 or newer
+
 ## Installation
 
-ThunderCats is available through [CocoaPods](http://cocoapods.org). To install
-it simply add the following line to your Podfile:
+ThunderCats is available through [CocoaPods](http://cocoapods.org). To install it simply add the following line to your Podfile:
 
-    pod 'ThunderCats', :git => 'https://github.com/metova/ThunderCats.git'
+```ruby
+pod 'ThunderCats'
+```
 
-## Author
+If you would like to test a beta version of ThunderCats, you can install the latest from develop:
 
-Metova Inc.
+```ruby
+pod 'ThunderCats', :git => 'https://github.com/metova/ThunderCats.git', :branch => 'develop'
+```
+
+
+## Credits
+
+ThunderCats is owned and maintained by [Metova Inc.](https://metova.com)
+
+[Contributors](https://github.com/Metova/ThunderCats/graphs/contributors)
 
 ## License
 
-ThunderCats is available under the MIT license. See the LICENSE file for more info.
+ThunderCats is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
 
