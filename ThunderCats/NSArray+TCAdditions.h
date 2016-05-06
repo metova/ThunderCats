@@ -27,6 +27,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TCNullabilityMacros.h"
 
 @interface NSArray (TCAdditions)
 
@@ -36,6 +37,6 @@
  *
  * @return a pretty printed formatted NSString
  */
-- (NSString *)tc_JSONString;
+- (NSString * __tc_nullable)tc_JSONString;
 
 @end

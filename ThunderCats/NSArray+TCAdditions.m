@@ -30,14 +30,17 @@
 
 @implementation NSArray (Takl)
 
-- (NSString *)tc_JSONString {
+- (NSString *)tc_JSONString
+{
     
     NSError *e = nil;
     NSData *data = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:&e];
     
     if (e) {
-        NSLog(@"Error creating JSON string from array.");
-        return [self description];
+#if DEBUG
+        NSLog(@"ThunderCats > Error creating JSON string from array: %@.", [e localizedDescription]);
+#endif
+        return nil;
     }
     
     NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
