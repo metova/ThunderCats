@@ -49,6 +49,9 @@
 		4AB0205A1CDABC5C00E38DC8 /* UIDeviceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB020531CDABC5C00E38DC8 /* UIDeviceTests.m */; };
 		4AB0205B1CDABC5C00E38DC8 /* UINavigationControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB020541CDABC5C00E38DC8 /* UINavigationControllerTests.m */; };
 		4AB0205C1CDABC5C00E38DC8 /* UIViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB020551CDABC5C00E38DC8 /* UIViewTests.m */; };
+		5394F2BB1CDD3FE9008C2112 /* NSArray+TCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5394F2B91CDD3FE9008C2112 /* NSArray+TCAdditions.h */; };
+		5394F2BC1CDD3FE9008C2112 /* NSArray+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5394F2BA1CDD3FE9008C2112 /* NSArray+TCAdditions.m */; };
+		5394F2BE1CDD4004008C2112 /* NSArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5394F2BD1CDD4004008C2112 /* NSArrayTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +116,9 @@
 		4AB020531CDABC5C00E38DC8 /* UIDeviceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDeviceTests.m; sourceTree = "<group>"; };
 		4AB020541CDABC5C00E38DC8 /* UINavigationControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationControllerTests.m; sourceTree = "<group>"; };
 		4AB020551CDABC5C00E38DC8 /* UIViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewTests.m; sourceTree = "<group>"; };
+		5394F2B91CDD3FE9008C2112 /* NSArray+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+TCAdditions.h"; sourceTree = "<group>"; };
+		5394F2BA1CDD3FE9008C2112 /* NSArray+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+TCAdditions.m"; sourceTree = "<group>"; };
+		5394F2BD1CDD4004008C2112 /* NSArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,8 @@
 		4AB01FAE1CDABB2C00E38DC8 /* ThunderCats */ = {
 			isa = PBXGroup;
 			children = (
+				5394F2B91CDD3FE9008C2112 /* NSArray+TCAdditions.h */,
+				5394F2BA1CDD3FE9008C2112 /* NSArray+TCAdditions.m */,
 				4AB0200D1CDABC2B00E38DC8 /* NSDictionary+TCAdditions.h */,
 				4AB0200E1CDABC2B00E38DC8 /* NSDictionary+TCAdditions.m */,
 				4AB0200F1CDABC2B00E38DC8 /* NSString+TCAdditions.h */,
@@ -211,6 +219,7 @@
 		4AB01FBA1CDABB2C00E38DC8 /* ThunderCatsTests */ = {
 			isa = PBXGroup;
 			children = (
+				5394F2BD1CDD4004008C2112 /* NSArrayTests.m */,
 				4AB0204F1CDABC5C00E38DC8 /* NSDictionaryTests.m */,
 				4AB020501CDABC5C00E38DC8 /* NSStringTests.m */,
 				4AB020511CDABC5C00E38DC8 /* UIColorTests.m */,
@@ -231,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AB020351CDABC2B00E38DC8 /* UIAlertController+TCAdditions.h in Headers */,
+				5394F2BB1CDD3FE9008C2112 /* NSArray+TCAdditions.h in Headers */,
 				4AB0204B1CDABC2B00E38DC8 /* UIView+TCAdditions.h in Headers */,
 				4AB0204D1CDABC2B00E38DC8 /* UIViewController+TCAdditions.h in Headers */,
 				4AB020301CDABC2B00E38DC8 /* NSString+TCAdditions.h in Headers */,
@@ -353,6 +363,7 @@
 				4AB0204A1CDABC2B00E38DC8 /* UITextField+TCAdditions.m in Sources */,
 				4AB020461CDABC2B00E38DC8 /* UINavigationController+TCAdditions.m in Sources */,
 				4AB020421CDABC2B00E38DC8 /* UIDevice+TCAdditions.m in Sources */,
+				5394F2BC1CDD3FE9008C2112 /* NSArray+TCAdditions.m in Sources */,
 				4AB0203A1CDABC2B00E38DC8 /* UICollectionReusableView+TCAdditions.m in Sources */,
 				4AB0204E1CDABC2B00E38DC8 /* UIViewController+TCAdditions.m in Sources */,
 				4AB020311CDABC2B00E38DC8 /* NSString+TCAdditions.m in Sources */,
@@ -374,6 +385,7 @@
 				4AB0205A1CDABC5C00E38DC8 /* UIDeviceTests.m in Sources */,
 				4AB020581CDABC5C00E38DC8 /* UIColorTests.m in Sources */,
 				4AB020591CDABC5C00E38DC8 /* UIControlTests.m in Sources */,
+				5394F2BE1CDD4004008C2112 /* NSArrayTests.m in Sources */,
 				4AB0205C1CDABC5C00E38DC8 /* UIViewTests.m in Sources */,
 				4AB0205B1CDABC5C00E38DC8 /* UINavigationControllerTests.m in Sources */,
 				4AB020571CDABC5C00E38DC8 /* NSStringTests.m in Sources */,
