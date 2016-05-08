@@ -1,5 +1,5 @@
 coverage_service: coveralls
-xcodeproj: MetovaTestKit.xcodeproj
-scheme: MetovaTestKit
+xcodeproj: ThunderCats.xcodeproj
+scheme: ThunderCats
 ignore:
 # No ignores for now

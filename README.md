@@ -11,7 +11,7 @@ ThunderCats is a lightweight collection of utility extensions added to existing 
 
 ## Requirements
 
-- iOS 7.0 or newer
+- iOS 8.0 or newer
 
 ## Installation
 
