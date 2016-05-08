@@ -1,5 +1,5 @@
 //
-//  NSDictionary+TCAdditions.h
+//  UICollectionViewCell+TCAdditions.h
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,16 +26,45 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+
+#import <UIKit/UIKit.h>
 #import "TCNullabilityMacros.h"
 
-@interface NSDictionary (TCAdditions)
+@interface UICollectionViewCell (TCAdditions)
 
 /**
- *  Returns a string with the contents of the dictionary interpreted as JSON. The JSON is pretty printed so it's easier to read. This is particularly useful for debugging network requests and responses.
+ *  Returns a string equal to the class name for use as a reuse identifier.
  *
- *  @return A JSON string.
+ *  @return A reuse identifier that is equal to the class name.
  */
-- (NSString * __tc_nullable)tc_JSONString;
++ (NSString * __tc_null_unspecified)tc_reuseIdentifier;
+
+/**
+ *  Returns a string equal to the class name.
+ *
+ *  @return A string equal to the class name.
+ */
++ (NSString * __tc_null_unspecified)tc_nibName;
+
+/**
+ *  Returns a string that is equal to the class name with "_iPad" appended to it.
+ *
+ *  @return A string that is equal to the class name with "_iPad" appended to it.
+ */
++ (NSString * __tc_null_unspecified)tc_iPadNibName __deprecated_msg("iPad methods will be removed in version 2.0");
+
+/**
+ *  Returns a nib for the cell subclass if one exists and is named after the class.
+ *
+ *  @return The nib for the cell subclass.
+ */
++ (UINib * __tc_null_unspecified)tc_nib;
+
+/**
+ *  Returns a nib for the cell subclass if one exists and is named after the class with "_iPad" appended to it.
+ *
+ *  @return The iPad nib for the cell subclass.
+ */
++ (UINib * __tc_null_unspecified)tc_iPadNib __deprecated_msg("iPad methods will be removed in version 2.0");
 
 @end

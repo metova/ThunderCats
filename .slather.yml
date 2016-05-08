@@ -1,0 +1,5 @@
+coverage_service: coveralls
+xcodeproj: ThunderCats.xcodeproj
+scheme: ThunderCats
+ignore:
+# No ignores for now

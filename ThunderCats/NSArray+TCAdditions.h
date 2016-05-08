@@ -1,5 +1,5 @@
 //
-//  ThunderCats.h
+//  NSArray+TCAdditions.h
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,23 +26,17 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#import <Foundation/Foundation.h>
+#import "TCNullabilityMacros.h"
 
-#ifndef _ThunderCats_h
-#define _ThunderCats_h
+@interface NSArray (TCAdditions)
 
-#import "NSString+TCAdditions.h"
-#import "UIAlertView+TCAdditions.h"
-#import "UICollectionViewCell+TCAdditions.h"
-#import "UICollectionReusableView+TCAdditions.h"
-#import "UIColor+TCAdditions.h"
-#import "UIDevice+TCAdditions.h"
-#import "UIImage+TCAdditions.h"
-#import "UITableViewCell+TCAdditions.h"
-#import "UIView+TCAdditions.h"
-#import "UITextField+TCAdditions.h"
-#import "NSDictionary+TCAdditions.h"
-#import "NSURL+TCAdditions.h"
-#import "UIControl+TCAdditions.h"
-#import "UINavigationController+TCAdditions.h"
 
-#endif
+/**
+ * Returns a string with the contents of the array interpreted as JSON. The JSON is pretty printed so it's easier to read. This is particularly useful for debugging network requests and responses.
+ *
+ * @return a pretty printed formatted NSString
+ */
+- (NSString * __tc_nullable)tc_JSONString;
+
+@end

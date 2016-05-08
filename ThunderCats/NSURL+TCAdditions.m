@@ -1,5 +1,5 @@
 //
-//  ThunderCats.h
+//  NSURL+TCAdditions.m
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,23 +26,23 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-
-#ifndef _ThunderCats_h
-#define _ThunderCats_h
-
-#import "NSString+TCAdditions.h"
-#import "UIAlertView+TCAdditions.h"
-#import "UICollectionViewCell+TCAdditions.h"
-#import "UICollectionReusableView+TCAdditions.h"
-#import "UIColor+TCAdditions.h"
-#import "UIDevice+TCAdditions.h"
-#import "UIImage+TCAdditions.h"
-#import "UITableViewCell+TCAdditions.h"
-#import "UIView+TCAdditions.h"
-#import "UITextField+TCAdditions.h"
-#import "NSDictionary+TCAdditions.h"
 #import "NSURL+TCAdditions.h"
-#import "UIControl+TCAdditions.h"
-#import "UINavigationController+TCAdditions.h"
 
+@implementation NSURL (TCAdditions)
+
+- (BOOL)tc_addExcludeBackupAttribute
+{
+    NSError *error = nil;
+    BOOL success = [self setResourceValue:@YES forKey:NSURLIsExcludedFromBackupKey error:&error];
+    
+    if (!success)
+    {
+#if DEBUG
+        NSLog(@"ThunderCats > Failed to add NSURLIsExcludedFromBackupKey to url, %@, with error: %@", self.absoluteString, [error localizedDescription]);
 #endif
+    }
+    
+    return success;
+}
+
+@end

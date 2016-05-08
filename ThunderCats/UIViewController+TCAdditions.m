@@ -1,5 +1,5 @@
 //
-//  ThunderCats.h
+//  UIViewController+TCAdditions.m
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,23 +26,14 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#import "UIViewController+TCAdditions.h"
+#import "UIAlertController+TCAdditions.h"
 
-#ifndef _ThunderCats_h
-#define _ThunderCats_h
+@implementation UIViewController (TCAdditions)
 
-#import "NSString+TCAdditions.h"
-#import "UIAlertView+TCAdditions.h"
-#import "UICollectionViewCell+TCAdditions.h"
-#import "UICollectionReusableView+TCAdditions.h"
-#import "UIColor+TCAdditions.h"
-#import "UIDevice+TCAdditions.h"
-#import "UIImage+TCAdditions.h"
-#import "UITableViewCell+TCAdditions.h"
-#import "UIView+TCAdditions.h"
-#import "UITextField+TCAdditions.h"
-#import "NSDictionary+TCAdditions.h"
-#import "NSURL+TCAdditions.h"
-#import "UIControl+TCAdditions.h"
-#import "UINavigationController+TCAdditions.h"
+- (void)tc_displayNotImplementedAlert
+{
+    [self presentViewController:[UIAlertController tc_notImplementedAlert] animated:YES completion:nil];
+}
 
-#endif
+@end

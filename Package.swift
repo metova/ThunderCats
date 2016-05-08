@@ -1,8 +1,8 @@
 //
-//  ThunderCats.h
-//  ThunderCats
+//  Package.swift
+//  DataManager
 //
-//  Copyright (c) 2015 Metova Inc.
+//  Copyright (c) 2016 Metova Inc.
 //
 //  MIT License
 //
@@ -26,23 +26,8 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+import PackageDescription
 
-#ifndef _ThunderCats_h
-#define _ThunderCats_h
-
-#import "NSString+TCAdditions.h"
-#import "UIAlertView+TCAdditions.h"
-#import "UICollectionViewCell+TCAdditions.h"
-#import "UICollectionReusableView+TCAdditions.h"
-#import "UIColor+TCAdditions.h"
-#import "UIDevice+TCAdditions.h"
-#import "UIImage+TCAdditions.h"
-#import "UITableViewCell+TCAdditions.h"
-#import "UIView+TCAdditions.h"
-#import "UITextField+TCAdditions.h"
-#import "NSDictionary+TCAdditions.h"
-#import "NSURL+TCAdditions.h"
-#import "UIControl+TCAdditions.h"
-#import "UINavigationController+TCAdditions.h"
-
-#endif
+let package = Package(
+    name: "ThunderCats"
+)

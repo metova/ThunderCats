@@ -1,5 +1,5 @@
 //
-//  ThunderCats.h
+//  NSURL+TCAdditions.h
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,23 +26,16 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#import <Foundation/Foundation.h>
+#import "TCNullabilityMacros.h"
 
-#ifndef _ThunderCats_h
-#define _ThunderCats_h
+@interface NSURL (TCAdditions)
 
-#import "NSString+TCAdditions.h"
-#import "UIAlertView+TCAdditions.h"
-#import "UICollectionViewCell+TCAdditions.h"
-#import "UICollectionReusableView+TCAdditions.h"
-#import "UIColor+TCAdditions.h"
-#import "UIDevice+TCAdditions.h"
-#import "UIImage+TCAdditions.h"
-#import "UITableViewCell+TCAdditions.h"
-#import "UIView+TCAdditions.h"
-#import "UITextField+TCAdditions.h"
-#import "NSDictionary+TCAdditions.h"
-#import "NSURL+TCAdditions.h"
-#import "UIControl+TCAdditions.h"
-#import "UINavigationController+TCAdditions.h"
+/**
+ *  Sets the NSURLIsExcludedFromBackupKey to YES for the file at the URL. This prevents files from being backed up to iCloud.
+ *
+ *  @return YES if NSURLIsExcludedFromBackupKey was set successfully, NO otherwise.
+ */
+- (BOOL)tc_addExcludeBackupAttribute;
 
-#endif
+@end

@@ -1,5 +1,5 @@
 //
-//  ThunderCats.h
+//  UIControl+TCAdditions.m
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,23 +26,28 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-
-#ifndef _ThunderCats_h
-#define _ThunderCats_h
-
-#import "NSString+TCAdditions.h"
-#import "UIAlertView+TCAdditions.h"
-#import "UICollectionViewCell+TCAdditions.h"
-#import "UICollectionReusableView+TCAdditions.h"
-#import "UIColor+TCAdditions.h"
-#import "UIDevice+TCAdditions.h"
-#import "UIImage+TCAdditions.h"
-#import "UITableViewCell+TCAdditions.h"
-#import "UIView+TCAdditions.h"
-#import "UITextField+TCAdditions.h"
-#import "NSDictionary+TCAdditions.h"
-#import "NSURL+TCAdditions.h"
 #import "UIControl+TCAdditions.h"
-#import "UINavigationController+TCAdditions.h"
 
-#endif
+@implementation UIControl (TCAdditions)
+
+- (BOOL)tc_isControlWiredToTarget:(id)target
+              forIBActionSelector:(SEL)ibactionSelector
+                  forControlEvent:(UIControlEvents)controlEvent
+{
+    NSString *actionSelectorString = NSStringFromSelector(ibactionSelector);
+    NSArray *actionsForTarget = [self actionsForTarget:target forControlEvent:controlEvent];
+    
+    for (NSString *action in actionsForTarget)
+    {
+        if ([actionSelectorString isEqualToString:action])
+        {
+            if ([target respondsToSelector:ibactionSelector]) {
+                return YES;
+            }
+        }
+    }
+    
+    return NO;
+}
+
+@end

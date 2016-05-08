@@ -40,17 +40,7 @@ NSString *const TCIOSVersionStringIOS8 = @"8.0";
 
 + (CGSize)tc_screenSize
 {
-    CGRect screenBounds = [UIScreen mainScreen].bounds;
-    
-    if ([UIDevice tc_isVersionLessThan:TCIOSVersionStringIOS8] &&
-        UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation))
-    {
-        return CGSizeMake(CGRectGetHeight(screenBounds), CGRectGetWidth(screenBounds));
-    }
-    else
-    {
-        return screenBounds.size;
-    }
+    return [UIScreen mainScreen].bounds.size;
 }
 
 
@@ -68,17 +58,7 @@ NSString *const TCIOSVersionStringIOS8 = @"8.0";
 
 + (CGSize)tc_statusBarSize
 {
-    CGSize size = [UIApplication sharedApplication].statusBarFrame.size;
-    
-    if ([UIDevice tc_isVersionLessThan:TCIOSVersionStringIOS8] &&
-        UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation))
-    {
-        return CGSizeMake(size.height, size.width);
-    }
-    else
-    {
-        return size;
-    }
+    return [UIApplication sharedApplication].statusBarFrame.size;
 }
 
 

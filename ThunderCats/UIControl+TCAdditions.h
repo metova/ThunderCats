@@ -1,5 +1,5 @@
 //
-//  ThunderCats.h
+//  UIControl+TCAdditions.h
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,23 +26,22 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#import <UIKit/UIKit.h>
+#import "TCNullabilityMacros.h"
 
-#ifndef _ThunderCats_h
-#define _ThunderCats_h
+@interface UIControl (TCAdditions)
 
-#import "NSString+TCAdditions.h"
-#import "UIAlertView+TCAdditions.h"
-#import "UICollectionViewCell+TCAdditions.h"
-#import "UICollectionReusableView+TCAdditions.h"
-#import "UIColor+TCAdditions.h"
-#import "UIDevice+TCAdditions.h"
-#import "UIImage+TCAdditions.h"
-#import "UITableViewCell+TCAdditions.h"
-#import "UIView+TCAdditions.h"
-#import "UITextField+TCAdditions.h"
-#import "NSDictionary+TCAdditions.h"
-#import "NSURL+TCAdditions.h"
-#import "UIControl+TCAdditions.h"
-#import "UINavigationController+TCAdditions.h"
+/**
+ *  Returns a Boolean value that indicates whether the control has an IBAction wired to a target for a particular control event.
+ *
+ *  @param target           The target of the action.
+ *  @param ibactionSelector The IBAction selector.
+ *  @param controlEvent     The control event to check for.
+ *
+ *  @return YES if the control has the target for the control event.
+ */
+- (BOOL)tc_isControlWiredToTarget:(id __tc_nonnull)target
+              forIBActionSelector:(SEL __tc_nonnull)ibactionSelector
+                  forControlEvent:(UIControlEvents)controlEvent;
 
-#endif
+@end
