@@ -1,11 +1,11 @@
 # ThunderCats
 
+[![Build Status](https://travis-ci.org/metova/ThunderCats.svg)](https://travis-ci.org/metova/ThunderCats)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/ThunderCats.svg)](https://img.shields.io/cocoapods/v/ThunderCats.svg)
+[![Documentation](https://img.shields.io/cocoapods/metrics/doc-percent/ThunderCats.svg)](http://cocoadocs.org/docsets/ThunderCats/)
+[![Coverage Status](https://coveralls.io/repos/github/metova/ThunderCats/badge.svg?branch=master)](https://coveralls.io/github/metova/ThunderCats?branch=master)
+[![Platform](https://img.shields.io/cocoapods/p/ThunderCats.svg?style=flat)](http://cocoadocs.org/docsets/ThunderCats)
 [![Twitter](https://img.shields.io/badge/twitter-@Metova-3CAC84.svg)](http://twitter.com/metova)
-[![Build Status](https://travis-ci.org/metova/thundercats.svg)](https://travis-ci.org/metova/thundercats)
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/thundercats.svg)](https://img.shields.io/cocoapods/v/thundercats.svg)
-[![Platform](https://img.shields.io/cocoapods/p/thundercats.svg?style=flat)](http://cocoadocs.org/docsets/thundercats)
-[![Documentation](https://img.shields.io/cocoapods/metrics/doc-percent/thundercats.svg)](http://cocoadocs.org/docsets/thundercats/)
-[![Coverage Status](https://coveralls.io/repos/github/metova/thundercats/badge.svg?branch=master)](https://coveralls.io/github/metova/thundercats?branch=master)
 
 ThunderCats is a lightweight collection of utility extensions added to existing Foundation & UIKit classes.
 
