@@ -69,7 +69,7 @@
 		4A7D51741CDABEDE00BACB72 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		4A7D51751CDABEDE00BACB72 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4A7D51761CDABEDE00BACB72 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		4A7D51771CDABEDE00BACB72 /* ThunderCats.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ThunderCats.podspec; sourceTree = "<group>"; };
+		4A7D51771CDABEDE00BACB72 /* ThunderCats.podspec */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text; path = ThunderCats.podspec; sourceTree = "<group>"; };
 		4A7D517D1CDAC09200BACB72 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		4AB01FAC1CDABB2C00E38DC8 /* ThunderCats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ThunderCats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB01FAF1CDABB2C00E38DC8 /* ThunderCats.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThunderCats.h; sourceTree = "<group>"; };
@@ -116,6 +116,10 @@
 		4AB020531CDABC5C00E38DC8 /* UIDeviceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDeviceTests.m; sourceTree = "<group>"; };
 		4AB020541CDABC5C00E38DC8 /* UINavigationControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationControllerTests.m; sourceTree = "<group>"; };
 		4AB020551CDABC5C00E38DC8 /* UIViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewTests.m; sourceTree = "<group>"; };
+		4AB9A3E11CDFA7370021B6B8 /* .slather.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .slather.yml; sourceTree = "<group>"; };
+		4AB9A3E21CDFA8010021B6B8 /* .travis.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		4AB9A3E31CDFA8850021B6B8 /* GEMFILE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GEMFILE; sourceTree = "<group>"; };
+		4AB9A3E51CDFA8F50021B6B8 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		5394F2B91CDD3FE9008C2112 /* NSArray+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+TCAdditions.h"; sourceTree = "<group>"; };
 		5394F2BA1CDD3FE9008C2112 /* NSArray+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+TCAdditions.m"; sourceTree = "<group>"; };
 		5394F2BD1CDD4004008C2112 /* NSArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayTests.m; sourceTree = "<group>"; };
@@ -144,11 +148,15 @@
 			isa = PBXGroup;
 			children = (
 				4A7D51731CDABEDE00BACB72 /* .gitignore */,
+				4AB9A3E11CDFA7370021B6B8 /* .slather.yml */,
+				4AB9A3E21CDFA8010021B6B8 /* .travis.yml */,
+				4AB9A3E31CDFA8850021B6B8 /* GEMFILE */,
 				4A7D51741CDABEDE00BACB72 /* CHANGELOG.md */,
 				4A7D51751CDABEDE00BACB72 /* LICENSE */,
 				4A7D51761CDABEDE00BACB72 /* README.md */,
-				4A7D51771CDABEDE00BACB72 /* ThunderCats.podspec */,
 				4A7D517D1CDAC09200BACB72 /* CONTRIBUTING.md */,
+				4AB9A3E51CDFA8F50021B6B8 /* Package.swift */,
+				4A7D51771CDABEDE00BACB72 /* ThunderCats.podspec */,
 			);
 			name = "Related Files";
 			sourceTree = "<group>";

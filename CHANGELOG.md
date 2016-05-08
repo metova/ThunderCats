@@ -8,6 +8,9 @@
 - Removed dependencies.
 - Updated README.md
 - Added CONTRIBUTING.md
+- Added .slather.yml for code coverage
+- Added .travis.yml for CI
+- Updated GEMFILE
 
 ## 0.1.0
 
