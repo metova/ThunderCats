@@ -1,5 +1,5 @@
 //
-//  ThunderCats.h
+//  UIAlertController+TCAdditions.m
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,23 +26,21 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#import "UIAlertController+TCAdditions.h"
 
-#ifndef _ThunderCats_h
-#define _ThunderCats_h
+@implementation UIAlertController (TCAdditions)
 
-#import "NSString+TCAdditions.h"
-#import "UIAlertView+TCAdditions.h"
-#import "UICollectionViewCell+TCAdditions.h"
-#import "UICollectionReusableView+TCAdditions.h"
-#import "UIColor+TCAdditions.h"
-#import "UIDevice+TCAdditions.h"
-#import "UIImage+TCAdditions.h"
-#import "UITableViewCell+TCAdditions.h"
-#import "UIView+TCAdditions.h"
-#import "UITextField+TCAdditions.h"
-#import "NSDictionary+TCAdditions.h"
-#import "NSURL+TCAdditions.h"
-#import "UIControl+TCAdditions.h"
-#import "UINavigationController+TCAdditions.h"
++ (instancetype)tc_notImplementedAlert
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Not Implemented"
+                                                                   message:@"This feature is not yet implemented."
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *okay = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
+    
+    [alert addAction:okay];
+    
+    return alert;
+}
 
-#endif
+@end

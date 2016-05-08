@@ -1,5 +1,5 @@
 //
-//  ThunderCats.h
+//  TCNullabilityMacros.h
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,23 +26,29 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#ifndef ThunderCats_TCNullabilityMacros_h
+#define ThunderCats_TCNullabilityMacros_h
 
-#ifndef _ThunderCats_h
-#define _ThunderCats_h
-
-#import "NSString+TCAdditions.h"
-#import "UIAlertView+TCAdditions.h"
-#import "UICollectionViewCell+TCAdditions.h"
-#import "UICollectionReusableView+TCAdditions.h"
-#import "UIColor+TCAdditions.h"
-#import "UIDevice+TCAdditions.h"
-#import "UIImage+TCAdditions.h"
-#import "UITableViewCell+TCAdditions.h"
-#import "UIView+TCAdditions.h"
-#import "UITextField+TCAdditions.h"
-#import "NSDictionary+TCAdditions.h"
-#import "NSURL+TCAdditions.h"
-#import "UIControl+TCAdditions.h"
-#import "UINavigationController+TCAdditions.h"
+#if __has_feature(nullability)
+#define TC_ASSUME_NONNULL_BEGIN _Pragma("clang assume_nonnull begin")
+#define TC_ASSUME_NONNULL_END _Pragma("clang assume_nonnull end")
+#define tc_nullable nullable
+#define tc_nonnull nonnull
+#define tc_null_unspecified null_unspecified
+#define tc_null_resettable null_resettable
+#define __tc_nullable __nullable
+#define __tc_nonnull __nonnull
+#define __tc_null_unspecified __null_unspecified
+#else
+#define TC_ASSUME_NONNULL_BEGIN
+#define TC_ASSUME_NONNULL_END
+#define tc_nullable
+#define tc_nonnull
+#define tc_null_unspecified
+#define tc_null_resettable
+#define __tc_nullable
+#define __tc_nonnull
+#define __tc_null_unspecified
+#endif
 
 #endif

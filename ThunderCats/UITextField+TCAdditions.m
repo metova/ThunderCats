@@ -1,5 +1,5 @@
 //
-//  ThunderCats.h
+//  UITextField+TCAdditions.m
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,23 +26,18 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-
-#ifndef _ThunderCats_h
-#define _ThunderCats_h
-
-#import "NSString+TCAdditions.h"
-#import "UIAlertView+TCAdditions.h"
-#import "UICollectionViewCell+TCAdditions.h"
-#import "UICollectionReusableView+TCAdditions.h"
-#import "UIColor+TCAdditions.h"
-#import "UIDevice+TCAdditions.h"
-#import "UIImage+TCAdditions.h"
-#import "UITableViewCell+TCAdditions.h"
-#import "UIView+TCAdditions.h"
 #import "UITextField+TCAdditions.h"
-#import "NSDictionary+TCAdditions.h"
-#import "NSURL+TCAdditions.h"
-#import "UIControl+TCAdditions.h"
-#import "UINavigationController+TCAdditions.h"
 
-#endif
+@implementation UITextField (TCAdditions)
+
+- (void)tc_setLeftAndRightPadding:(CGFloat)paddingWidth
+{
+    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, paddingWidth, self.frame.size.height)];
+    
+    self.leftView = paddingView;
+    self.leftViewMode = UITextFieldViewModeAlways;
+    self.rightView = paddingView;
+    self.rightViewMode = UITextFieldViewModeUnlessEditing;
+}
+
+@end

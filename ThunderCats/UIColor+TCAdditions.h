@@ -1,5 +1,5 @@
 //
-//  ThunderCats.h
+//  UIColor+TCAdditions.h
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,23 +26,27 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#import "TCNullabilityMacros.h"
+#import "UIKit/UIKit.h"
 
-#ifndef _ThunderCats_h
-#define _ThunderCats_h
+@interface UIColor (TCAdditions)
 
-#import "NSString+TCAdditions.h"
-#import "UIAlertView+TCAdditions.h"
-#import "UICollectionViewCell+TCAdditions.h"
-#import "UICollectionReusableView+TCAdditions.h"
-#import "UIColor+TCAdditions.h"
-#import "UIDevice+TCAdditions.h"
-#import "UIImage+TCAdditions.h"
-#import "UITableViewCell+TCAdditions.h"
-#import "UIView+TCAdditions.h"
-#import "UITextField+TCAdditions.h"
-#import "NSDictionary+TCAdditions.h"
-#import "NSURL+TCAdditions.h"
-#import "UIControl+TCAdditions.h"
-#import "UINavigationController+TCAdditions.h"
+/**
+ *  Returns a UIColor for the provided hex color code.
+ *
+ *  @param hexString The hex string color representation.
+ *
+ *  @return A UIColor for the provided hex color code.
+ */
++ (UIColor * __tc_nonnull)tc_colorWithHexString:(NSString * __tc_nonnull)hexString;
 
-#endif
+/**
+ *  Returns a Boolean value that indicates whether a given color is equal to the receiver.
+ *
+ *  @param aColor The color with which to compare the receiver.
+ *
+ *  @return YES if aColor's RGBA values are equivalent to the receiver's, otherwise NO.
+ */
+- (BOOL)tc_isEqualToColor:(UIColor * __tc_nonnull)aColor;
+
+@end
