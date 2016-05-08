@@ -9,9 +9,13 @@
 
 ThunderCats is a lightweight collection of utility extensions added to existing Foundation & UIKit classes.
 
+-----
+
 ## Requirements
 
 - iOS 8.0 or newer
+
+-----
 
 ## Installation
 
@@ -27,12 +31,17 @@ If you would like to test a beta version of ThunderCats, you can install the lat
 pod 'ThunderCats', :git => 'https://github.com/metova/ThunderCats.git', :branch => 'develop'
 ```
 
+-----
 
 ## Credits
 
 ThunderCats is owned and maintained by [Metova Inc.](https://metova.com)
 
 [Contributors](https://github.com/Metova/ThunderCats/graphs/contributors)
+
+If you would like to contribute to ThunderCats, see our [CONTRIBUTING](CONTRIBUTING.md) guidelines.
+
+-----
 
 ## License
 
