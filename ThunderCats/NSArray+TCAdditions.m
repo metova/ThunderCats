@@ -28,7 +28,7 @@
 
 #import "NSArray+TCAdditions.h"
 
-@implementation NSArray (Takl)
+@implementation NSArray (TCAdditions)
 
 - (NSString *)tc_JSONString
 {
@@ -36,7 +36,8 @@
     NSError *e = nil;
     NSData *data = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:&e];
     
-    if (e) {
+    if (e)
+    {
 #if DEBUG
         NSLog(@"ThunderCats > Error creating JSON string from array: %@.", [e localizedDescription]);
 #endif

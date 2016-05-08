@@ -9,7 +9,8 @@ Pod::Spec.new do |s|
     "Logan Gauthier" => "logan.gauthier@metova.com",
     "Kurt Treangen" => "kurt.treangen@metova.com",
     "William Grand" => "william.grand@metova.com",
-    "Nick Griffith" => "nick.griffith@metova.com"
+    "Nick Griffith" => "nick.griffith@metova.com",
+    "Abbey Jackson" => "abbey.jackson@metova.com"
   }
 
   s.platform = :ios, '8.0'
