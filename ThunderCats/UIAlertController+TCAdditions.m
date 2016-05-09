@@ -43,4 +43,61 @@
     return alert;
 }
 
++ (instancetype)tc_alertWithTitle:(NSString * __tc_nonnull)title message:(NSString * __tc_nonnull)message cancelButtonTitle:(NSString * __tc_nonnull)cancelButtonTitle cancelAction:(void (^ __tc_nullable)(UIAlertAction * __tc_nonnull))cancelAction
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:cancelButtonTitle style:UIAlertActionStyleCancel handler:cancelAction]];
+    
+    return alert;
+}
+
++ (instancetype)tc_alertWithActionSheet:(NSString * __tc_nonnull)title message:(NSString * __tc_nonnull)message cancelButtonTitle:(NSString * __tc_nonnull)cancelButtonTitle cancelAction:(void (^ __tc_nullable)(UIAlertAction * __tc_nonnull))cancelAction
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:cancelButtonTitle style:UIAlertActionStyleCancel handler:cancelAction]];
+    
+    return alert;
+}
+
++ (UIViewController * __tc_nonnull)tc_imagePickerActionSheet:(UIImagePickerController * __tc_nonnull)imagePicker presentingViewController:(UIViewController * __tc_nonnull)presentingViewController
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
+                                                                   message:nil
+                                                            preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"Take a Photo"
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction *action)
+                                 {
+                                     imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+                                     [presentingViewController presentViewController:imagePicker animated:true completion:nil];
+                                 }];
+        
+        [alert addAction:action];
+    }
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"Photo Library"
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction *action)
+                                 {
+                                     imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+                                     [presentingViewController presentViewController:imagePicker animated:true completion:nil];
+                                 }];
+        
+        [alert addAction:action];
+    }
+    
+    return alert;
+}
+
 @end

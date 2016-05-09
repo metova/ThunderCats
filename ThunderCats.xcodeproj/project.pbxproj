@@ -52,6 +52,7 @@
 		5394F2BB1CDD3FE9008C2112 /* NSArray+TCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5394F2B91CDD3FE9008C2112 /* NSArray+TCAdditions.h */; };
 		5394F2BC1CDD3FE9008C2112 /* NSArray+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5394F2BA1CDD3FE9008C2112 /* NSArray+TCAdditions.m */; };
 		5394F2BE1CDD4004008C2112 /* NSArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5394F2BD1CDD4004008C2112 /* NSArrayTests.m */; };
+		53B7311A1CE1332100C230C1 /* UIAlertControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B731191CE1332100C230C1 /* UIAlertControllerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		5394F2B91CDD3FE9008C2112 /* NSArray+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+TCAdditions.h"; sourceTree = "<group>"; };
 		5394F2BA1CDD3FE9008C2112 /* NSArray+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+TCAdditions.m"; sourceTree = "<group>"; };
 		5394F2BD1CDD4004008C2112 /* NSArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayTests.m; sourceTree = "<group>"; };
+		53B731191CE1332100C230C1 /* UIAlertControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertControllerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 				4AB020541CDABC5C00E38DC8 /* UINavigationControllerTests.m */,
 				4AB020551CDABC5C00E38DC8 /* UIViewTests.m */,
 				4AB01FBD1CDABB2C00E38DC8 /* Info.plist */,
+				53B731191CE1332100C230C1 /* UIAlertControllerTests.m */,
 			);
 			path = ThunderCatsTests;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				4AB0205A1CDABC5C00E38DC8 /* UIDeviceTests.m in Sources */,
 				4AB020581CDABC5C00E38DC8 /* UIColorTests.m in Sources */,
 				4AB020591CDABC5C00E38DC8 /* UIControlTests.m in Sources */,
+				53B7311A1CE1332100C230C1 /* UIAlertControllerTests.m in Sources */,
 				5394F2BE1CDD4004008C2112 /* NSArrayTests.m in Sources */,
 				4AB0205C1CDABC5C00E38DC8 /* UIViewTests.m in Sources */,
 				4AB0205B1CDABC5C00E38DC8 /* UINavigationControllerTests.m in Sources */,
