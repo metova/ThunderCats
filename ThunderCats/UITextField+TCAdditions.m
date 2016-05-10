@@ -43,10 +43,10 @@
 - (void)tc_addToolbarWithNextButton:(UITextField * __tc_nonnull)nextTextField
                    toolbarColor:(UIColor * __tc_nonnull)toolbarColor
 {
-    [self tc_addToolbarWithButton:@"Next" toolbarColor:toolbarColor withTarget:nextTextField action:@selector(becomeFirstResponder)];
+    [self tc_addToolbarWithButton:@"Next" toolbarColor:toolbarColor target:nextTextField action:@selector(becomeFirstResponder)];
 }
 
-- (void)tc_addToolbarWithButton:(NSString * __tc_nonnull)buttonTitle withToolbarColor:(UIColor * __tc_nonnull)toolbarColor target:(id)target action:(SEL)selector
+- (void)tc_addToolbarWithButton:(NSString * __tc_nonnull)buttonTitle toolbarColor:(UIColor * __tc_nonnull)toolbarColor target:(id)target action:(SEL)selector
 {
     UIBarButtonItem *button = [[UIBarButtonItem init] initWithTitle:buttonTitle style:UIBarButtonItemStylePlain target:target action:selector];
     [self addToolBarWithButton:button toolbarColor:toolbarColor];

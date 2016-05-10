@@ -57,7 +57,7 @@
  */
 - (void)tc_addToolbarWithButton:(NSString * __tc_nonnull)buttonTitle
                    toolbarColor:(UIColor * __tc_nonnull)toolbarColor
-                     withTarget:(id __tc_nullable)target
+                         target:(id __tc_nullable)target
                          action:(SEL __tc_nullable)selector;
 
 @end
