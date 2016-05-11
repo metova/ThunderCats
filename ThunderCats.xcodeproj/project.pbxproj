@@ -65,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A591C661CE3B2A200E8C3CE /* .cocoadocs.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .cocoadocs.yml; sourceTree = "<group>"; };
 		4A7D51731CDABEDE00BACB72 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4A7D51741CDABEDE00BACB72 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		4A7D51751CDABEDE00BACB72 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				4A7D51731CDABEDE00BACB72 /* .gitignore */,
+				4A591C661CE3B2A200E8C3CE /* .cocoadocs.yml */,
 				4AB9A3E11CDFA7370021B6B8 /* .slather.yml */,
 				4AB9A3E21CDFA8010021B6B8 /* .travis.yml */,
 				4AB9A3E31CDFA8850021B6B8 /* GEMFILE */,

@@ -1,4 +1,4 @@
-# ThunderCats
+![ThunderCats](Assets/ThunderCatsBanner.png)
 
 [![Build Status](https://travis-ci.org/metova/ThunderCats.svg)](https://travis-ci.org/metova/ThunderCats)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/ThunderCats.svg)](https://img.shields.io/cocoapods/v/ThunderCats.svg)
@@ -41,9 +41,10 @@ ThunderCats is owned and maintained by [Metova Inc.](https://metova.com)
 
 If you would like to contribute to ThunderCats, see our [CONTRIBUTING](CONTRIBUTING.md) guidelines.
 
+ThunderCats banner image and other assets provided by Christi Johnson.
+
 -----
 
 ## License
 
 ThunderCats is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
-
