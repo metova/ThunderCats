@@ -1,4 +1,4 @@
-# ThunderCats
+![ThunderCats](Assets/ThunderCatsIconLarge.png)
 
 [![Build Status](https://travis-ci.org/metova/ThunderCats.svg)](https://travis-ci.org/metova/ThunderCats)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/ThunderCats.svg)](https://img.shields.io/cocoapods/v/ThunderCats.svg)
@@ -46,4 +46,3 @@ If you would like to contribute to ThunderCats, see our [CONTRIBUTING](CONTRIBUT
 ## License
 
 ThunderCats is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
-
