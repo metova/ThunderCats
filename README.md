@@ -41,6 +41,8 @@ ThunderCats is owned and maintained by [Metova Inc.](https://metova.com)
 
 If you would like to contribute to ThunderCats, see our [CONTRIBUTING](CONTRIBUTING.md) guidelines.
 
+ThunderCats banner image and other assets provided by Christi Johnson.
+
 -----
 
 ## License
