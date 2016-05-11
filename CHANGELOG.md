@@ -1,5 +1,10 @@
 # thundercats CHANGELOG
 
+## 2.0.1
+
+- Added ThunderCats logo.  Thanks Christi.
+- Added .cocoadocs.yml
+
 ## 2.0.0
 
 - Actually started putting stuff in change log.

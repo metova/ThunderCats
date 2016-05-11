@@ -1,0 +1,15 @@
+# ThunderCats Pink: #E41A61
+# ThunderCats Blue: #2BA5DE
+# ThunderCats Black: #000000
+
+highlight-font: '"GT Walsheim", "gt_walsheim_regular", "Avant Garde Gothic ITCW01Dm", "Avant Garde", "Helvetica Neue", "Arial" '
+body: '"Helvetica Neue", "Arial", san-serif'
+code: '"Monaco", "Menlo", "Consolas", "Courier New", monospace'
+
+highlight-color: "#E41A61"
+highlight-dark-color: "#2BA5DE"
+darker-color: "#E41A61"
+darker-dark-color: "#E41A61"
+background-color: "#F2F2F2"
+alt-link-color: "#2BA5DE"
+warning-color: "#2BA5DE"
