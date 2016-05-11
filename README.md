@@ -1,4 +1,4 @@
-![ThunderCats](Assets/ThunderCatsIconLarge.png)
+![ThunderCats](Assets/ThunderCatsBanner.png)
 
 [![Build Status](https://travis-ci.org/metova/ThunderCats.svg)](https://travis-ci.org/metova/ThunderCats)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/ThunderCats.svg)](https://img.shields.io/cocoapods/v/ThunderCats.svg)
