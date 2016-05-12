@@ -1,4 +1,4 @@
-![[ThunderCats](Assets/ThunderCatsBanner.png)](http://cocoadocs.org/docsets/ThunderCats/)
+[![ThunderCats](Assets/ThunderCatsBanner.png)](http://cocoadocs.org/docsets/ThunderCats/)
 
 [![Build Status](https://travis-ci.org/metova/ThunderCats.svg)](https://travis-ci.org/metova/ThunderCats)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/ThunderCats.svg)](http://cocoadocs.org/docsets/ThunderCats/)
