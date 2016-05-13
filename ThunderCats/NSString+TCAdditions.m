@@ -43,7 +43,7 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES[c] %@", emailRegex];
     return [emailTest evaluateWithObject:self];
 }
- 
+
 
 - (BOOL)tc_containsString:(NSString *)substring
 {

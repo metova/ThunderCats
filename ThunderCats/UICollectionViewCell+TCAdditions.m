@@ -55,8 +55,7 @@
 
 + (UINib *)tc_nib
 {
-    return [UINib nibWithNibName:[self tc_nibName]
-                          bundle:[NSBundle mainBundle]];
+    return [UINib nibWithNibName:[self tc_nibName] bundle:[NSBundle mainBundle]];
 }
 
 
