@@ -2,19 +2,6 @@
 //  NSString+TCAdditions.h
 //  ThunderCats
 //
-//  Created by Abbey Jackson on 2016-05-12.
-//  Copyright © 2016 Metova. All rights reserved.
-//
-
-#import <UIKit/UIKit.h>
-
-@interface NSString_TCAdditions : UIViewController
-
-@end
-//
-//  NSString+Utils.h
-//  ThunderCats
-//
 //  Copyright (c) 2015 Metova Inc.
 //
 //  MIT License

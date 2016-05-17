@@ -21,6 +21,7 @@
     XCTAssertEqualObjects(alert.title, @"Not Implemented");
     XCTAssertEqualObjects(alert.message, @"This feature is not yet implemented.");
     XCTAssertEqualObjects(alert.actions[0].title, @"Ok");
+    XCTAssertEqual(alert.actions.count, 1);
 }
 
 @end
