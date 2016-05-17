@@ -44,8 +44,8 @@
  *  @param nextTextField The textfield that should becomeFirstResponder next
  *  @param toolbarColor  The UIColor of the toolbar
  */
-- (void)tc_addToolbarWithNextButton:(UITextField * __tc_nonnull)nextTextField
-                       toolbarColor:(UIColor * __tc_nonnull)toolbarColor;
+- (void)tc_addNextButtonToolbarWithColor:(UIColor * __tc_nonnull)toolbarColor
+                               nextField:(UITextField * __tc_nonnull)nextTextField;
 
 /**
  *  Adds a toolbar to keyboard with a custom button that performs the action passed in

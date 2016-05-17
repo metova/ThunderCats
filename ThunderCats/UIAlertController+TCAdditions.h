@@ -31,6 +31,9 @@
 
 @interface UIAlertController (TCAdditions)
 
+/**
+ *  A block definition for the cancelAction on the UIAlertController+TCAdditions methods.
+ */
 typedef void (^ TCCancelAction)(UIAlertAction * __tc_nonnull);
 
 /**
@@ -44,14 +47,14 @@ typedef void (^ TCCancelAction)(UIAlertAction * __tc_nonnull);
  *  @param title             The title of the alert
  *  @param message           The message displayed on the alert
  *  @param cancelButtonTitle The text displayed on the cancel button
- *  @param cancelAction      A completion block which will be executed when the user taps cancel which has one UIAlertAction as a parameter
+ *  @param cancelAction      A completion block which will be executed when the user taps cancel which has one UIAlertAction as a parameter. If the value is nil the alert will be dismissed upon tapping the cancel button.
  *
  *  @return A UIAlertController
  */
 + (instancetype __tc_nonnull)tc_alertWithTitle:(NSString * __tc_nonnull)title
-                          message:(NSString * __tc_nonnull)message
-                cancelButtonTitle:(NSString * __tc_nonnull)cancelButtonTitle
-                     cancelAction:(TCCancelAction __tc_nullable)cancelAction;
+                                       message:(NSString * __tc_nonnull)message
+                             cancelButtonTitle:(NSString * __tc_nonnull)cancelButtonTitle
+                                  cancelAction:(TCCancelAction __tc_nullable)cancelAction;
 
 
 /**
@@ -60,14 +63,14 @@ typedef void (^ TCCancelAction)(UIAlertAction * __tc_nonnull);
  *  @param title             The title of the alert
  *  @param message           The message displayed on the alert
  *  @param cancelButtonTitle The text displayed on the cancel button
- *  @param cancelAction      A completion block which will be executed when the user taps cancel which has one UIAlertAction as a parameter
+ *  @param cancelAction      A completion block which will be executed when the user taps cancel which has one UIAlertAction as a parameter. If the value is nil the alert will be dismissed upon tapping the cancel button.
  *
  *  @return A UIAlertController
  */
 + (instancetype __tc_nonnull)tc_alertWithActionSheet:(NSString * __tc_nonnull)title
-                                message:(NSString * __tc_nonnull)message
-                      cancelButtonTitle:(NSString * __tc_nonnull)cancelButtonTitle
-                           cancelAction:(TCCancelAction __tc_nullable)cancelAction;
+                                             message:(NSString * __tc_nonnull)message
+                                   cancelButtonTitle:(NSString * __tc_nonnull)cancelButtonTitle
+                                        cancelAction:(TCCancelAction __tc_nullable)cancelAction;
 
 /**
  *  Creates a UIAlertController which uses an action sheet for choosing from Camera Roll or Taking a Photo. Checks which source is available and only displays the available sources. Must instantiate and pass in an image picker with delegate already set.
@@ -77,7 +80,7 @@ typedef void (^ TCCancelAction)(UIAlertAction * __tc_nonnull);
  *
  *  @return A UIAlertController
  */
-+ (UIViewController * __tc_nonnull)tc_imagePickerActionSheet:(UIImagePickerController * __tc_nonnull)imagePicker
++ (instancetype __tc_nonnull)tc_imagePickerActionSheet:(UIImagePickerController * __tc_nonnull)imagePicker
                                     presentingViewController:(UIViewController * __tc_nonnull)presentingViewController;
 
 @end
