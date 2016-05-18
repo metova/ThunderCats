@@ -47,24 +47,10 @@
 + (NSString * __tc_null_unspecified)tc_nibName;
 
 /**
- *  Returns a string that is equal to the class name with "_iPad" appended to it.
- *
- *  @return A string that is equal to the class name with "_iPad" appended to it.
- */
-+ (NSString * __tc_null_unspecified)tc_iPadNibName __deprecated_msg("iPad methods will be removed in version 2.0");
-
-/**
  *  Returns a nib for the cell subclass if one exists and is named after the class.
  *
  *  @return The nib for the cell subclass.
  */
 + (UINib * __tc_null_unspecified)tc_nib;
-
-/**
- *  Returns a nib for the cell subclass if one exists and is named after the class with "_iPad" appended to it.
- *
- *  @return The iPad nib for the cell subclass.
- */
-+ (UINib * __tc_null_unspecified)tc_iPadNib __deprecated_msg("iPad methods will be removed in version 2.0");
 
 @end
