@@ -9,6 +9,9 @@
 #import <XCTest/XCTest.h>
 #import "UICollectionReusableView+TCAdditions.h"
 
+@interface TestReusableView : UICollectionReusableView @end
+@implementation TestReusableView @end
+
 @interface UICollectionReusableViewTests : XCTestCase
 
 @end
@@ -30,6 +33,24 @@
 - (void)testNib
 {
     UINib *nib = [UICollectionReusableView tc_nib];
+    XCTAssertNotNil(nib);
+}
+
+- (void)testSubclassReuseIdentifier
+{
+    NSString *identifier = [TestReusableView tc_reuseIdentifier];
+    XCTAssertEqualObjects(identifier, @"TestReusableView");
+}
+
+- (void)testSubclassNibName
+{
+    NSString *nibName = [TestReusableView tc_reuseIdentifier];
+    XCTAssertEqualObjects(nibName, @"TestReusableView");
+}
+
+- (void)testSubclassNib
+{
+    UINib *nib = [TestReusableView tc_nib];
     XCTAssertNotNil(nib);
 }
 

@@ -9,6 +9,9 @@
 #import <XCTest/XCTest.h>
 #import "UICollectionViewCell+TCAdditions.h"
 
+@interface TestCollectionViewCell : UICollectionViewCell @end
+@implementation TestCollectionViewCell @end
+
 @interface UICollectionViewCellTests : XCTestCase
 
 @end
@@ -40,6 +43,36 @@
 }
 
 - (void)testIPadNib
+{
+    UINib *iPadNib = [UICollectionViewCell tc_iPadNib];
+    XCTAssertNotNil(iPadNib);
+}
+
+- (void)testSubclassReuseIdentifier
+{
+    NSString *identifier = [TestCollectionViewCell tc_reuseIdentifier];
+    XCTAssertEqualObjects(identifier, @"TestCollectionViewCell");
+}
+
+- (void)testSubclassNibName
+{
+    NSString *nibName = [TestCollectionViewCell tc_nibName];
+    XCTAssertEqualObjects(nibName, @"TestCollectionViewCell");
+}
+
+- (void)testSubclassIPadNibName
+{
+    NSString *iPadNibName = [TestCollectionViewCell tc_iPadNibName];
+    XCTAssertEqualObjects(iPadNibName, @"TestCollectionViewCell_iPad");
+}
+
+- (void)testSubclassNib
+{
+    UINib *nib = [TestCollectionViewCell tc_nib];
+    XCTAssertNotNil(nib);
+}
+
+- (void)testSubclassIPadNib
 {
     UINib *iPadNib = [UICollectionViewCell tc_iPadNib];
     XCTAssertNotNil(iPadNib);

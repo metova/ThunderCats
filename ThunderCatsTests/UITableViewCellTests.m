@@ -9,6 +9,9 @@
 #import <XCTest/XCTest.h>
 #import "UITableViewCell+TCAdditions.h"
 
+@interface TestTableViewCell : UITableViewCell @end
+@implementation TestTableViewCell @end
+
 @interface UITableViewCellTests : XCTestCase
 
 @end
@@ -30,6 +33,24 @@
 - (void)testNib
 {
     UINib *nib = [UITableViewCell tc_nib];
+    XCTAssertNotNil(nib);
+}
+
+- (void)testSubclassReuseIdentifier
+{
+    NSString *identifier = [TestTableViewCell tc_reuseIdentifier];
+    XCTAssertEqualObjects(identifier, @"TestTableViewCell");
+}
+
+- (void)testSubclassNibName
+{
+    NSString *nibName = [TestTableViewCell tc_nibName];
+    XCTAssertEqualObjects(nibName, @"TestTableViewCell");
+}
+
+- (void)testSubclassNib
+{
+    UINib *nib = [TestTableViewCell tc_nib];
     XCTAssertNotNil(nib);
 }
 
