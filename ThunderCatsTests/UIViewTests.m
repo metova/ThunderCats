@@ -56,7 +56,7 @@
     
     NSArray *allSubviews = [view tc_getAllSubviewsRecursively];
     
-    XCTAssertTrue(allSubviews.count == 6);
+    XCTAssertEqual(allSubviews.count, 6);
     XCTAssertTrue([allSubviews containsObject:subview1]);
     XCTAssertTrue([allSubviews containsObject:subview2]);
     XCTAssertTrue([allSubviews containsObject:subSubview1]);
@@ -89,7 +89,7 @@
                                            }];
     
     XCTAssertNotNil(subview);
-    XCTAssertTrue(subview == subSubSubview1);
+    XCTAssertEqual(subview, subSubSubview1);
 }
 
 
@@ -116,7 +116,7 @@
                                            }];
     
     XCTAssertNotNil(subview);
-    XCTAssertTrue(subview == subview2);
+    XCTAssertEqual(subview, subview2);
 }
 
 
