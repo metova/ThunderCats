@@ -35,16 +35,21 @@
     XCTAssertEqual(alert.title, title);
     XCTAssertEqual(alert.message, message);
     XCTAssertEqual(alert.actions[0].title, cancelButtonTitle);
+}
+
+- (void)testAlertWithTitleWithCompletionBlock
+{
+    NSString *title = @"Title";
+    NSString *message = @"Message Text";
+    NSString *cancelButtonTitle = @"Cancel";
     
-    __block NSString *cancelActionString = @"";
     UIAlertController *alertWithCancelAction = [UIAlertController tc_alertWithTitle:title message:message cancelButtonTitle:cancelButtonTitle cancelAction:^(UIAlertAction * __tc_nonnull cancelAction) {
-        cancelActionString = @"Successful";
+        // completion block
     }];
     
     XCTAssertEqual(alertWithCancelAction.title, title);
     XCTAssertEqual(alertWithCancelAction.message, message);
     XCTAssertEqual(alertWithCancelAction.actions[0].title, cancelButtonTitle);
-    XCTAssertEqualObjects(cancelActionString, @"Successful");
 }
 
 - (void)testAlertWithActionSheet
@@ -59,16 +64,21 @@
     XCTAssertEqual(alert.message, message);
     XCTAssertEqual(alert.actions.firstObject.title, cancelButtonTitle);
     XCTAssertEqual(alert.actions.count, 1);
+}
+
+- (void)testAlertWithActionSheetWithCompletionBlock
+{
+    NSString *title = @"Title";
+    NSString *message = @"Message Text";
+    NSString *cancelButtonTitle = @"Cancel";
     
-    __block NSString *cancelActionString = @"";
-    UIAlertController *alertWithCancelAction = [UIAlertController tc_alertWithActionSheet:title message:message cancelButtonTitle:cancelButtonTitle cancelAction:^(UIAlertAction * __tc_nonnull cancelAction) {
-        cancelActionString = @"Successful";
+    UIAlertController *alertWithCancelAction = [UIAlertController tc_alertWithTitle:title message:message cancelButtonTitle:cancelButtonTitle cancelAction:^(UIAlertAction * __tc_nonnull cancelAction) {
+        // completion block
     }];
     
     XCTAssertEqual(alertWithCancelAction.title, title);
     XCTAssertEqual(alertWithCancelAction.message, message);
     XCTAssertEqual(alertWithCancelAction.actions[0].title, cancelButtonTitle);
-    XCTAssertEqualObjects(cancelActionString, @"Successful");
 }
 
 - (void)testImagePickerActionSheet
