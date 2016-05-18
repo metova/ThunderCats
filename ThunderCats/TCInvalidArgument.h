@@ -1,5 +1,5 @@
 //
-//  UITextField+TCAdditions.m
+//  TCInvalidArgument.h
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,23 +26,16 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "UITextField+TCAdditions.h"
-#import "TCInvalidArgument.h"
+#import <Foundation/Foundation.h>
+#import "TCNullabilityMacros.h"
 
-@implementation UITextField (TCAdditions)
+@interface TCInvalidArgument : NSException
 
-- (void)tc_setLeftAndRightPadding:(CGFloat)paddingWidth
-{
-    if (paddingWidth < 0) {
-        [TCInvalidArgument raiseWithReason:@"paddingWidth can not be a negative number"];
-    }
-    
-    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, paddingWidth, self.frame.size.height)];
-    
-    self.leftView = paddingView;
-    self.leftViewMode = UITextFieldViewModeAlways;
-    self.rightView = paddingView;
-    self.rightViewMode = UITextFieldViewModeUnlessEditing;
-}
+/**
+ *  Throws TCInvalidArgument with reason given
+ *
+ *  @param reason The reason the exception is thrown
+ */
++ (void)raiseWithReason:(NSString * __tc_nonnull)reason;
 
 @end

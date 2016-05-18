@@ -49,6 +49,9 @@
 		5394F2BB1CDD3FE9008C2112 /* NSArray+TCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5394F2B91CDD3FE9008C2112 /* NSArray+TCAdditions.h */; };
 		5394F2BC1CDD3FE9008C2112 /* NSArray+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5394F2BA1CDD3FE9008C2112 /* NSArray+TCAdditions.m */; };
 		5394F2BE1CDD4004008C2112 /* NSArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5394F2BD1CDD4004008C2112 /* NSArrayTests.m */; };
+		53AE2F461CECDD1D000B0302 /* TCInvalidArgument.h in Headers */ = {isa = PBXBuildFile; fileRef = 53AE2F441CECDD1D000B0302 /* TCInvalidArgument.h */; };
+		53AE2F471CECDD1D000B0302 /* TCInvalidArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AE2F451CECDD1D000B0302 /* TCInvalidArgument.m */; };
+		53AE2F491CECE086000B0302 /* TCInvalidArgumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AE2F481CECE086000B0302 /* TCInvalidArgumentTests.m */; };
 		53B731261CE4D29200C230C1 /* UICollectionViewCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B731251CE4D29200C230C1 /* UICollectionViewCellTests.m */; };
 		53B731281CE4D2A200C230C1 /* UICollectionReusableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B731271CE4D2A200C230C1 /* UICollectionReusableViewTests.m */; };
 		53B7312A1CE4E9A200C230C1 /* NSURLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B731291CE4E9A200C230C1 /* NSURLTests.m */; };
@@ -126,6 +129,9 @@
 		5394F2B91CDD3FE9008C2112 /* NSArray+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+TCAdditions.h"; sourceTree = "<group>"; };
 		5394F2BA1CDD3FE9008C2112 /* NSArray+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+TCAdditions.m"; sourceTree = "<group>"; };
 		5394F2BD1CDD4004008C2112 /* NSArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayTests.m; sourceTree = "<group>"; };
+		53AE2F441CECDD1D000B0302 /* TCInvalidArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCInvalidArgument.h; sourceTree = "<group>"; };
+		53AE2F451CECDD1D000B0302 /* TCInvalidArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCInvalidArgument.m; sourceTree = "<group>"; };
+		53AE2F481CECE086000B0302 /* TCInvalidArgumentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCInvalidArgumentTests.m; sourceTree = "<group>"; };
 		53B731251CE4D29200C230C1 /* UICollectionViewCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewCellTests.m; sourceTree = "<group>"; };
 		53B731271CE4D2A200C230C1 /* UICollectionReusableViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionReusableViewTests.m; sourceTree = "<group>"; };
 		53B731291CE4E9A200C230C1 /* NSURLTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLTests.m; sourceTree = "<group>"; };
@@ -203,6 +209,8 @@
 				53376CB01CE53784008B7721 /* NSString+TCAdditions.m */,
 				4AB020111CDABC2B00E38DC8 /* NSURL+TCAdditions.h */,
 				4AB020121CDABC2B00E38DC8 /* NSURL+TCAdditions.m */,
+				53AE2F441CECDD1D000B0302 /* TCInvalidArgument.h */,
+				53AE2F451CECDD1D000B0302 /* TCInvalidArgument.m */,
 				4AB020131CDABC2B00E38DC8 /* TCNullabilityMacros.h */,
 				4AB020141CDABC2B00E38DC8 /* UIAlertController+TCAdditions.h */,
 				4AB020151CDABC2B00E38DC8 /* UIAlertController+TCAdditions.m */,
@@ -253,6 +261,7 @@
 				4AB020551CDABC5C00E38DC8 /* UIViewTests.m */,
 				53B731351CE506D600C230C1 /* UIViewControllerTests.m */,
 				4AB01FBD1CDABB2C00E38DC8 /* Info.plist */,
+				53AE2F481CECE086000B0302 /* TCInvalidArgumentTests.m */,
 			);
 			path = ThunderCatsTests;
 			sourceTree = "<group>";
@@ -277,6 +286,7 @@
 				4AB020491CDABC2B00E38DC8 /* UITextField+TCAdditions.h in Headers */,
 				4AB020341CDABC2B00E38DC8 /* TCNullabilityMacros.h in Headers */,
 				4AB020391CDABC2B00E38DC8 /* UICollectionReusableView+TCAdditions.h in Headers */,
+				53AE2F461CECDD1D000B0302 /* TCInvalidArgument.h in Headers */,
 				4AB0203B1CDABC2B00E38DC8 /* UICollectionViewCell+TCAdditions.h in Headers */,
 				4AB0203D1CDABC2B00E38DC8 /* UIColor+TCAdditions.h in Headers */,
 				4AB01FB01CDABB2C00E38DC8 /* ThunderCats.h in Headers */,
@@ -381,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53AE2F471CECDD1D000B0302 /* TCInvalidArgument.m in Sources */,
 				4AB0204C1CDABC2B00E38DC8 /* UIView+TCAdditions.m in Sources */,
 				4AB020331CDABC2B00E38DC8 /* NSURL+TCAdditions.m in Sources */,
 				4AB020361CDABC2B00E38DC8 /* UIAlertController+TCAdditions.m in Sources */,
@@ -411,6 +422,7 @@
 				4AB020591CDABC5C00E38DC8 /* UIControlTests.m in Sources */,
 				5394F2BE1CDD4004008C2112 /* NSArrayTests.m in Sources */,
 				53B731341CE4F74C00C230C1 /* UIAlertViewTests.m in Sources */,
+				53AE2F491CECE086000B0302 /* TCInvalidArgumentTests.m in Sources */,
 				53B7312C1CE4EA6E00C230C1 /* UIAlertControllerTests.m in Sources */,
 				53B731281CE4D2A200C230C1 /* UICollectionReusableViewTests.m in Sources */,
 				53B7312E1CE4EE4100C230C1 /* UITableViewCellTests.m in Sources */,
