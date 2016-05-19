@@ -30,22 +30,10 @@
     XCTAssertEqualObjects(nibName, @"UICollectionViewCell");
 }
 
-- (void)testiPadNibName
-{
-    NSString *iPadNibName = [UICollectionViewCell tc_iPadNibName];
-    XCTAssertEqualObjects(iPadNibName, @"UICollectionViewCell_iPad");
-}
-
 - (void)testNib
 {
     UINib *nib = [UICollectionViewCell tc_nib];
     XCTAssertNotNil(nib);
-}
-
-- (void)testIPadNib
-{
-    UINib *iPadNib = [UICollectionViewCell tc_iPadNib];
-    XCTAssertNotNil(iPadNib);
 }
 
 - (void)testSubclassReuseIdentifier
@@ -60,22 +48,10 @@
     XCTAssertEqualObjects(nibName, @"TestCollectionViewCell");
 }
 
-- (void)testSubclassIPadNibName
-{
-    NSString *iPadNibName = [TestCollectionViewCell tc_iPadNibName];
-    XCTAssertEqualObjects(iPadNibName, @"TestCollectionViewCell_iPad");
-}
-
 - (void)testSubclassNib
 {
     UINib *nib = [TestCollectionViewCell tc_nib];
     XCTAssertNotNil(nib);
-}
-
-- (void)testSubclassIPadNib
-{
-    UINib *iPadNib = [UICollectionViewCell tc_iPadNib];
-    XCTAssertNotNil(iPadNib);
 }
 
 @end
