@@ -1,7 +1,7 @@
-# ThunderCats
+[![ThunderCats](Assets/ThunderCatsBanner.png)](https://cocoapods.org/pods/ThunderCats)
 
 [![Build Status](https://travis-ci.org/metova/ThunderCats.svg)](https://travis-ci.org/metova/ThunderCats)
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/ThunderCats.svg)](https://img.shields.io/cocoapods/v/ThunderCats.svg)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/ThunderCats.svg)](https://cocoapods.org/pods/ThunderCats)
 [![Documentation](https://img.shields.io/cocoapods/metrics/doc-percent/ThunderCats.svg)](http://cocoadocs.org/docsets/ThunderCats/)
 [![Coverage Status](https://coveralls.io/repos/github/metova/ThunderCats/badge.svg?branch=master)](https://coveralls.io/github/metova/ThunderCats?branch=master)
 [![Platform](https://img.shields.io/cocoapods/p/ThunderCats.svg?style=flat)](http://cocoadocs.org/docsets/ThunderCats)
@@ -41,9 +41,10 @@ ThunderCats is owned and maintained by [Metova Inc.](https://metova.com)
 
 If you would like to contribute to ThunderCats, see our [CONTRIBUTING](CONTRIBUTING.md) guidelines.
 
+ThunderCats banner image and other assets provided by Christi Johnson.
+
 -----
 
 ## License
 
 ThunderCats is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
-
