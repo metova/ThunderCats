@@ -32,7 +32,7 @@
 
 + (void)raiseWithReason:(NSString *)reason
 {
-    [NSException raise:@"TCInvalidArgument" format:reason];
+    [NSException raise:@"TCInvalidArgument" format:@"%@", reason];
 }
 
 @end
