@@ -41,11 +41,12 @@
 - (void)testValidUUIDFormat
 {
     NSString *uuid = [NSString tc_UUID];
-    XCTAssertTrue(uuid.length == 36, @"UUID should have 36 characters total");
-    XCTAssertTrue([uuid stringByReplacingOccurrencesOfString:@"-" withString:@""].length == 32, @"UUID should have 32 hexadecimal digits");
+    XCTAssertEqual(uuid.length, 36, @"UUID should have 36 characters total");
+    XCTAssertEqual([uuid stringByReplacingOccurrencesOfString:@"-" withString:@""].length, 32, @"UUID should have 32 hexadecimal digits");
+    XCTAssertEqual([uuid componentsSeparatedByString:@"-"].count, 5, @"UUID should have 5 components separated by dashes");
     
-    NSArray *components = [uuid componentsSeparatedByString:@"-"];
-    XCTAssertTrue(components.count == 5, @"UUID should have 5 components separated by dashes");
+    NSCharacterSet *uuidCharacters = [NSCharacterSet characterSetWithCharactersInString:@"0123456789abcdefABCDEF-"];
+    XCTAssertEqual([uuid rangeOfCharacterFromSet:[uuidCharacters invertedSet]].location, NSNotFound);
 }
 
 
@@ -61,10 +62,9 @@
                            @"lowercase@Capital.com",
                            @"case@test.Com"];
     
-    for (int i = 0; i < addresses.count; i++)
+    for (NSString *emailAddress in addresses)
     {
-        NSString *currentAddress = [addresses objectAtIndex:i];
-        XCTAssertTrue([currentAddress tc_isValidEmailAddressFormat], @"The following address should succeed: %@", currentAddress);
+        XCTAssertTrue([emailAddress tc_isValidEmailAddressFormat], @"The following address should succeed: %@", emailAddress);
     }
 }
 
@@ -78,10 +78,9 @@
                            @"me@example..com",
                            @"me\\@example.com"];
     
-    for (int i = 0; i < addresses.count; i++)
+    for (NSString *emailAddress in addresses)
     {
-        NSString *currentAddress = [addresses objectAtIndex:i];
-        XCTAssertFalse([currentAddress tc_isValidEmailAddressFormat], @"The following address should fail: %@", currentAddress);
+        XCTAssertFalse([emailAddress tc_isValidEmailAddressFormat], @"The following address should fail: %@", emailAddress);
     }
 }
 
@@ -107,10 +106,6 @@
     fullString = @"This is @!\\@#$ string";
     subString = @"@!\\@#$";
     XCTAssertTrue([fullString tc_containsString:subString], @"Should find substring of special characters");
-    
-    fullString = @"";
-    subString = @"";
-    XCTAssertFalse([fullString tc_containsString:subString], @"An empty string ");
 }
 
 
@@ -123,6 +118,10 @@
     fullString = @"This is a string";
     subString = @"";
     XCTAssertFalse([fullString tc_containsString:subString], @"Should not contain an empty string");
+    
+    fullString = @"";
+    subString = @"";
+    XCTAssertFalse([fullString tc_containsString:subString], @"An empty string ");
 }
 
 
@@ -136,6 +135,9 @@
     
     fullString = @" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam interdum magna id metus euismod, eu consectetur neque posuere. Etiam quis.";
     XCTAssertEqual([fullString tc_wordCount].intValue, 20, @"LEADING WHITE SPACE: String has 20 words, wordCount supplied %d", [fullString tc_wordCount].intValue);
+    
+    XCTAssertEqual([@"" tc_wordCount].intValue, 0);
+    XCTAssertEqual([@" " tc_wordCount].intValue, 0);
 }
 
 /*
