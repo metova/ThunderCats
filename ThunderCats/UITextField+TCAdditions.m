@@ -62,7 +62,7 @@
     toolbar.tintColor = toolbarColor;
     [toolbar sizeToFit];
     
-    toolbar.items = @[[[[UIBarButtonItem alloc] init] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil], buttonItem];
+    toolbar.items = @[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil], buttonItem];
     
     self.inputAccessoryView = toolbar;
 }

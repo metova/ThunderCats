@@ -21,7 +21,8 @@
     
     XCTAssertEqualObjects(alert.title, @"Not Implemented");
     XCTAssertEqualObjects(alert.message, @"This feature is not yet implemented.");
-    XCTAssertEqualObjects(alert.actions[0].title, @"Ok");
+    XCTAssertEqualObjects(alert.actions.firstObject.title, @"Ok");
+    XCTAssertEqual(alert.actions.count, 1);
 }
 
 - (void)testAlertWithTitle
@@ -34,7 +35,8 @@
     
     XCTAssertEqual(alert.title, title);
     XCTAssertEqual(alert.message, message);
-    XCTAssertEqual(alert.actions[0].title, cancelButtonTitle);
+    XCTAssertEqual(alert.actions.firstObject.title, cancelButtonTitle);
+    XCTAssertEqual(alert.actions.count, 1);
 }
 
 - (void)testAlertWithTitleWithCompletionBlock
@@ -49,7 +51,8 @@
     
     XCTAssertEqual(alertWithCancelAction.title, title);
     XCTAssertEqual(alertWithCancelAction.message, message);
-    XCTAssertEqual(alertWithCancelAction.actions[0].title, cancelButtonTitle);
+    XCTAssertEqual(alertWithCancelAction.actions.firstObject.title, cancelButtonTitle);
+    XCTAssertEqual(alertWithCancelAction.actions.count, 1);
 }
 
 - (void)testAlertWithActionSheet
@@ -78,7 +81,8 @@
     
     XCTAssertEqual(alertWithCancelAction.title, title);
     XCTAssertEqual(alertWithCancelAction.message, message);
-    XCTAssertEqual(alertWithCancelAction.actions[0].title, cancelButtonTitle);
+    XCTAssertEqual(alertWithCancelAction.actions.firstObject.title, cancelButtonTitle);
+    XCTAssertEqual(alertWithCancelAction.actions.count, 1);
 }
 
 - (void)testImagePickerActionSheet
@@ -88,8 +92,7 @@
     
     UIAlertController *alert = [UIAlertController tc_imagePickerActionSheet:imagePicker presentingViewController:viewController];
     
-    XCTAssertEqualObjects(alert.actions[0].title, @"Cancel");
-    
+    XCTAssertEqualObjects(alert.actions.firstObject.title, @"Cancel");
     XCTAssertEqualObjects(alert.actions[1].title, @"Photo Library");
     
 }

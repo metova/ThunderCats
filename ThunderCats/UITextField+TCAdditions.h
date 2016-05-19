@@ -41,8 +41,8 @@
 /**
  *  Adds a toolbar to keyboard with a next function which advances to the next textfield when tapped.
  *
- *  @param nextTextField The textfield that should becomeFirstResponder next
  *  @param toolbarColor  The UIColor of the toolbar
+ *  @param nextTextField The textfield that should becomeFirstResponder next
  */
 - (void)tc_addNextButtonToolbarWithColor:(UIColor * __tc_nonnull)toolbarColor
                                nextField:(UITextField * __tc_nonnull)nextTextField;
@@ -52,7 +52,7 @@
  *
  *  @param buttonTitle   The title of the button
  *  @param toolbarColor  The UIColor of the toolbar
- *  @param andWithAction The target of the action
+ *  @param target The target of the action
  *  @param selector      The action to be performed on button press
  */
 - (void)tc_addToolbarWithButton:(NSString * __tc_nonnull)buttonTitle

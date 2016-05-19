@@ -234,13 +234,13 @@
 				5394F2BD1CDD4004008C2112 /* NSArrayTests.m */,
 				4AB0204F1CDABC5C00E38DC8 /* NSDictionaryTests.m */,
 				4AB020501CDABC5C00E38DC8 /* NSStringTests.m */,
+				53B731191CE1332100C230C1 /* UIAlertControllerTests.m */,
 				4AB020511CDABC5C00E38DC8 /* UIColorTests.m */,
 				4AB020521CDABC5C00E38DC8 /* UIControlTests.m */,
 				4AB020531CDABC5C00E38DC8 /* UIDeviceTests.m */,
 				4AB020541CDABC5C00E38DC8 /* UINavigationControllerTests.m */,
 				4AB020551CDABC5C00E38DC8 /* UIViewTests.m */,
 				4AB01FBD1CDABB2C00E38DC8 /* Info.plist */,
-				53B731191CE1332100C230C1 /* UIAlertControllerTests.m */,
 			);
 			path = ThunderCatsTests;
 			sourceTree = "<group>";
