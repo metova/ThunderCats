@@ -27,11 +27,16 @@
 //
 
 #import "UITextField+TCAdditions.h"
+#import "TCInvalidArgument.h"
 
 @implementation UITextField (TCAdditions)
 
 - (void)tc_setLeftAndRightPadding:(CGFloat)paddingWidth
 {
+    if (paddingWidth < 0) {
+        [TCInvalidArgument raiseWithReason:@"paddingWidth can not be a negative number"];
+    }
+    
     UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, paddingWidth, self.frame.size.height)];
     
     self.leftView = paddingView;

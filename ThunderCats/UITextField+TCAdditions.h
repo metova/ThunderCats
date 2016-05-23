@@ -34,7 +34,8 @@
 /**
  *  Sets the padding to the left and right sides of the text field.
  *
- *  @param paddingWidth The width to use for the padding.
+ *  @param paddingWidth The width to use for the padding, can not be negative
+ *  @exception TCInvalidArgument Throws TCInvalidArgument if a negative paddingWidth is passed
  */
 - (void)tc_setLeftAndRightPadding:(CGFloat)paddingWidth;
 

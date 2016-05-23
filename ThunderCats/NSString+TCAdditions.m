@@ -1,5 +1,5 @@
 //
-//  NSString+Utils.m
+//  NSString+TCAdditions.m
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -43,7 +43,7 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES[c] %@", emailRegex];
     return [emailTest evaluateWithObject:self];
 }
- 
+
 
 - (BOOL)tc_containsString:(NSString *)substring
 {

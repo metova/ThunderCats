@@ -1,5 +1,5 @@
 //
-//  NSString+Utils.h
+//  NSString+TCAdditions.h
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.

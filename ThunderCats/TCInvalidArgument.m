@@ -1,8 +1,8 @@
 //
-//  UICollectionViewCell+TCAdditions.m
+//  TCInvalidArgument.h
 //  ThunderCats
 //
-//  Copyright (c) 2015 Metova Inc.
+//  Copyright (c) 2016 Metova Inc.
 //
 //  MIT License
 //
@@ -26,28 +26,13 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#import "TCInvalidArgument.h"
 
-#import "UICollectionViewCell+TCAdditions.h"
+@implementation TCInvalidArgument
 
-@implementation UICollectionViewCell (TCAdditions)
-
-+ (NSString *)tc_reuseIdentifier
++ (void)raiseWithReason:(NSString *)reason
 {
-    NSString *className = NSStringFromClass(self);
-    NSString *classNameWithoutSwiftModule = [className componentsSeparatedByString:@"."].lastObject;
-    return classNameWithoutSwiftModule;
-}
-
-+ (NSString *)tc_nibName
-{
-    NSString *className = NSStringFromClass(self);
-    NSString *classNameWithoutSwiftModule = [className componentsSeparatedByString:@"."].lastObject;
-    return classNameWithoutSwiftModule;
-}
-
-+ (UINib *)tc_nib
-{
-    return [UINib nibWithNibName:[self tc_nibName] bundle:[NSBundle mainBundle]];
+    [NSException raise:@"TCInvalidArgument" format:@"%@", reason];
 }
 
 @end
