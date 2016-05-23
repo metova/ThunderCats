@@ -60,6 +60,7 @@
 		53B731301CE4EF5400C230C1 /* UITextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B7312F1CE4EF5400C230C1 /* UITextFieldTests.m */; };
 		53B731341CE4F74C00C230C1 /* UIAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B731331CE4F74C00C230C1 /* UIAlertViewTests.m */; };
 		53B731361CE506D600C230C1 /* UIViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B731351CE506D600C230C1 /* UIViewControllerTests.m */; };
+		53FC19941CF3982C004FE059 /* nsurl_tests.json in Resources */ = {isa = PBXBuildFile; fileRef = 53FC19931CF3982C004FE059 /* nsurl_tests.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +141,7 @@
 		53B7312F1CE4EF5400C230C1 /* UITextFieldTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldTests.m; sourceTree = "<group>"; };
 		53B731331CE4F74C00C230C1 /* UIAlertViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertViewTests.m; sourceTree = "<group>"; };
 		53B731351CE506D600C230C1 /* UIViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerTests.m; sourceTree = "<group>"; };
+		53FC19931CF3982C004FE059 /* nsurl_tests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nsurl_tests.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +247,7 @@
 		4AB01FBA1CDABB2C00E38DC8 /* ThunderCatsTests */ = {
 			isa = PBXGroup;
 			children = (
+				53FC19921CF39819004FE059 /* Resources */,
 				5394F2BD1CDD4004008C2112 /* NSArrayTests.m */,
 				4AB0204F1CDABC5C00E38DC8 /* NSDictionaryTests.m */,
 				4AB020501CDABC5C00E38DC8 /* NSStringTests.m */,
@@ -264,6 +267,14 @@
 				53AE2F481CECE086000B0302 /* TCInvalidArgumentTests.m */,
 			);
 			path = ThunderCatsTests;
+			sourceTree = "<group>";
+		};
+		53FC19921CF39819004FE059 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53FC19931CF3982C004FE059 /* nsurl_tests.json */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,6 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53FC19941CF3982C004FE059 /* nsurl_tests.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

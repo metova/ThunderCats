@@ -17,8 +17,13 @@
 
 - (void)testAddExcludeBackupAttribute
 {
-    NSURL *url = [NSURL URLWithString:@""];
+    NSString *path = [NSString stringWithFormat: @"%@%@", @"file:///", [[NSBundle bundleForClass:[self class]] pathForResource:@"nsurl_tests" ofType:@"json"]];
+    NSURL *url = [NSURL URLWithString: path];
+    
     XCTAssertTrue([url tc_addExcludeBackupAttribute]);
+    NSNumber *value;
+    [url getResourceValue:&value forKey:NSURLIsExcludedFromBackupKey error:nil];
+    XCTAssertEqualObjects(value, @1);
 }
 
 @end
