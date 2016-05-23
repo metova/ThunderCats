@@ -1,5 +1,5 @@
-*Current Develop Status:* [![Build Status](https://travis-ci.org/metova/thundercats.svg?branch=develop)](https://travis-ci.org/metova/thundercats/branches)
-[![Coverage Status](https://coveralls.io/repos/github/metova/thundercats/badge.svg?branch=develop)](https://coveralls.io/github/metova/thundercats?branch=develop)
+*Current Develop Status:* [![Build Status](https://travis-ci.org/metova/ThunderCats.svg?branch=develop)](https://travis-ci.org/metova/ThunderCats/branches)
+[![Coverage Status](https://coveralls.io/repos/github/metova/ThunderCats/badge.svg?branch=develop)](https://coveralls.io/github/metova/ThunderCats?branch=develop)
 
 # Contributions
 

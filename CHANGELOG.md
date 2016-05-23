@@ -1,4 +1,4 @@
-# thundercats CHANGELOG
+# ThunderCats CHANGELOG
 
 ## 2.0.1
 
