@@ -30,100 +30,69 @@
 #import <XCTest/XCTest.h>
 #import "UIColor+TCAdditions.h"
 
-
 @interface UIColorTests : XCTestCase
 
 @end
-
 
 @implementation UIColorTests
 
 - (void)testColorWithHexString
 {
-    UIColor *color1 = [UIColor tc_colorWithHexString:@"000000"];
-    UIColor *color2 = [UIColor blackColor];
+    UIColor *blackColor = [UIColor tc_colorWithHexString:@"000"];
     
-    CGFloat r1, r2, g1, g2, b1, b2, a1, a2;
-    [color1 getRed:&r1 green:&g1 blue:&b1 alpha:&a1];
-    [color2 getRed:&r2 green:&g2 blue:&b2 alpha:&a2];
+    CGFloat red, green, blue, alpha;
     
-    XCTAssertTrue(r1-r2 == 0 && g1-g2 == 0 && b1-b2 == 0 && a1-a2 == 0);
+    [blackColor getRed:&red green:&green blue:&blue alpha:&alpha];
     
-    color2 = [UIColor redColor];
-    [color2 getRed:&r2 green:&g2 blue:&b2 alpha:&a2];
+    XCTAssertEqualWithAccuracy(red, 0.0/255.0, 0.05,  @"Expected red value of 0, but got %f", red);
+    XCTAssertEqualWithAccuracy(green, 0.0/255.0, 0.05,  @"Expected red value of 0, but got %f", green);
+    XCTAssertEqualWithAccuracy(blue, 0.0/255.0, 0.05,  @"Expected red value of 0, but got %f", blue);
+    XCTAssertEqual(alpha, 1,  @"Expected red value of 1, but got %f", alpha);
     
-    XCTAssertFalse(r1-r2 == 0 && g1-g2 == 0 && b1-b2 == 0 && a1-a2 == 0);
-    
-    color1 = [UIColor tc_colorWithHexString:@"FF0000"];
-    color2 = [UIColor colorWithRed:1.0 green:0 blue:0 alpha:1.0];
+    blackColor = [UIColor tc_colorWithHexString:@"#000000"];
 
-    [color1 getRed:&r1 green:&g1 blue:&b1 alpha:&a1];
-    [color2 getRed:&r2 green:&g2 blue:&b2 alpha:&a2];
+    [blackColor getRed:&red green:&green blue:&blue alpha:&alpha];
+
+    XCTAssertEqualWithAccuracy(red, 0.0/255.0, 0.05,  @"Expected red value of 0, but got %f", red);
+    XCTAssertEqualWithAccuracy(green, 0.0/255.0, 0.05,  @"Expected red value of 0, but got %f", green);
+    XCTAssertEqualWithAccuracy(blue, 0.0/255.0, 0.05,  @"Expected red value of 0, but got %f", blue);
+    XCTAssertEqual(alpha, 1,  @"Expected red value of 1, but got %f", alpha);
     
-    XCTAssertTrue(r1-r2 == 0 && g1-g2 == 0 && b1-b2 == 0 && a1-a2 == 0);
+    UIColor *redColor  = [UIColor tc_colorWithHexString:@"F00"];
     
-    color2 = [UIColor blueColor];
-    [color2 getRed:&r2 green:&g2 blue:&b2 alpha:&a2];
+    [redColor getRed:&red green:&green blue:&blue alpha:&alpha];
     
-    XCTAssertFalse(r1-r2 == 0 && g1-g2 == 0 && b1-b2 == 0 && a1-a2 == 0);
+    XCTAssertEqualWithAccuracy(red, 255.0/255.0, 0.05,  @"Expected red value of 1, but got %f", red);
+    XCTAssertEqualWithAccuracy(green, 0.0/255.0, 0.05,  @"Expected red value of 0, but got %f", green);
+    XCTAssertEqualWithAccuracy(blue, 0.0/255.0, 0.05,  @"Expected red value of 0, but got %f", blue);
+    XCTAssertEqual(alpha, 1,  @"Expected red value of 1, but got %f", alpha);
     
-    color1 = [UIColor tc_colorWithHexString:@"0000FF"];
-    color2 = [UIColor colorWithHue:240.0/360.0 saturation:1.0 brightness:1.0 alpha:1.0];
+    UIColor *otherColor  = [UIColor tc_colorWithHexString:@"#E34"];
     
-    [color1 getRed:&r1 green:&g1 blue:&b1 alpha:&a1];
-    [color2 getRed:&r2 green:&g2 blue:&b2 alpha:&a2];
+    [otherColor getRed:&red green:&green blue:&blue alpha:&alpha];
     
-    XCTAssertTrue(r1-r2 == 0 && g1-g2 == 0 && b1-b2 == 0 && a1-a2 == 0);
+    XCTAssertEqualWithAccuracy(red, 238.0/255.0, 0.05,  @"Expected red value of %f, but got %f", 238.0/255.0, red);
+    XCTAssertEqualWithAccuracy(green, 51.0/255.0, 0.05,  @"Expected red value of %f, but got %f", 51.0/255.0, green);
+    XCTAssertEqualWithAccuracy(blue, 68.0/255.0, 0.05,  @"Expected red value of %f, but got %f", 68.0/255.0, blue);
+    XCTAssertEqual(alpha, 1,  @"Expected red value of 1, but got %f", alpha);
     
-    color2 = [UIColor redColor];
-    [color2 getRed:&r2 green:&g2 blue:&b2 alpha:&a2];
+    otherColor = [UIColor tc_colorWithHexString:@"C12345"];
     
-    XCTAssertFalse(r1-r2 == 0 && g1-g2 == 0 && b1-b2 == 0 && a1-a2 == 0);
+    [otherColor getRed:&red green:&green blue:&blue alpha:&alpha];
+    
+    XCTAssertEqualWithAccuracy(red, 193.0/255.0, 0.05,  @"Expected red value of %f, but got %f", 193.0/255.0, red);
+    XCTAssertEqualWithAccuracy(green, 35.0/255.0, 0.05,  @"Expected red value of %f, but got %f", 35.0/255.0, green);
+    XCTAssertEqualWithAccuracy(blue, 69.0/255.0, 0.05,  @"Expected red value of %f, but got %f", 69.0/255.0, blue);
+    XCTAssertEqual(alpha, 1,  @"Expected red value of 1, but got %f", alpha);
+    
+    XCTAssertThrows([UIColor tc_colorWithHexString:@""]);
+    XCTAssertThrows([UIColor tc_colorWithHexString:@"1"]);
+    XCTAssertThrows([UIColor tc_colorWithHexString:@"F"]);
+    XCTAssertThrows([UIColor tc_colorWithHexString:@"00"]);
+    XCTAssertThrows([UIColor tc_colorWithHexString:@"F000"]);
+    XCTAssertThrows([UIColor tc_colorWithHexString:@"C123456"]);
+    XCTAssertThrows([UIColor tc_colorWithHexString:@"C123456789"]);
 }
-
-- (void)testColorWithShortHexString
-{
-    UIColor *color1 = [UIColor tc_colorWithHexString:@"000"];
-    UIColor *color2 = [UIColor blackColor];
-    
-    CGFloat r1, r2, g1, g2, b1, b2, a1, a2;
-    [color1 getRed:&r1 green:&g1 blue:&b1 alpha:&a1];
-    [color2 getRed:&r2 green:&g2 blue:&b2 alpha:&a2];
-    
-    XCTAssertTrue(r1-r2 == 0 && g1-g2 == 0 && b1-b2 == 0 && a1-a2 == 0);
-    
-    color2 = [UIColor redColor];
-    [color2 getRed:&r2 green:&g2 blue:&b2 alpha:&a2];
-    
-    XCTAssertFalse(r1-r2 == 0 && g1-g2 == 0 && b1-b2 == 0 && a1-a2 == 0);
-    
-    color1 = [UIColor tc_colorWithHexString:@"F00"];
-    color2 = [UIColor colorWithRed:1.0 green:0 blue:0 alpha:1.0];
-    
-    [color1 getRed:&r1 green:&g1 blue:&b1 alpha:&a1];
-    [color2 getRed:&r2 green:&g2 blue:&b2 alpha:&a2];
-    
-    XCTAssertTrue(r1-r2 == 0 && g1-g2 == 0 && b1-b2 == 0 && a1-a2 == 0);
-    
-    color2 = [UIColor blueColor];
-    [color2 getRed:&r2 green:&g2 blue:&b2 alpha:&a2];
-    
-    XCTAssertFalse(r1-r2 == 0 && g1-g2 == 0 && b1-b2 == 0 && a1-a2 == 0);
-    
-    color1 = [UIColor tc_colorWithHexString:@"00F"];
-    color2 = [UIColor colorWithHue:240.0/360.0 saturation:1.0 brightness:1.0 alpha:1.0];
-    
-    [color1 getRed:&r1 green:&g1 blue:&b1 alpha:&a1];
-    [color2 getRed:&r2 green:&g2 blue:&b2 alpha:&a2];
-    
-    XCTAssertTrue(r1-r2 == 0 && g1-g2 == 0 && b1-b2 == 0 && a1-a2 == 0);
-    
-    color2 = [UIColor redColor];
-    [color2 getRed:&r2 green:&g2 blue:&b2 alpha:&a2];
-    
-    XCTAssertFalse(r1-r2 == 0 && g1-g2 == 0 && b1-b2 == 0 && a1-a2 == 0);
-}
-
 
 - (void)testIsEqualToColor
 {
