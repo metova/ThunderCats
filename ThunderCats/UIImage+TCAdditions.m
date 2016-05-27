@@ -31,6 +31,7 @@
 
 #import <Accelerate/Accelerate.h>
 #import <float.h>
+#import "UIImageExtensionHelper.h"
 
 @implementation UIImage (TCAdditions)
 
@@ -49,7 +50,7 @@
     return image;
 }
 
-
+/* The following blur effect functions were pulled from https://developer.apple.com/library/ios/samplecode/UIImageEffects/Listings/UIImageEffects_UIImageEffects_m.html and modified slightly to clean them up and meet our needs */
 - (UIImage *)tc_imageWithLightEffect
 {
     UIColor *tintColor = [UIColor colorWithWhite:1.0 alpha:0.3];
@@ -72,28 +73,8 @@
 
 
 - (UIImage *)tc_imageWithTintEffectUsingColor:(UIColor *)tintColor
-{
-    const CGFloat EffectColorAlpha = 0.6;
-    UIColor *effectColor = tintColor;
-    unsigned long componentCount = CGColorGetNumberOfComponents(tintColor.CGColor);
-    
-    if (componentCount == 2)
-    {
-        CGFloat b;
-        if ([tintColor getWhite:&b alpha:NULL])
-        {
-            effectColor = [UIColor colorWithWhite:b alpha:EffectColorAlpha];
-        }
-    }
-    else
-    {
-        CGFloat r, g, b;
-        if ([tintColor getRed:&r green:&g blue:&b alpha:NULL])
-        {
-            effectColor = [UIColor colorWithRed:r green:g blue:b alpha:EffectColorAlpha];
-        }
-    }
-    
+{    
+    UIColor *effectColor = [UIImageExtensionHelper createTintEffectColor:tintColor];
     return [self tc_imageWithBlurUsingRadius:10 tintColor:effectColor saturationDeltaFactor:-1.0 maskImage:nil];
 }
 
@@ -123,8 +104,8 @@
     CGRect imageRect = { CGPointZero, self.size };
     UIImage *effectImage = self;
     
-    BOOL hasBlur = blurRadius > __FLT_EPSILON__;
-    BOOL hasSaturationChange = fabs(saturationDeltaFactor - 1.) > __FLT_EPSILON__;
+    BOOL hasBlur = [UIImageExtensionHelper hasBlur:blurRadius];
+    BOOL hasSaturationChange = [UIImageExtensionHelper hasSaturationChange:saturationDeltaFactor];
     
     if (hasBlur || hasSaturationChange)
     {
@@ -162,13 +143,8 @@
             //
             // ... if d is odd, use three box-blurs of size 'd', centered on the output pixel.
             //
-            CGFloat inputRadius = blurRadius * [[UIScreen mainScreen] scale];
-            uint32_t radius = floor(inputRadius * 3. * sqrt(2 * M_PI) / 4 + 0.5);
             
-            if (radius % 2 != 1)
-            {
-                radius += 1; // force radius to be odd so that the three box-blur methodology works.
-            }
+            uint32_t radius = [UIImageExtensionHelper calculateEffectRadius:blurRadius];
             
             vImageBoxConvolve_ARGB8888(&effectInBuffer, &effectOutBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);
             vImageBoxConvolve_ARGB8888(&effectOutBuffer, &effectInBuffer, NULL, 0, 0, radius, radius, 0, kvImageEdgeExtend);
@@ -406,9 +382,6 @@
             
         case ALAssetOrientationDownMirrored:
             return UIImageOrientationDownMirrored;
-            
-        default:
-            return UIImageOrientationUp;
     }
 }
 
@@ -416,8 +389,9 @@
 + (UIImage *)tc_imageWithImage:(UIImage *)image
                scaledToFitSize:(CGSize)size
 {
-    NSAssert(image.size.height != 0, @"Invalid image height. You must pass an image with a height greater than zero.");
-    NSAssert(image.size.width != 0, @"Invalid image width. You must pass an image with a width greater than zero.");
+    if (image.size.width <= 0 || image.size.width <= 0) {
+        return nil;
+    }
     
     CGFloat scale = MIN(size.width/image.size.width, size.height/image.size.height);
     CGFloat width = image.size.width * scale;
@@ -435,8 +409,9 @@
 + (UIImage *)tc_imageWithImage:(UIImage *)image
               scaledToFillSize:(CGSize)size
 {
-    NSAssert(image.size.height != 0, @"Invalid image height. You must pass an image with a height greater than zero.");
-    NSAssert(image.size.width != 0, @"Invalid image width. You must pass an image with a width greater than zero.");
+    if (image.size.width <= 0 || image.size.width <= 0) {
+        return nil;
+    }
     
     CGFloat scale = MAX(size.width/image.size.width, size.height/image.size.height);
     CGFloat width = image.size.width * scale;
@@ -454,8 +429,9 @@
 + (UIImage *)tc_imageWithImage:(UIImage *)image
     scaledAndCroppedToFillSize:(CGSize)size
 {
-    NSAssert(image.size.height != 0, @"Invalid image height. You must pass an image with a height greater than zero.");
-    NSAssert(image.size.width != 0, @"Invalid image width. You must pass an image with a width greater than zero.");
+    if (image.size.width <= 0 || image.size.width <= 0) {
+        return nil;
+    }
     
     CGFloat scale = MAX(size.width/image.size.width, size.height/image.size.height);
     CGFloat width = image.size.width * scale;
