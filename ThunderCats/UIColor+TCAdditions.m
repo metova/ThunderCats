@@ -34,28 +34,36 @@
 
 + (UIColor *)tc_colorWithHexString:(NSString *)hexString
 {
-    NSString *cleanString = [hexString stringByReplacingOccurrencesOfString:@"#" withString:@""];
-    
-    if ([cleanString length] != 3 && [cleanString length] != 6)
+    if([hexString hasPrefix:@"#"])
     {
-        [TCInvalidArgument raiseWithReason:@"invalid hex string"];
+        hexString = [hexString substringFromIndex:1];
     }
     
-    if ([cleanString length] == 3)
+    NSCharacterSet *validCharacters = [NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEFabcdefg"];
+    
+    bool invalidLength = [hexString length] != 3 && [hexString length] != 6;
+    bool invalidCharacters = ![[hexString stringByTrimmingCharactersInSet:validCharacters]  isEqualToString: @""];
+
+    if (invalidLength || invalidCharacters)
     {
-        cleanString = [NSString stringWithFormat:@"%@%@%@%@%@%@",
-                       [cleanString substringWithRange:NSMakeRange(0, 1)], [cleanString substringWithRange:NSMakeRange(0, 1)],
-                       [cleanString substringWithRange:NSMakeRange(1, 1)], [cleanString substringWithRange:NSMakeRange(1, 1)],
-                       [cleanString substringWithRange:NSMakeRange(2, 1)], [cleanString substringWithRange:NSMakeRange(2, 1)]];
+        [TCInvalidArgument raiseWithReason:[NSString stringWithFormat:@"%@ is not a valid hex string.", hexString]];
     }
     
-    if ([cleanString length] == 6)
+    if ([hexString length] == 3)
     {
-        cleanString = [cleanString stringByAppendingString:@"ff"];
+        hexString = [NSString stringWithFormat:@"%@%@%@%@%@%@",
+                       [hexString substringWithRange:NSMakeRange(0, 1)], [hexString substringWithRange:NSMakeRange(0, 1)],
+                       [hexString substringWithRange:NSMakeRange(1, 1)], [hexString substringWithRange:NSMakeRange(1, 1)],
+                       [hexString substringWithRange:NSMakeRange(2, 1)], [hexString substringWithRange:NSMakeRange(2, 1)]];
+    }
+    
+    if ([hexString length] == 6)
+    {
+        hexString = [hexString stringByAppendingString:@"ff"];
     }
     
     unsigned int baseValue;
-    [[NSScanner scannerWithString:cleanString] scanHexInt:&baseValue];
+    [[NSScanner scannerWithString:hexString] scanHexInt:&baseValue];
     
     float red = ((baseValue >> 24) & 0xFF) / 255.0f;
     float green = ((baseValue >> 16) & 0xFF) / 255.0f;
