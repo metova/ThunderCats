@@ -215,8 +215,7 @@
 		4AB01FAE1CDABB2C00E38DC8 /* ThunderCats */ = {
 			isa = PBXGroup;
 			children = (
-				A9BAEE0A1CF7EDCF00DE9271 /* UIImageExtensionHelper.h */,
-				A9BAEE0B1CF7EDCF00DE9271 /* UIImageExtensionHelper.m */,
+				A92862C81CFE417D003BC78A /* Helpers */,
 				5394F2B91CDD3FE9008C2112 /* NSArray+TCAdditions.h */,
 				5394F2BA1CDD3FE9008C2112 /* NSArray+TCAdditions.m */,
 				4AB0200D1CDABC2B00E38DC8 /* NSDictionary+TCAdditions.h */,
@@ -293,6 +292,15 @@
 				53FC19931CF3982C004FE059 /* nsurl_tests.json */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		A92862C81CFE417D003BC78A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A9BAEE0A1CF7EDCF00DE9271 /* UIImageExtensionHelper.h */,
+				A9BAEE0B1CF7EDCF00DE9271 /* UIImageExtensionHelper.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

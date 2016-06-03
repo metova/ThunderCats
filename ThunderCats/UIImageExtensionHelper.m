@@ -17,11 +17,11 @@
     return color;
 }
 
-+ (Boolean) hasSaturationChange:(CGFloat)saturationDeltaFactor {
++ (BOOL) hasSaturationChange:(CGFloat)saturationDeltaFactor {
     return fabs(saturationDeltaFactor - 1.) > __FLT_EPSILON__;
 }
 
-+ (Boolean) hasBlur:(CGFloat)blurRadius {
++ (BOOL) hasBlur:(CGFloat)blurRadius {
     return blurRadius > __FLT_EPSILON__;
 }
 

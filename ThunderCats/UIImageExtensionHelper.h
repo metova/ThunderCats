@@ -9,11 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#pragma GCC visibility push(hidden)
 @interface UIImageExtensionHelper : NSObject
 
 + (UIColor *) createTintEffectColor:(UIColor *)color;
-+ (Boolean) hasSaturationChange:(CGFloat)saturationDeltaFactor;
-+ (Boolean) hasBlur:(CGFloat)blurRadius;
++ (BOOL) hasSaturationChange:(CGFloat)saturationDeltaFactor;
++ (BOOL) hasBlur:(CGFloat)blurRadius;
 + (uint32_t) calculateEffectRadius:(CGFloat)blurRadius;
 
 @end
+#pragma GCC visibility pop
