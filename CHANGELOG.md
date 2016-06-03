@@ -1,5 +1,10 @@
 # ThunderCats CHANGELOG
 
+## 2.0.2
+
+- Improved tests.
+- [UITextField tc_setLeftAndRightPadding:] will now throw exceptions if negative values are passed.
+
 ## 2.0.1
 
 - Added ThunderCats logo.  Thanks Christi.
