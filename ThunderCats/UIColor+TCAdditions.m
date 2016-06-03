@@ -34,20 +34,12 @@
 
 + (UIColor *)tc_colorWithHexString:(NSString *)hexString
 {
-    if([hexString hasPrefix:@"#"])
-    {
-        hexString = [hexString substringFromIndex:1];
-    }
-    
-    NSCharacterSet *validCharacters = [NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEFabcdefg"];
-    
-    bool invalidLength = [hexString length] != 3 && [hexString length] != 6;
-    bool invalidCharacters = ![[hexString stringByTrimmingCharactersInSet:validCharacters]  isEqualToString: @""];
-
-    if (invalidLength || invalidCharacters)
+    if (![UIColor tc_isValidHexString: hexString])
     {
         [TCInvalidArgument raiseWithReason:[NSString stringWithFormat:@"%@ is not a valid hex string.", hexString]];
     }
+    
+    hexString = [hexString stringByReplacingOccurrencesOfString:@"#" withString:@""];
     
     if ([hexString length] == 3)
     {
@@ -56,8 +48,16 @@
                        [hexString substringWithRange:NSMakeRange(1, 1)], [hexString substringWithRange:NSMakeRange(1, 1)],
                        [hexString substringWithRange:NSMakeRange(2, 1)], [hexString substringWithRange:NSMakeRange(2, 1)]];
     }
+    else if ([hexString length] == 4)
+    {
+        hexString = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@",
+                     [hexString substringWithRange:NSMakeRange(0, 1)], [hexString substringWithRange:NSMakeRange(0, 1)],
+                     [hexString substringWithRange:NSMakeRange(1, 1)], [hexString substringWithRange:NSMakeRange(1, 1)],
+                     [hexString substringWithRange:NSMakeRange(2, 1)], [hexString substringWithRange:NSMakeRange(2, 1)],
+                     [hexString substringWithRange:NSMakeRange(3, 2)], [hexString substringWithRange:NSMakeRange(3, 2)]];
+    }
     
-    if ([hexString length] == 6)
+    if ([hexString length] == 6 || [hexString length] == 8)
     {
         hexString = [hexString stringByAppendingString:@"ff"];
     }
@@ -77,6 +77,22 @@
 - (BOOL)tc_isEqualToColor:(UIColor *)aColor
 {
     return CGColorEqualToColor(self.CGColor, aColor.CGColor);
+}
+
+
++ (BOOL)tc_isValidHexString:(NSString *)hexString
+{
+    if([hexString hasPrefix:@"#"])
+    {
+        hexString = [hexString substringFromIndex:1];
+    }
+    
+    NSCharacterSet *validCharacters = [NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEFabcdefg"];
+    
+    bool invalidCharacters = ![[hexString stringByTrimmingCharactersInSet:validCharacters]  isEqualToString: @""];
+    bool invalidLength = [hexString length] != 3 && [hexString length] != 4 && [hexString length] != 6 && [hexString length] != 8;
+
+    return !(invalidLength || invalidCharacters);
 }
 
 @end
