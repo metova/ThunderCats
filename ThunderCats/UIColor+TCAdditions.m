@@ -54,10 +54,10 @@
                      [hexString substringWithRange:NSMakeRange(0, 1)], [hexString substringWithRange:NSMakeRange(0, 1)],
                      [hexString substringWithRange:NSMakeRange(1, 1)], [hexString substringWithRange:NSMakeRange(1, 1)],
                      [hexString substringWithRange:NSMakeRange(2, 1)], [hexString substringWithRange:NSMakeRange(2, 1)],
-                     [hexString substringWithRange:NSMakeRange(3, 2)], [hexString substringWithRange:NSMakeRange(3, 2)]];
+                     [hexString substringWithRange:NSMakeRange(3, 1)], [hexString substringWithRange:NSMakeRange(3, 1)]];
     }
     
-    if ([hexString length] == 6 || [hexString length] == 8)
+    if ([hexString length] == 6)
     {
         hexString = [hexString stringByAppendingString:@"ff"];
     }
@@ -87,7 +87,7 @@
         hexString = [hexString substringFromIndex:1];
     }
     
-    NSCharacterSet *validCharacters = [NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEFabcdefg"];
+    NSCharacterSet *validCharacters = [NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEFabcdef"];
     
     bool invalidCharacters = ![[hexString stringByTrimmingCharactersInSet:validCharacters]  isEqualToString: @""];
     bool invalidLength = [hexString length] != 3 && [hexString length] != 4 && [hexString length] != 6 && [hexString length] != 8;

@@ -58,6 +58,24 @@
     XCTAssertEqualWithAccuracy(blue, 0.0/255.0, 0.001,  @"Expected blue value of 0, but got %f", blue);
     XCTAssertEqualWithAccuracy(alpha, 1, 0.001,  @"Expected alpha value of 1, but got %f", alpha);
     
+    blackColor = [UIColor tc_colorWithHexString:@"#00000080"];
+    
+    [blackColor getRed:&red green:&green blue:&blue alpha:&alpha];
+    
+    XCTAssertEqualWithAccuracy(red, 0.0/255.0, 0.001,  @"Expected red value of 0, but got %f", red);
+    XCTAssertEqualWithAccuracy(green, 0.0/255.0, 0.001,  @"Expected green value of 0, but got %f", green);
+    XCTAssertEqualWithAccuracy(blue, 0.0/255.0, 0.001,  @"Expected blue value of 0, but got %f", blue);
+    XCTAssertEqualWithAccuracy(floor(alpha * 100)/100, 0.50, 0.001,  @"Expected alpha value of 1, but got %f", alpha);
+    
+    blackColor = [UIColor tc_colorWithHexString:@"#FFFF00cc"];
+    
+    [blackColor getRed:&red green:&green blue:&blue alpha:&alpha];
+    
+    XCTAssertEqualWithAccuracy(red, 255/255.0, 0.001,  @"Expected red value of 0, but got %f", red);
+    XCTAssertEqualWithAccuracy(green, 255/255.0, 0.001,  @"Expected green value of 0, but got %f", green);
+    XCTAssertEqualWithAccuracy(blue, 0.0/255.0, 0.001,  @"Expected blue value of 0, but got %f", blue);
+    XCTAssertEqualWithAccuracy(floor(alpha * 100)/100, 0.80, 0.001,  @"Expected alpha value of 1, but got %f", alpha);
+    
     UIColor *redColor  = [UIColor tc_colorWithHexString:@"F00"];
     
     [redColor getRed:&red green:&green blue:&blue alpha:&alpha];
@@ -67,14 +85,14 @@
     XCTAssertEqualWithAccuracy(blue, 0.0/255.0, 0.001,  @"Expected blue value of 0, but got %f", blue);
     XCTAssertEqualWithAccuracy(alpha, 1, 0.001,  @"Expected alpha value of 1, but got %f", alpha);
     
-    UIColor *otherColor  = [UIColor tc_colorWithHexString:@"#E34"];
+    UIColor *otherColor  = [UIColor tc_colorWithHexString:@"#E340"];
     
     [otherColor getRed:&red green:&green blue:&blue alpha:&alpha];
     
     XCTAssertEqualWithAccuracy(red, 238.0/255.0, 0.001,  @"Expected red value of %f, but got %f", 238.0/255.0, red);
     XCTAssertEqualWithAccuracy(green, 51.0/255.0, 0.001,  @"Expected green value of %f, but got %f", 51.0/255.0, green);
     XCTAssertEqualWithAccuracy(blue, 68.0/255.0, 0.001,  @"Expected blue value of %f, but got %f", 68.0/255.0, blue);
-    XCTAssertEqualWithAccuracy(alpha, 1, 0.001,  @"Expected alpha value of 1, but got %f", alpha);
+    XCTAssertEqualWithAccuracy(floor(alpha * 100)/100, 0, 0.001,  @"Expected alpha value of 1, but got %f", alpha);
     
     otherColor  = [UIColor tc_colorWithHexString:@"#e34"];
     
@@ -83,7 +101,7 @@
     XCTAssertEqualWithAccuracy(red, 238.0/255.0, 0.001,  @"Expected red value of %f, but got %f", 238.0/255.0, red);
     XCTAssertEqualWithAccuracy(green, 51.0/255.0, 0.001,  @"Expected green value of %f, but got %f", 51.0/255.0, green);
     XCTAssertEqualWithAccuracy(blue, 68.0/255.0, 0.001,  @"Expected blue value of %f, but got %f", 68.0/255.0, blue);
-    XCTAssertEqualWithAccuracy(alpha, 1, 0.001,  @"Expected alpha value of 1, but got %f", alpha);
+    XCTAssertEqualWithAccuracy(floor(alpha * 100)/100, 1, 0.001,  @"Expected alpha value of 1, but got %f", alpha);
     
     otherColor = [UIColor tc_colorWithHexString:@"c12345"];
     
@@ -92,20 +110,9 @@
     XCTAssertEqualWithAccuracy(red, 193.0/255.0, 0.001,  @"Expected red value of %f, but got %f", 193.0/255.0, red);
     XCTAssertEqualWithAccuracy(green, 35.0/255.0, 0.001,  @"Expected green value of %f, but got %f", 35.0/255.0, green);
     XCTAssertEqualWithAccuracy(blue, 69.0/255.0, 0.001,  @"Expected blue value of %f, but got %f", 69.0/255.0, blue);
-    XCTAssertEqualWithAccuracy(alpha, 1, 0.001,  @"Expected alpha value of 1, but got %f", alpha);
-    
-    XCTAssertThrows([UIColor tc_colorWithHexString:@""]);
-    XCTAssertThrows([UIColor tc_colorWithHexString:@"1"]);
-    XCTAssertThrows([UIColor tc_colorWithHexString:@"F"]);
-    XCTAssertThrows([UIColor tc_colorWithHexString:@"00"]);
-    XCTAssertThrows([UIColor tc_colorWithHexString:@"F000"]);
-    XCTAssertThrows([UIColor tc_colorWithHexString:@"#c123456"]);
-    XCTAssertThrows([UIColor tc_colorWithHexString:@"C123456789"]);
-    XCTAssertThrows([UIColor tc_colorWithHexString:@"violet"]);
-    XCTAssertThrows([UIColor tc_colorWithHexString:@"abcde*"]);
-    XCTAssertThrows([UIColor tc_colorWithHexString:@"#0123#FF"]);
-    XCTAssertThrows([UIColor tc_colorWithHexString:@"0123#FF"]);
+    XCTAssertEqualWithAccuracy(floor(alpha * 100)/100, 1, 0.001,  @"Expected alpha value of 1, but got %f", alpha);
 }
+
 
 - (void)testIsEqualToColor
 {
@@ -117,6 +124,24 @@
     color2 = [UIColor blueColor];
     
     XCTAssertFalse([color1 tc_isEqualToColor:color2]);
+}
+
+
+- (void)testIsValidHexString
+{
+    XCTAssertTrue([UIColor tc_isValidHexString:@"f123"]);
+    XCTAssertTrue([UIColor tc_isValidHexString:@"#c12"]);
+    XCTAssertTrue([UIColor tc_isValidHexString:@"C12345"]);
+    XCTAssertTrue([UIColor tc_isValidHexString:@"#0095ff80"]);
+    XCTAssertTrue([UIColor tc_isValidHexString:@"000"]);
+    XCTAssertFalse([UIColor tc_isValidHexString:@""]);
+    XCTAssertFalse([UIColor tc_isValidHexString:@"1"]);
+    XCTAssertFalse([UIColor tc_isValidHexString:@"00"]);
+    XCTAssertFalse([UIColor tc_isValidHexString:@"F"]);
+    XCTAssertFalse([UIColor tc_isValidHexString:@"#c123456"]);
+    XCTAssertFalse([UIColor tc_isValidHexString:@"C123456789"]);
+    XCTAssertFalse([UIColor tc_isValidHexString:@"violet"]);
+    XCTAssertFalse([UIColor tc_isValidHexString:@"0123#FF"]);
 }
 
 @end
