@@ -60,16 +60,6 @@ UIImageOrientation mockedOrientation;
 
 @implementation UIImageTests
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
 - (void)testImageWithColor {
     
     CGFloat inRed = 136.0/255.0;
@@ -102,17 +92,21 @@ UIImageOrientation mockedOrientation;
     
     // RGBA values range from 0 to 255
     UIColor *pixelColor = [UIColor colorWithRed:red/255.0
-                           green:green/255.0
-                            blue:blue/255.0
-                           alpha:alpha/255.0];
+                                          green:green/255.0
+                                           blue:blue/255.0
+                                          alpha:alpha/255.0];
     
     CGFloat outRed, outGreen, outBlue, outAlpha;
-    [pixelColor getRed:&outRed green:&outGreen blue:&outBlue alpha:&outAlpha];
     
-    XCTAssertEqual(inRed, outRed);
-    XCTAssertEqual(inGreen, outGreen);
-    XCTAssertEqual(inBlue, outBlue);
-    XCTAssertEqual(inAlpha, outAlpha);
+    [pixelColor getRed:&outRed
+                 green:&outGreen
+                  blue:&outBlue
+                 alpha:&outAlpha];
+    
+    XCTAssertEqualWithAccuracy(inRed, outRed, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(inGreen, outGreen, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(inBlue, outBlue, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(inAlpha, outAlpha, FLT_EPSILON);
 }
 
 - (void)testImageWithBlur {
@@ -125,7 +119,7 @@ UIImageOrientation mockedOrientation;
     XCTAssertNil(blurredImage, @"Should return nil if image is nil");
     
     UIImage *blackImage = [UIImage tc_imageWithColor:[UIColor blackColor]];
-    CIImage* ciImage = [[CIImage alloc] initWithCGImage:blackImage.CGImage];
+    CIImage *ciImage = [[CIImage alloc] initWithCGImage:blackImage.CGImage];
     UIImage *imageFromCI = [UIImage imageWithCIImage:ciImage];
     
     blurredImage = [imageFromCI tc_imageWithBlurUsingRadius:10.0 tintColor:[UIColor redColor] saturationDeltaFactor:10.0 maskImage:nil];
@@ -157,7 +151,7 @@ UIImageOrientation mockedOrientation;
     XCTAssertNil(blurredImage, @"Should return nil if image is nil");
     
     UIImage *blackImage = [UIImage tc_imageWithColor:[UIColor blackColor]];
-    CIImage* ciImage = [[CIImage alloc] initWithCGImage:blackImage.CGImage];
+    CIImage *ciImage = [[CIImage alloc] initWithCGImage:blackImage.CGImage];
     UIImage *imageFromCI = [UIImage imageWithCIImage:ciImage];
     
     blurredImage = [imageFromCI tc_imageWithLightEffect];
@@ -184,7 +178,7 @@ UIImageOrientation mockedOrientation;
     XCTAssertNil(blurredImage, @"Should return nil if image is nil");
     
     UIImage *blackImage = [UIImage tc_imageWithColor:[UIColor blackColor]];
-    CIImage* ciImage = [[CIImage alloc] initWithCGImage:blackImage.CGImage];
+    CIImage *ciImage = [[CIImage alloc] initWithCGImage:blackImage.CGImage];
     UIImage *imageFromCI = [UIImage imageWithCIImage:ciImage];
     
     blurredImage = [imageFromCI tc_imageWithExtraLightEffect];
@@ -211,7 +205,7 @@ UIImageOrientation mockedOrientation;
     XCTAssertNil(blurredImage, @"Should return nil if image is nil");
     
     UIImage *blackImage = [UIImage tc_imageWithColor:[UIColor blackColor]];
-    CIImage* ciImage = [[CIImage alloc] initWithCGImage:blackImage.CGImage];
+    CIImage *ciImage = [[CIImage alloc] initWithCGImage:blackImage.CGImage];
     UIImage *imageFromCI = [UIImage imageWithCIImage:ciImage];
     
     blurredImage = [imageFromCI tc_imageWithDarkEffect];
@@ -253,7 +247,7 @@ UIImageOrientation mockedOrientation;
     XCTAssertNil(blurredImage, @"Should return nil if image is nil");
     
     UIImage *blackImage = [UIImage tc_imageWithColor:[UIColor blackColor]];
-    CIImage* ciImage = [[CIImage alloc] initWithCGImage:blackImage.CGImage];
+    CIImage *ciImage = [[CIImage alloc] initWithCGImage:blackImage.CGImage];
     UIImage *imageFromCI = [UIImage imageWithCIImage:ciImage];
 
     blurredImage = [imageFromCI tc_imageWithTintEffectUsingColor:color];
@@ -336,33 +330,27 @@ UIImageOrientation mockedOrientation;
 
 - (void)testImageFromAsset {
     
-    __block BOOL hasCalledBack = NO;
-    
-    void (^completionBlock)(void) = ^(void){
-        NSLog(@"Completion Block!");
-        hasCalledBack = YES;
-    };
-    
     ALAsset *asset = [[MockAsset alloc] init];
-    
-    __block UIImage *resultImage;
     
     CGSize scaleSize = CGSizeMake(5.0, 10.0);
     
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Resulting image is not as expected"];
+    
     [UIImage tc_imageFromAsset:asset scaledToCoverSize:scaleSize completion:^(UIImage* image){
-        resultImage = image;
+
+        XCTAssertNotNil(image);
+        XCTAssertEqual(image.imageOrientation, UIImageOrientationUp);
+        XCTAssertEqual(image.size.width, 10.0);
+        XCTAssertEqual(image.size.height, 10.0);
+        
+        [expectation fulfill];
     }];
     
-    NSDate *loopUntil = [NSDate dateWithTimeIntervalSinceNow:10];
-    while (hasCalledBack == NO && [loopUntil timeIntervalSinceNow] > 0) {
-        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
-                                 beforeDate:loopUntil];
-    }
-    
-    XCTAssertNotNil(resultImage);
-    XCTAssertEqual(resultImage.imageOrientation, UIImageOrientationUp);
-    XCTAssertEqual(resultImage.size.width, 10.0);
-    XCTAssertEqual(resultImage.size.height, 10.0);
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if (error) {
+            NSLog(@"Timed out while waiting for image from asset catalog");
+        }
+    }];
 }
 
 - (void)testImageOrientationUp {
@@ -456,7 +444,11 @@ UIImageOrientation mockedOrientation;
     CGFloat inBlue = 70.0/255.0;
     CGFloat inAlpha = 1.0;
     
-    UIImage *colorImage = [UIImage tc_imageWithColor:[UIColor colorWithRed:inRed green:inGreen blue:inBlue alpha:inAlpha]];
+    UIImage *colorImage = [UIImage tc_imageWithColor:[UIColor colorWithRed:inRed
+                                                                     green:inGreen
+                                                                      blue:inBlue
+                                                                     alpha:inAlpha]];
+    
     colorImage = [UIImage tc_imageWithImage:colorImage scaledAndCroppedToFillSize:CGSizeMake(100, 100)];
     
     UIImage *noBlurImage = [colorImage tc_imageWithBlurUsingRadius:0.0 tintColor:nil saturationDeltaFactor:1.0 maskImage:nil];
@@ -486,12 +478,16 @@ UIImageOrientation mockedOrientation;
                                           alpha:alpha/255.0];
     
     CGFloat outRed, outGreen, outBlue, outAlpha;
-    [pixelColor getRed:&outRed green:&outGreen blue:&outBlue alpha:&outAlpha];
     
-    XCTAssertEqual(inRed, outRed);
-    XCTAssertEqual(inGreen, outGreen);
-    XCTAssertEqual(inBlue, outBlue);
-    XCTAssertEqual(inAlpha, outAlpha);
+    [pixelColor getRed:&outRed
+                 green:&outGreen
+                  blue:&outBlue
+                 alpha:&outAlpha];
+    
+    XCTAssertEqualWithAccuracy(inRed, outRed, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(inGreen, outGreen, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(inBlue, outBlue, FLT_EPSILON);
+    XCTAssertEqualWithAccuracy(inAlpha, outAlpha, FLT_EPSILON);
 }
 
 @end

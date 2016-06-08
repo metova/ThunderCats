@@ -11,8 +11,8 @@
 @implementation UIImageExtensionHelper
 
 + (UIColor *) createTintEffectColor:(UIColor *)color {
-    const CGFloat EffectColorAlpha = 0.6;
-    color = [color colorWithAlphaComponent:EffectColorAlpha];
+    const CGFloat kEffectColorAlpha = 0.6;
+    color = [color colorWithAlphaComponent:kEffectColorAlpha];
     
     return color;
 }
