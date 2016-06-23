@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ThunderCats"
-  s.version      = "2.0.1"
+  s.version      = "2.1.0"
   s.summary      = "Useful categories"
 
   s.homepage = "http://metova.com"
@@ -10,7 +10,8 @@ Pod::Spec.new do |s|
     "Kurt Treangen" => "kurt.treangen@metova.com",
     "William Grand" => "william.grand@metova.com",
     "Nick Griffith" => "nick.griffith@metova.com",
-    "Abbey Jackson" => "abbey.jackson@metova.com"
+    "Abbey Jackson" => "abbey.jackson@metova.com",
+    "Jonathon Richardson" => "jonathon.richardson@metova.com"
   }
 
   s.platform = :ios, '8.0'
