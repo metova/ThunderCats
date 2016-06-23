@@ -35,7 +35,7 @@
 /**
  * Returns a string with the contents of the array interpreted as JSON. The JSON is pretty printed so it's easier to read. This is particularly useful for debugging network requests and responses.
  *
- * @return a pretty printed formatted NSString
+ * @return A pretty printed formatted NSString
  */
 - (NSString * __tc_nullable)tc_JSONString;
 

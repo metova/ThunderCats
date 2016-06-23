@@ -101,7 +101,7 @@
  *  @param size       The size that the resulting image should cover.
  *  @param completion Completion block that is called once the image is generated.
  */
-- (void)tc_imageFromAsset:(ALAsset * __tc_nonnull)asset
++ (void)tc_imageFromAsset:(ALAsset * __tc_nonnull)asset
         scaledToCoverSize:(CGSize)size
                completion:(void (^ __tc_nonnull)(UIImage * __tc_null_unspecified image))completion;
 

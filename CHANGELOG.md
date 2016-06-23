@@ -1,4 +1,11 @@
-# thundercats CHANGELOG
+# ThunderCats CHANGELOG
+
+## 2.1.0
+
+- Improved tests.
+- `[UITextField tc_setLeftAndRightPadding:]` will now throw exceptions if negative values are passed.
+- Added `[UIColor tc_isValidHexString:]` which will determine whether an `NSString` can be converted to a `UIColor`.
+- `[UIColor tc_colorWithHexString:]` will now throw exceptions if invalid strings are passed.
 
 ## 2.0.1
 

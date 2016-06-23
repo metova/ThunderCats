@@ -43,6 +43,5 @@
 #import "NSDictionary+TCAdditions.h"
 #import "NSURL+TCAdditions.h"
 #import "UIControl+TCAdditions.h"
-#import "UINavigationController+TCAdditions.h"
 
 #endif

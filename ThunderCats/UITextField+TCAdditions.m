@@ -27,17 +27,49 @@
 //
 
 #import "UITextField+TCAdditions.h"
+#import "TCInvalidArgument.h"
 
 @implementation UITextField (TCAdditions)
 
 - (void)tc_setLeftAndRightPadding:(CGFloat)paddingWidth
 {
+    if (paddingWidth < 0) {
+        [TCInvalidArgument raiseWithReason:@"paddingWidth can not be a negative number"];
+    }
+    
     UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, paddingWidth, self.frame.size.height)];
     
     self.leftView = paddingView;
     self.leftViewMode = UITextFieldViewModeAlways;
     self.rightView = paddingView;
     self.rightViewMode = UITextFieldViewModeUnlessEditing;
+}
+
+- (void)tc_addNextButtonToolbarWithColor:(UIColor * __tc_nonnull)toolbarColor
+                               nextField:(UITextField * __tc_nonnull)nextTextField
+
+{
+    [self tc_addToolbarWithButton:@"Next" toolbarColor:toolbarColor target:nextTextField action:@selector(becomeFirstResponder)];
+}
+
+- (void)tc_addToolbarWithButton:(NSString * __tc_nonnull)buttonTitle
+                   toolbarColor:(UIColor * __tc_nonnull)toolbarColor
+                         target:(id)target action:(SEL)selector
+{
+    UIBarButtonItem *button = [[UIBarButtonItem init] initWithTitle:buttonTitle style:UIBarButtonItemStylePlain target:target action:selector];
+    [self addToolBarWithButton:button toolbarColor:toolbarColor];
+}
+
+- (void)addToolBarWithButton:(UIBarButtonItem * __tc_nonnull)buttonItem
+                toolbarColor:(UIColor * __tc_nonnull)toolbarColor
+{
+    UIToolbar *toolbar = [[UIToolbar alloc] init];
+    toolbar.tintColor = toolbarColor;
+    [toolbar sizeToFit];
+    
+    toolbar.items = @[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil], buttonItem];
+    
+    self.inputAccessoryView = toolbar;
 }
 
 @end

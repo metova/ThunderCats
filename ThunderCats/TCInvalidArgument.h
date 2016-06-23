@@ -1,5 +1,5 @@
 //
-//  UIAlertController+TCAdditions.m
+//  TCInvalidArgument.h
 //  ThunderCats
 //
 //  Copyright (c) 2015 Metova Inc.
@@ -26,21 +26,16 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "UIAlertController+TCAdditions.h"
+#import <Foundation/Foundation.h>
+#import "TCNullabilityMacros.h"
 
-@implementation UIAlertController (TCAdditions)
+@interface TCInvalidArgument : NSException
 
-+ (instancetype)tc_notImplementedAlert
-{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Not Implemented"
-                                                                   message:@"This feature is not yet implemented."
-                                                            preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction *okay = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
-    
-    [alert addAction:okay];
-    
-    return alert;
-}
+/**
+ *  Throws TCInvalidArgument with reason given
+ *
+ *  @param reason The reason the exception is thrown
+ */
++ (void)raiseWithReason:(NSString * __tc_nonnull)reason;
 
 @end
