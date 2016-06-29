@@ -37,6 +37,41 @@
 
 @implementation UIViewTests
 
+- (void)testViewResignFirstResponder {
+    
+    UIViewController *vc = [[UIViewController alloc] init];
+    UIWindow *window = [[UIWindow alloc] init];
+    UIView *view = vc.view;
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
+    [vc.view addSubview:textField];
+    [window addSubview:view];
+    [textField becomeFirstResponder];
+    
+    XCTAssertTrue(textField.isFirstResponder);
+    
+    [textField tc_findAndResignFirstResponder];
+    
+    XCTAssertFalse(textField.isFirstResponder);
+}
+
+- (void)testSubviewResignFirstResponder {
+    
+    UIViewController *vc = [[UIViewController alloc] init];
+    
+    UIWindow *window = [[UIWindow alloc] init];
+    UIView *view = vc.view;
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
+    [vc.view addSubview:textField];
+    [window addSubview:view];
+    [textField becomeFirstResponder];
+    
+    XCTAssertTrue(textField.isFirstResponder);
+    
+    [view tc_findAndResignFirstResponder];
+    
+    XCTAssertFalse(textField.isFirstResponder);
+}
+
 - (void)testGetAllSubviews
 {
     UIView *view = [UIView new];
@@ -65,6 +100,30 @@
     XCTAssertTrue([allSubviews containsObject:subSubSubview1]);
 }
 
+- (void)testSubviewSearch {
+    
+    UIView *view = [UIView new];
+    UIView *subview1 = [UIView new];
+    UIView *subview2 = [UITextField new];
+    UIView *subSubview1 = [UIView new];
+    UIView *subSubview2 = [UIView new];
+    UIView *subSubview3 = [UIView new];
+    UITextField *subSubSubview1 = [UITextField new];
+    
+    [view addSubview:subview1];
+    [view addSubview:subview2];
+    [subview1 addSubview:subSubview1];
+    [subview1 addSubview:subSubview2];
+    [subview2 addSubview:subSubview3];
+    [subSubview1 addSubview:subSubSubview1];
+    
+    UIView *subview = [view tc_subviewThatSatisfiesBlock:^BOOL(UIView *view) {
+                                               return [view isKindOfClass:[UITextField class]];
+                                           }];
+    
+    XCTAssertNotNil(subview);
+    XCTAssertEqual(subview, subview2);
+}
 
 - (void)testDepthFirstSubviewSearch
 {

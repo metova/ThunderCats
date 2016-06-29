@@ -56,7 +56,7 @@
                    toolbarColor:(UIColor * __tc_nonnull)toolbarColor
                          target:(id)target action:(SEL)selector
 {
-    UIBarButtonItem *button = [[UIBarButtonItem init] initWithTitle:buttonTitle style:UIBarButtonItemStylePlain target:target action:selector];
+    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithTitle:buttonTitle style:UIBarButtonItemStylePlain target:target action:selector];
     [self addToolBarWithButton:button toolbarColor:toolbarColor];
 }
 

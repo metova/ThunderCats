@@ -59,4 +59,49 @@
     XCTAssertThrowsSpecific([textField tc_setLeftAndRightPadding: -20], NSException, @"paddingWidth can not be a negative number");
 }
 
+- (void)testAddNextButton {
+    
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 10, 10, 10)];
+    UITextField *textField2 = [[UITextField alloc] initWithFrame:CGRectMake(10, 10, 20, 20)];
+    
+    UIViewController *vc = [[UIViewController alloc] init];
+    UIWindow *window = [[UIWindow alloc] init];
+    UIView *view = vc.view;
+    [vc.view addSubview:textField];
+    [vc.view addSubview:textField2];
+    [window addSubview:view];
+
+    [textField tc_addNextButtonToolbarWithColor:[UIColor redColor] nextField:textField2];
+    
+    XCTAssertNotNil(textField.inputAccessoryView);
+    XCTAssertTrue([textField.inputAccessoryView isKindOfClass:[UIToolbar class]]);
+    
+    UIToolbar *toolbar = (UIToolbar *) textField.inputAccessoryView;
+    UIBarButtonItem *barButtonItem = toolbar.items[1];
+    
+    XCTAssertTrue([barButtonItem.title isEqualToString:@"Next"], @"Test failed: %@ is not equal to %@", toolbar.items[0].title, @"Next");
+    XCTAssertEqual(barButtonItem.target, textField2);
+    
+    [textField2 performSelector:barButtonItem.action];
+    
+    XCTAssertTrue(textField2.isFirstResponder);
+}
+
+- (void)testAddToolbarWithButton {
+    
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 10, 10, 10)];
+    NSString *buttonTitle = @"Test";
+    
+    [textField tc_addToolbarWithButton:buttonTitle toolbarColor:[UIColor redColor] target:self action:nil];
+    
+    XCTAssertNotNil(textField.inputAccessoryView);
+    XCTAssertTrue([textField.inputAccessoryView isKindOfClass:[UIToolbar class]]);
+    
+    UIToolbar *toolbar = (UIToolbar *) textField.inputAccessoryView;
+    UIBarButtonItem *barButtonItem = toolbar.items[1];
+    
+    XCTAssertTrue([barButtonItem.title isEqualToString:buttonTitle], @"Test failed: %@ is not equal to %@", toolbar.items[0].title, buttonTitle);
+    XCTAssertEqual(barButtonItem.target, self);
+}
+
 @end
