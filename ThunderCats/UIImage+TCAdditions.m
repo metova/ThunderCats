@@ -354,7 +354,7 @@
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         CGImageRef imageRef = [[asset defaultRepresentation] fullResolutionImage];
-        UIImageOrientation orientation = [UIImage tc_imageOrientationFromAssetOrientation:[[asset defaultRepresentation] orientation]];
+        UIImageOrientation orientation = [UIImage imageOrientationFromAssetOrientation:[[asset defaultRepresentation] orientation]];
         CGFloat scale = [[asset defaultRepresentation] scale];
         
         UIImage *image = [UIImage imageWithCGImage:imageRef scale:scale orientation:orientation];
@@ -378,8 +378,8 @@
     });
 }
 
-
-+ (UIImageOrientation)tc_imageOrientationFromAssetOrientation:(ALAssetOrientation)assetOrientation
+//For internal use only, since the exposed version of this function is deprecated
++ (UIImageOrientation)imageOrientationFromAssetOrientation:(ALAssetOrientation)assetOrientation
 {
     switch (assetOrientation)
     {
@@ -410,6 +410,12 @@
         default:
             return UIImageOrientationUp;
     }
+}
+
+//This is the exposed version of imageOrientationFromAssetOrientation, and is deprecated
++ (UIImageOrientation)tc_imageOrientationFromAssetOrientation:(ALAssetOrientation)assetOrientation
+{
+    return [UIImage imageOrientationFromAssetOrientation:assetOrientation];
 }
 
 
