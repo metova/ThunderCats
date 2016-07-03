@@ -61,6 +61,12 @@
 		53B731341CE4F74C00C230C1 /* UIAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B731331CE4F74C00C230C1 /* UIAlertViewTests.m */; };
 		53B731361CE506D600C230C1 /* UIViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B731351CE506D600C230C1 /* UIViewControllerTests.m */; };
 		53FC19941CF3982C004FE059 /* nsurl_tests.json in Resources */ = {isa = PBXBuildFile; fileRef = 53FC19931CF3982C004FE059 /* nsurl_tests.json */; };
+		A9BAEE021CF7ED4C00DE9271 /* UIImageSize0Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BAEE001CF7ED4C00DE9271 /* UIImageSize0Tests.m */; };
+		A9BAEE031CF7ED4C00DE9271 /* UIImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BAEE011CF7ED4C00DE9271 /* UIImageTests.m */; };
+		A9BAEE071CF7ED7F00DE9271 /* Corrupt.png in Resources */ = {isa = PBXBuildFile; fileRef = A9BAEE061CF7ED7F00DE9271 /* Corrupt.png */; };
+		A9BAEE0C1CF7EDCF00DE9271 /* UIImageExtensionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = A9BAEE0A1CF7EDCF00DE9271 /* UIImageExtensionHelper.h */; };
+		A9BAEE0D1CF7EDCF00DE9271 /* UIImageExtensionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BAEE0B1CF7EDCF00DE9271 /* UIImageExtensionHelper.m */; };
+		A9BAEE0F1CF7EF2400DE9271 /* icon-green.png in Resources */ = {isa = PBXBuildFile; fileRef = A9BAEE0E1CF7EF2400DE9271 /* icon-green.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +148,12 @@
 		53B731331CE4F74C00C230C1 /* UIAlertViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertViewTests.m; sourceTree = "<group>"; };
 		53B731351CE506D600C230C1 /* UIViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerTests.m; sourceTree = "<group>"; };
 		53FC19931CF3982C004FE059 /* nsurl_tests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nsurl_tests.json; sourceTree = "<group>"; };
+		A9BAEE001CF7ED4C00DE9271 /* UIImageSize0Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageSize0Tests.m; sourceTree = "<group>"; };
+		A9BAEE011CF7ED4C00DE9271 /* UIImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageTests.m; sourceTree = "<group>"; };
+		A9BAEE061CF7ED7F00DE9271 /* Corrupt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Corrupt.png; sourceTree = "<group>"; };
+		A9BAEE0A1CF7EDCF00DE9271 /* UIImageExtensionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageExtensionHelper.h; sourceTree = "<group>"; };
+		A9BAEE0B1CF7EDCF00DE9271 /* UIImageExtensionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageExtensionHelper.m; sourceTree = "<group>"; };
+		A9BAEE0E1CF7EF2400DE9271 /* icon-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-green.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +215,7 @@
 		4AB01FAE1CDABB2C00E38DC8 /* ThunderCats */ = {
 			isa = PBXGroup;
 			children = (
+				A92862C81CFE417D003BC78A /* Helpers */,
 				5394F2B91CDD3FE9008C2112 /* NSArray+TCAdditions.h */,
 				5394F2BA1CDD3FE9008C2112 /* NSArray+TCAdditions.m */,
 				4AB0200D1CDABC2B00E38DC8 /* NSDictionary+TCAdditions.h */,
@@ -247,6 +260,8 @@
 		4AB01FBA1CDABB2C00E38DC8 /* ThunderCatsTests */ = {
 			isa = PBXGroup;
 			children = (
+				A9BAEE001CF7ED4C00DE9271 /* UIImageSize0Tests.m */,
+				A9BAEE011CF7ED4C00DE9271 /* UIImageTests.m */,
 				53FC19921CF39819004FE059 /* Resources */,
 				5394F2BD1CDD4004008C2112 /* NSArrayTests.m */,
 				4AB0204F1CDABC5C00E38DC8 /* NSDictionaryTests.m */,
@@ -272,9 +287,20 @@
 		53FC19921CF39819004FE059 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A9BAEE0E1CF7EF2400DE9271 /* icon-green.png */,
+				A9BAEE061CF7ED7F00DE9271 /* Corrupt.png */,
 				53FC19931CF3982C004FE059 /* nsurl_tests.json */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		A92862C81CFE417D003BC78A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A9BAEE0A1CF7EDCF00DE9271 /* UIImageExtensionHelper.h */,
+				A9BAEE0B1CF7EDCF00DE9271 /* UIImageExtensionHelper.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +318,7 @@
 				4AB0202E1CDABC2B00E38DC8 /* NSDictionary+TCAdditions.h in Headers */,
 				4AB020411CDABC2B00E38DC8 /* UIDevice+TCAdditions.h in Headers */,
 				4AB020431CDABC2B00E38DC8 /* UIImage+TCAdditions.h in Headers */,
+				A9BAEE0C1CF7EDCF00DE9271 /* UIImageExtensionHelper.h in Headers */,
 				4AB020321CDABC2B00E38DC8 /* NSURL+TCAdditions.h in Headers */,
 				4AB020471CDABC2B00E38DC8 /* UITableViewCell+TCAdditions.h in Headers */,
 				4AB020491CDABC2B00E38DC8 /* UITextField+TCAdditions.h in Headers */,
@@ -393,6 +420,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				53FC19941CF3982C004FE059 /* nsurl_tests.json in Resources */,
+				A9BAEE071CF7ED7F00DE9271 /* Corrupt.png in Resources */,
+				A9BAEE0F1CF7EF2400DE9271 /* icon-green.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +449,7 @@
 				4AB020401CDABC2B00E38DC8 /* UIControl+TCAdditions.m in Sources */,
 				4AB0202F1CDABC2B00E38DC8 /* NSDictionary+TCAdditions.m in Sources */,
 				4AB020481CDABC2B00E38DC8 /* UITableViewCell+TCAdditions.m in Sources */,
+				A9BAEE0D1CF7EDCF00DE9271 /* UIImageExtensionHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +459,7 @@
 			files = (
 				4AB020561CDABC5C00E38DC8 /* NSDictionaryTests.m in Sources */,
 				4AB0205A1CDABC5C00E38DC8 /* UIDeviceTests.m in Sources */,
+				A9BAEE021CF7ED4C00DE9271 /* UIImageSize0Tests.m in Sources */,
 				53B731361CE506D600C230C1 /* UIViewControllerTests.m in Sources */,
 				4AB020581CDABC5C00E38DC8 /* UIColorTests.m in Sources */,
 				4AB020591CDABC5C00E38DC8 /* UIControlTests.m in Sources */,
@@ -443,6 +474,7 @@
 				53B7312A1CE4E9A200C230C1 /* NSURLTests.m in Sources */,
 				4AB020571CDABC5C00E38DC8 /* NSStringTests.m in Sources */,
 				53B731301CE4EF5400C230C1 /* UITextFieldTests.m in Sources */,
+				A9BAEE031CF7ED4C00DE9271 /* UIImageTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

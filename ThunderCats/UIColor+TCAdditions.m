@@ -28,27 +28,42 @@
 
 
 #import "UIColor+TCAdditions.h"
+#import "TCInvalidArgument.h"
 
 @implementation UIColor (TCAdditions)
 
 + (UIColor *)tc_colorWithHexString:(NSString *)hexString
 {
-    NSString *cleanString = [hexString stringByReplacingOccurrencesOfString:@"#" withString:@""];
-    if ([cleanString length] == 3)
+    if (![UIColor tc_isValidHexString: hexString])
     {
-        cleanString = [NSString stringWithFormat:@"%@%@%@%@%@%@",
-                       [cleanString substringWithRange:NSMakeRange(0, 1)], [cleanString substringWithRange:NSMakeRange(0, 1)],
-                       [cleanString substringWithRange:NSMakeRange(1, 1)], [cleanString substringWithRange:NSMakeRange(1, 1)],
-                       [cleanString substringWithRange:NSMakeRange(2, 1)], [cleanString substringWithRange:NSMakeRange(2, 1)]];
+        [TCInvalidArgument raiseWithReason:[NSString stringWithFormat:@"%@ is not a valid hex string.", hexString]];
     }
     
-    if ([cleanString length] == 6)
+    hexString = [hexString stringByReplacingOccurrencesOfString:@"#" withString:@""];
+    
+    if ([hexString length] == 3)
     {
-        cleanString = [cleanString stringByAppendingString:@"ff"];
+        hexString = [NSString stringWithFormat:@"%@%@%@%@%@%@",
+                       [hexString substringWithRange:NSMakeRange(0, 1)], [hexString substringWithRange:NSMakeRange(0, 1)],
+                       [hexString substringWithRange:NSMakeRange(1, 1)], [hexString substringWithRange:NSMakeRange(1, 1)],
+                       [hexString substringWithRange:NSMakeRange(2, 1)], [hexString substringWithRange:NSMakeRange(2, 1)]];
+    }
+    else if ([hexString length] == 4)
+    {
+        hexString = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@",
+                     [hexString substringWithRange:NSMakeRange(0, 1)], [hexString substringWithRange:NSMakeRange(0, 1)],
+                     [hexString substringWithRange:NSMakeRange(1, 1)], [hexString substringWithRange:NSMakeRange(1, 1)],
+                     [hexString substringWithRange:NSMakeRange(2, 1)], [hexString substringWithRange:NSMakeRange(2, 1)],
+                     [hexString substringWithRange:NSMakeRange(3, 1)], [hexString substringWithRange:NSMakeRange(3, 1)]];
+    }
+    
+    if ([hexString length] == 6)
+    {
+        hexString = [hexString stringByAppendingString:@"ff"];
     }
     
     unsigned int baseValue;
-    [[NSScanner scannerWithString:cleanString] scanHexInt:&baseValue];
+    [[NSScanner scannerWithString:hexString] scanHexInt:&baseValue];
     
     float red = ((baseValue >> 24) & 0xFF) / 255.0f;
     float green = ((baseValue >> 16) & 0xFF) / 255.0f;
@@ -58,14 +73,26 @@
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
+
 - (BOOL)tc_isEqualToColor:(UIColor *)aColor
 {
-    CGFloat r1, g1, b1, a1, r2, g2, b2, a2;
+    return CGColorEqualToColor(self.CGColor, aColor.CGColor);
+}
+
+
++ (BOOL)tc_isValidHexString:(NSString *)hexString
+{
+    if([hexString hasPrefix:@"#"])
+    {
+        hexString = [hexString substringFromIndex:1];
+    }
     
-    [self getRed:&r1 green:&g1 blue:&b1 alpha:&a1];
-    [aColor getRed:&r2 green:&g2 blue:&b2 alpha:&a2];
+    NSCharacterSet *validCharacters = [NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEFabcdef"];
     
-    return r1-r2 == 0 && g1-g2 == 0 && b1-b2 == 0 && a1-a2==0;
+    bool invalidCharacters = ![[hexString stringByTrimmingCharactersInSet:validCharacters]  isEqualToString: @""];
+    bool invalidLength = [hexString length] != 3 && [hexString length] != 4 && [hexString length] != 6 && [hexString length] != 8;
+
+    return !(invalidLength || invalidCharacters);
 }
 
 @end

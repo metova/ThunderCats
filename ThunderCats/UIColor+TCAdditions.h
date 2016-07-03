@@ -49,4 +49,13 @@
  */
 - (BOOL)tc_isEqualToColor:(UIColor * __tc_nonnull)aColor;
 
+/**
+ *  Returns a Boolean value that indicates whether a given hex string is a valid hex string.
+ *
+ *  @param hex string to be validated.
+ *
+ *  @return YES if hex string is a valid hex string, otherwise NO.
+ */
++ (BOOL)tc_isValidHexString:(NSString * __tc_nonnull)hexString;
+
 @end
