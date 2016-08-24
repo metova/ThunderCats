@@ -103,7 +103,7 @@
  */
 + (void)tc_imageFromAsset:(ALAsset * __tc_nonnull)asset
         scaledToCoverSize:(CGSize)size
-               completion:(void (^ __tc_nonnull)(UIImage * __tc_null_unspecified image))completion;
+               completion:(void (^ __tc_nonnull)(UIImage * __tc_null_unspecified image))completion __attribute__((deprecated("tc_imageFromAsset has been deprecated in favor of the Photos framework manager function requestImageForAsset")));
 
 /**
  *  Converts an ALAssetOrientation to the equivalent UIImageOrientation.
@@ -112,7 +112,7 @@
  *
  *  @return A UIImageOrientation value that is the equivalent of assetOrientation.
  */
-+ (UIImageOrientation)tc_imageOrientationFromAssetOrientation:(ALAssetOrientation)assetOrientation;
++ (UIImageOrientation)tc_imageOrientationFromAssetOrientation:(ALAssetOrientation)assetOrientation __attribute__((deprecated("tc_imageOrientationFromAssetOrientation has been deprecated since ALAsset is deprecated in iOS 9+ in favor of the Photos framework")));
 
 /**
  *  Creates a new image that is scaled to the size that fully fits within a specific size (aspect fit).
