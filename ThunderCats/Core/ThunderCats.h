@@ -31,7 +31,6 @@
 #define _ThunderCats_h
 
 #import "NSString+TCAdditions.h"
-#import "UIAlertView+TCAdditions.h"
 #import "UICollectionViewCell+TCAdditions.h"
 #import "UICollectionReusableView+TCAdditions.h"
 #import "UIColor+TCAdditions.h"
