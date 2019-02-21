@@ -22,7 +22,6 @@
 		53B7312C1CE4EA6E00C230C1 /* UIAlertControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B7312B1CE4EA6E00C230C1 /* UIAlertControllerTests.m */; };
 		53B7312E1CE4EE4100C230C1 /* UITableViewCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B7312D1CE4EE4100C230C1 /* UITableViewCellTests.m */; };
 		53B731301CE4EF5400C230C1 /* UITextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B7312F1CE4EF5400C230C1 /* UITextFieldTests.m */; };
-		53B731341CE4F74C00C230C1 /* UIAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B731331CE4F74C00C230C1 /* UIAlertViewTests.m */; };
 		53B731361CE506D600C230C1 /* UIViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B731351CE506D600C230C1 /* UIViewControllerTests.m */; };
 		53FC19941CF3982C004FE059 /* nsurl_tests.json in Resources */ = {isa = PBXBuildFile; fileRef = 53FC19931CF3982C004FE059 /* nsurl_tests.json */; };
 		9617B848221C69E600019C4C /* NSDictionary+TCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9617B820221C69E600019C4C /* NSDictionary+TCAdditions.h */; };
@@ -30,7 +29,6 @@
 		9617B84B221C69E600019C4C /* UIDevice+TCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9617B823221C69E600019C4C /* UIDevice+TCAdditions.h */; };
 		9617B84C221C69E600019C4C /* UITextField+TCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9617B824221C69E600019C4C /* UITextField+TCAdditions.h */; };
 		9617B84D221C69E600019C4C /* UICollectionViewCell+TCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9617B825221C69E600019C4C /* UICollectionViewCell+TCAdditions.h */; };
-		9617B84E221C69E600019C4C /* UIAlertView+TCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9617B826221C69E600019C4C /* UIAlertView+TCAdditions.h */; };
 		9617B84F221C69E600019C4C /* UIAlertController+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9617B827221C69E600019C4C /* UIAlertController+TCAdditions.m */; };
 		9617B850221C69E600019C4C /* TCInvalidArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = 9617B828221C69E600019C4C /* TCInvalidArgument.m */; };
 		9617B851221C69E600019C4C /* UIControl+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9617B829221C69E600019C4C /* UIControl+TCAdditions.m */; };
@@ -44,7 +42,6 @@
 		9617B859221C69E600019C4C /* TCNullabilityMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 9617B831221C69E600019C4C /* TCNullabilityMacros.h */; };
 		9617B85A221C69E600019C4C /* UIView+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9617B832221C69E600019C4C /* UIView+TCAdditions.m */; };
 		9617B85B221C69E600019C4C /* NSDictionary+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9617B833221C69E600019C4C /* NSDictionary+TCAdditions.m */; };
-		9617B85D221C69E600019C4C /* UIAlertView+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9617B835221C69E600019C4C /* UIAlertView+TCAdditions.m */; };
 		9617B85E221C69E600019C4C /* UICollectionViewCell+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9617B836221C69E600019C4C /* UICollectionViewCell+TCAdditions.m */; };
 		9617B85F221C69E600019C4C /* UIDevice+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9617B837221C69E600019C4C /* UIDevice+TCAdditions.m */; };
 		9617B860221C69E600019C4C /* UITextField+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9617B838221C69E600019C4C /* UITextField+TCAdditions.m */; };
@@ -108,7 +105,6 @@
 		53B7312B1CE4EA6E00C230C1 /* UIAlertControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertControllerTests.m; sourceTree = "<group>"; };
 		53B7312D1CE4EE4100C230C1 /* UITableViewCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellTests.m; sourceTree = "<group>"; };
 		53B7312F1CE4EF5400C230C1 /* UITextFieldTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldTests.m; sourceTree = "<group>"; };
-		53B731331CE4F74C00C230C1 /* UIAlertViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertViewTests.m; sourceTree = "<group>"; };
 		53B731351CE506D600C230C1 /* UIViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerTests.m; sourceTree = "<group>"; };
 		53FC19931CF3982C004FE059 /* nsurl_tests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nsurl_tests.json; sourceTree = "<group>"; };
 		9617B820221C69E600019C4C /* NSDictionary+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+TCAdditions.h"; sourceTree = "<group>"; };
@@ -116,7 +112,6 @@
 		9617B823221C69E600019C4C /* UIDevice+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+TCAdditions.h"; sourceTree = "<group>"; };
 		9617B824221C69E600019C4C /* UITextField+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+TCAdditions.h"; sourceTree = "<group>"; };
 		9617B825221C69E600019C4C /* UICollectionViewCell+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+TCAdditions.h"; sourceTree = "<group>"; };
-		9617B826221C69E600019C4C /* UIAlertView+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+TCAdditions.h"; sourceTree = "<group>"; };
 		9617B827221C69E600019C4C /* UIAlertController+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+TCAdditions.m"; sourceTree = "<group>"; };
 		9617B828221C69E600019C4C /* TCInvalidArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCInvalidArgument.m; sourceTree = "<group>"; };
 		9617B829221C69E600019C4C /* UIControl+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+TCAdditions.m"; sourceTree = "<group>"; };
@@ -130,7 +125,6 @@
 		9617B831221C69E600019C4C /* TCNullabilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCNullabilityMacros.h; sourceTree = "<group>"; };
 		9617B832221C69E600019C4C /* UIView+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TCAdditions.m"; sourceTree = "<group>"; };
 		9617B833221C69E600019C4C /* NSDictionary+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+TCAdditions.m"; sourceTree = "<group>"; };
-		9617B835221C69E600019C4C /* UIAlertView+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+TCAdditions.m"; sourceTree = "<group>"; };
 		9617B836221C69E600019C4C /* UICollectionViewCell+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+TCAdditions.m"; sourceTree = "<group>"; };
 		9617B837221C69E600019C4C /* UIDevice+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+TCAdditions.m"; sourceTree = "<group>"; };
 		9617B838221C69E600019C4C /* UITextField+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+TCAdditions.m"; sourceTree = "<group>"; };
@@ -232,7 +226,6 @@
 				4AB020501CDABC5C00E38DC8 /* NSStringTests.m */,
 				53B731291CE4E9A200C230C1 /* NSURLTests.m */,
 				53B7312B1CE4EA6E00C230C1 /* UIAlertControllerTests.m */,
-				53B731331CE4F74C00C230C1 /* UIAlertViewTests.m */,
 				53B731271CE4D2A200C230C1 /* UICollectionReusableViewTests.m */,
 				53B731251CE4D29200C230C1 /* UICollectionViewCellTests.m */,
 				4AB020511CDABC5C00E38DC8 /* UIColorTests.m */,
@@ -276,8 +269,6 @@
 				9617B844221C69E600019C4C /* ThunderCats.h */,
 				9617B83F221C69E600019C4C /* UIAlertController+TCAdditions.h */,
 				9617B827221C69E600019C4C /* UIAlertController+TCAdditions.m */,
-				9617B826221C69E600019C4C /* UIAlertView+TCAdditions.h */,
-				9617B835221C69E600019C4C /* UIAlertView+TCAdditions.m */,
 				9617B82B221C69E600019C4C /* UICollectionReusableView+TCAdditions.h */,
 				9617B83A221C69E600019C4C /* UICollectionReusableView+TCAdditions.m */,
 				9617B825221C69E600019C4C /* UICollectionViewCell+TCAdditions.h */,
@@ -323,7 +314,6 @@
 				9617B854221C69E600019C4C /* UIViewController+TCAdditions.h in Headers */,
 				9617B856221C69E600019C4C /* UITableViewCell+TCAdditions.h in Headers */,
 				9617B859221C69E600019C4C /* TCNullabilityMacros.h in Headers */,
-				9617B84E221C69E600019C4C /* UIAlertView+TCAdditions.h in Headers */,
 				9617B868221C69E600019C4C /* NSURL+TCAdditions.h in Headers */,
 				9617B84D221C69E600019C4C /* UICollectionViewCell+TCAdditions.h in Headers */,
 				96337B6E221F397F00ED17EC /* UIImageExtensionHelper.h in Headers */,
@@ -457,7 +447,6 @@
 				96337B71221F398600ED17EC /* UIImage+TCAdditions.m in Sources */,
 				9617B85E221C69E600019C4C /* UICollectionViewCell+TCAdditions.m in Sources */,
 				9617B850221C69E600019C4C /* TCInvalidArgument.m in Sources */,
-				9617B85D221C69E600019C4C /* UIAlertView+TCAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +461,6 @@
 				4AB020581CDABC5C00E38DC8 /* UIColorTests.m in Sources */,
 				4AB020591CDABC5C00E38DC8 /* UIControlTests.m in Sources */,
 				5394F2BE1CDD4004008C2112 /* NSArrayTests.m in Sources */,
-				53B731341CE4F74C00C230C1 /* UIAlertViewTests.m in Sources */,
 				53AE2F491CECE086000B0302 /* TCInvalidArgumentTests.m in Sources */,
 				53B7312C1CE4EA6E00C230C1 /* UIAlertControllerTests.m in Sources */,
 				53B731281CE4D2A200C230C1 /* UICollectionReusableViewTests.m in Sources */,
