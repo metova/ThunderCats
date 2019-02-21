@@ -63,7 +63,6 @@
 		9617B86E221C69E600019C4C /* UIImage+TCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9617B847221C69E600019C4C /* UIImage+TCAdditions.h */; };
 		96337B67221F0D5B00ED17EC /* UIImageExtensionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 96337B65221F0D5A00ED17EC /* UIImageExtensionHelper.m */; };
 		96337B68221F0D5B00ED17EC /* UIImageExtensionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 96337B66221F0D5B00ED17EC /* UIImageExtensionHelper.h */; };
-		96337B6D221F193000ED17EC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96337B6C221F192F00ED17EC /* Info.plist */; };
 		A9BAEE021CF7ED4C00DE9271 /* UIImageSize0Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BAEE001CF7ED4C00DE9271 /* UIImageSize0Tests.m */; };
 		A9BAEE031CF7ED4C00DE9271 /* UIImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BAEE011CF7ED4C00DE9271 /* UIImageTests.m */; };
 		A9BAEE071CF7ED7F00DE9271 /* Corrupt.png in Resources */ = {isa = PBXBuildFile; fileRef = A9BAEE061CF7ED7F00DE9271 /* Corrupt.png */; };
@@ -429,7 +428,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96337B6D221F193000ED17EC /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
