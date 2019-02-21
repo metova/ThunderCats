@@ -52,7 +52,7 @@
 /**
  *  Returns a Boolean value that indicates whether a given hex string is a valid hex string.
  *
- *  @param hex string to be validated.
+ *  @param hexString string to be validated.
  *
  *  @return YES if hex string is a valid hex string, otherwise NO.
  */
