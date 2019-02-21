@@ -63,6 +63,8 @@
 		96337B6F221F398100ED17EC /* UIImageExtensionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 96337B65221F0D5A00ED17EC /* UIImageExtensionHelper.m */; };
 		96337B70221F398400ED17EC /* UIImage+TCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9617B847221C69E600019C4C /* UIImage+TCAdditions.h */; };
 		96337B71221F398600ED17EC /* UIImage+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9617B846221C69E600019C4C /* UIImage+TCAdditions.m */; };
+		96337B74221F564F00ED17EC /* ALAsset+ALAsset_TCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 96337B72221F564F00ED17EC /* ALAsset+ALAsset_TCAdditions.h */; };
+		96337B75221F564F00ED17EC /* ALAsset+ALAsset_TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96337B73221F564F00ED17EC /* ALAsset+ALAsset_TCAdditions.m */; };
 		A9BAEE021CF7ED4C00DE9271 /* UIImageSize0Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BAEE001CF7ED4C00DE9271 /* UIImageSize0Tests.m */; };
 		A9BAEE031CF7ED4C00DE9271 /* UIImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BAEE011CF7ED4C00DE9271 /* UIImageTests.m */; };
 		A9BAEE071CF7ED7F00DE9271 /* Corrupt.png in Resources */ = {isa = PBXBuildFile; fileRef = A9BAEE061CF7ED7F00DE9271 /* Corrupt.png */; };
@@ -150,6 +152,8 @@
 		96337B65221F0D5A00ED17EC /* UIImageExtensionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageExtensionHelper.m; sourceTree = "<group>"; };
 		96337B66221F0D5B00ED17EC /* UIImageExtensionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageExtensionHelper.h; sourceTree = "<group>"; };
 		96337B6C221F192F00ED17EC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96337B72221F564F00ED17EC /* ALAsset+ALAsset_TCAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ALAsset+ALAsset_TCAdditions.h"; sourceTree = "<group>"; };
+		96337B73221F564F00ED17EC /* ALAsset+ALAsset_TCAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+ALAsset_TCAdditions.m"; sourceTree = "<group>"; };
 		A9BAEE001CF7ED4C00DE9271 /* UIImageSize0Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageSize0Tests.m; sourceTree = "<group>"; };
 		A9BAEE011CF7ED4C00DE9271 /* UIImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageTests.m; sourceTree = "<group>"; };
 		A9BAEE061CF7ED7F00DE9271 /* Corrupt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Corrupt.png; sourceTree = "<group>"; };
@@ -262,6 +266,7 @@
 		9617B81F221C69E600019C4C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				96337B69221F143B00ED17EC /* Helpers */,
 				9617B82A221C69E600019C4C /* NSArray+TCAdditions.h */,
 				9617B83D221C69E600019C4C /* NSArray+TCAdditions.m */,
 				9617B820221C69E600019C4C /* NSDictionary+TCAdditions.h */,
@@ -288,6 +293,8 @@
 				9617B829221C69E600019C4C /* UIControl+TCAdditions.m */,
 				9617B823221C69E600019C4C /* UIDevice+TCAdditions.h */,
 				9617B837221C69E600019C4C /* UIDevice+TCAdditions.m */,
+				9617B847221C69E600019C4C /* UIImage+TCAdditions.h */,
+				9617B846221C69E600019C4C /* UIImage+TCAdditions.m */,
 				9617B82E221C69E600019C4C /* UITableViewCell+TCAdditions.h */,
 				9617B843221C69E600019C4C /* UITableViewCell+TCAdditions.m */,
 				9617B824221C69E600019C4C /* UITextField+TCAdditions.h */,
@@ -303,9 +310,8 @@
 		9617B845221C69E600019C4C /* Photos */ = {
 			isa = PBXGroup;
 			children = (
-				96337B69221F143B00ED17EC /* Helpers */,
-				9617B847221C69E600019C4C /* UIImage+TCAdditions.h */,
-				9617B846221C69E600019C4C /* UIImage+TCAdditions.m */,
+				96337B72221F564F00ED17EC /* ALAsset+ALAsset_TCAdditions.h */,
+				96337B73221F564F00ED17EC /* ALAsset+ALAsset_TCAdditions.m */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -343,6 +349,7 @@
 				9617B86C221C69E600019C4C /* ThunderCats.h in Headers */,
 				9617B848221C69E600019C4C /* NSDictionary+TCAdditions.h in Headers */,
 				9617B866221C69E600019C4C /* TCInvalidArgument.h in Headers */,
+				96337B74221F564F00ED17EC /* ALAsset+ALAsset_TCAdditions.h in Headers */,
 				9617B84B221C69E600019C4C /* UIDevice+TCAdditions.h in Headers */,
 				9617B853221C69E600019C4C /* UICollectionReusableView+TCAdditions.h in Headers */,
 				9617B855221C69E600019C4C /* NSString+TCAdditions.h in Headers */,
@@ -463,6 +470,7 @@
 				9617B851221C69E600019C4C /* UIControl+TCAdditions.m in Sources */,
 				9617B860221C69E600019C4C /* UITextField+TCAdditions.m in Sources */,
 				96337B71221F398600ED17EC /* UIImage+TCAdditions.m in Sources */,
+				96337B75221F564F00ED17EC /* ALAsset+ALAsset_TCAdditions.m in Sources */,
 				9617B85E221C69E600019C4C /* UICollectionViewCell+TCAdditions.m in Sources */,
 				9617B850221C69E600019C4C /* TCInvalidArgument.m in Sources */,
 				9617B85D221C69E600019C4C /* UIAlertView+TCAdditions.m in Sources */,

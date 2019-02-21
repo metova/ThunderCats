@@ -36,6 +36,7 @@
 #import "UICollectionReusableView+TCAdditions.h"
 #import "UIColor+TCAdditions.h"
 #import "UIDevice+TCAdditions.h"
+#import "UIImage+TCAdditions.h"
 #import "UITableViewCell+TCAdditions.h"
 #import "UIView+TCAdditions.h"
 #import "UITextField+TCAdditions.h"
