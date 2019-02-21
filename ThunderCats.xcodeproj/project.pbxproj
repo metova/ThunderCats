@@ -26,7 +26,6 @@
 		53B731361CE506D600C230C1 /* UIViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B731351CE506D600C230C1 /* UIViewControllerTests.m */; };
 		53FC19941CF3982C004FE059 /* nsurl_tests.json in Resources */ = {isa = PBXBuildFile; fileRef = 53FC19931CF3982C004FE059 /* nsurl_tests.json */; };
 		9617B848221C69E600019C4C /* NSDictionary+TCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9617B820221C69E600019C4C /* NSDictionary+TCAdditions.h */; };
-		9617B849221C69E600019C4C /* UIImageExtensionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 9617B821221C69E600019C4C /* UIImageExtensionHelper.h */; };
 		9617B84A221C69E600019C4C /* UIView+TCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9617B822221C69E600019C4C /* UIView+TCAdditions.h */; };
 		9617B84B221C69E600019C4C /* UIDevice+TCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9617B823221C69E600019C4C /* UIDevice+TCAdditions.h */; };
 		9617B84C221C69E600019C4C /* UITextField+TCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9617B824221C69E600019C4C /* UITextField+TCAdditions.h */; };
@@ -45,7 +44,6 @@
 		9617B859221C69E600019C4C /* TCNullabilityMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 9617B831221C69E600019C4C /* TCNullabilityMacros.h */; };
 		9617B85A221C69E600019C4C /* UIView+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9617B832221C69E600019C4C /* UIView+TCAdditions.m */; };
 		9617B85B221C69E600019C4C /* NSDictionary+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9617B833221C69E600019C4C /* NSDictionary+TCAdditions.m */; };
-		9617B85C221C69E600019C4C /* UIImageExtensionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9617B834221C69E600019C4C /* UIImageExtensionHelper.m */; };
 		9617B85D221C69E600019C4C /* UIAlertView+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9617B835221C69E600019C4C /* UIAlertView+TCAdditions.m */; };
 		9617B85E221C69E600019C4C /* UICollectionViewCell+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9617B836221C69E600019C4C /* UICollectionViewCell+TCAdditions.m */; };
 		9617B85F221C69E600019C4C /* UIDevice+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9617B837221C69E600019C4C /* UIDevice+TCAdditions.m */; };
@@ -63,12 +61,12 @@
 		9617B86C221C69E600019C4C /* ThunderCats.h in Headers */ = {isa = PBXBuildFile; fileRef = 9617B844221C69E600019C4C /* ThunderCats.h */; };
 		9617B86D221C69E600019C4C /* UIImage+TCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9617B846221C69E600019C4C /* UIImage+TCAdditions.m */; };
 		9617B86E221C69E600019C4C /* UIImage+TCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9617B847221C69E600019C4C /* UIImage+TCAdditions.h */; };
-		9617B870221C6A7700019C4C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9617B86F221C6A7700019C4C /* Info.plist */; };
+		96337B67221F0D5B00ED17EC /* UIImageExtensionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 96337B65221F0D5A00ED17EC /* UIImageExtensionHelper.m */; };
+		96337B68221F0D5B00ED17EC /* UIImageExtensionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 96337B66221F0D5B00ED17EC /* UIImageExtensionHelper.h */; };
+		96337B6D221F193000ED17EC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96337B6C221F192F00ED17EC /* Info.plist */; };
 		A9BAEE021CF7ED4C00DE9271 /* UIImageSize0Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BAEE001CF7ED4C00DE9271 /* UIImageSize0Tests.m */; };
 		A9BAEE031CF7ED4C00DE9271 /* UIImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BAEE011CF7ED4C00DE9271 /* UIImageTests.m */; };
 		A9BAEE071CF7ED7F00DE9271 /* Corrupt.png in Resources */ = {isa = PBXBuildFile; fileRef = A9BAEE061CF7ED7F00DE9271 /* Corrupt.png */; };
-		A9BAEE0C1CF7EDCF00DE9271 /* UIImageExtensionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = A9BAEE0A1CF7EDCF00DE9271 /* UIImageExtensionHelper.h */; };
-		A9BAEE0D1CF7EDCF00DE9271 /* UIImageExtensionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BAEE0B1CF7EDCF00DE9271 /* UIImageExtensionHelper.m */; };
 		A9BAEE0F1CF7EF2400DE9271 /* icon-green.png in Resources */ = {isa = PBXBuildFile; fileRef = A9BAEE0E1CF7EF2400DE9271 /* icon-green.png */; };
 /* End PBXBuildFile section */
 
@@ -115,7 +113,6 @@
 		53B731351CE506D600C230C1 /* UIViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerTests.m; sourceTree = "<group>"; };
 		53FC19931CF3982C004FE059 /* nsurl_tests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nsurl_tests.json; sourceTree = "<group>"; };
 		9617B820221C69E600019C4C /* NSDictionary+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+TCAdditions.h"; sourceTree = "<group>"; };
-		9617B821221C69E600019C4C /* UIImageExtensionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageExtensionHelper.h; sourceTree = "<group>"; };
 		9617B822221C69E600019C4C /* UIView+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TCAdditions.h"; sourceTree = "<group>"; };
 		9617B823221C69E600019C4C /* UIDevice+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+TCAdditions.h"; sourceTree = "<group>"; };
 		9617B824221C69E600019C4C /* UITextField+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+TCAdditions.h"; sourceTree = "<group>"; };
@@ -134,7 +131,6 @@
 		9617B831221C69E600019C4C /* TCNullabilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCNullabilityMacros.h; sourceTree = "<group>"; };
 		9617B832221C69E600019C4C /* UIView+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TCAdditions.m"; sourceTree = "<group>"; };
 		9617B833221C69E600019C4C /* NSDictionary+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+TCAdditions.m"; sourceTree = "<group>"; };
-		9617B834221C69E600019C4C /* UIImageExtensionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageExtensionHelper.m; sourceTree = "<group>"; };
 		9617B835221C69E600019C4C /* UIAlertView+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+TCAdditions.m"; sourceTree = "<group>"; };
 		9617B836221C69E600019C4C /* UICollectionViewCell+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+TCAdditions.m"; sourceTree = "<group>"; };
 		9617B837221C69E600019C4C /* UIDevice+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+TCAdditions.m"; sourceTree = "<group>"; };
@@ -152,12 +148,12 @@
 		9617B844221C69E600019C4C /* ThunderCats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThunderCats.h; sourceTree = "<group>"; };
 		9617B846221C69E600019C4C /* UIImage+TCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TCAdditions.m"; sourceTree = "<group>"; };
 		9617B847221C69E600019C4C /* UIImage+TCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TCAdditions.h"; sourceTree = "<group>"; };
-		9617B86F221C6A7700019C4C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96337B65221F0D5A00ED17EC /* UIImageExtensionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageExtensionHelper.m; sourceTree = "<group>"; };
+		96337B66221F0D5B00ED17EC /* UIImageExtensionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageExtensionHelper.h; sourceTree = "<group>"; };
+		96337B6C221F192F00ED17EC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9BAEE001CF7ED4C00DE9271 /* UIImageSize0Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageSize0Tests.m; sourceTree = "<group>"; };
 		A9BAEE011CF7ED4C00DE9271 /* UIImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageTests.m; sourceTree = "<group>"; };
 		A9BAEE061CF7ED7F00DE9271 /* Corrupt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Corrupt.png; sourceTree = "<group>"; };
-		A9BAEE0A1CF7EDCF00DE9271 /* UIImageExtensionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageExtensionHelper.h; sourceTree = "<group>"; };
-		A9BAEE0B1CF7EDCF00DE9271 /* UIImageExtensionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageExtensionHelper.m; sourceTree = "<group>"; };
 		A9BAEE0E1CF7EF2400DE9271 /* icon-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-green.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,10 +216,9 @@
 		4AB01FAE1CDABB2C00E38DC8 /* ThunderCats */ = {
 			isa = PBXGroup;
 			children = (
-				9617B86F221C6A7700019C4C /* Info.plist */,
+				96337B6C221F192F00ED17EC /* Info.plist */,
 				9617B81F221C69E600019C4C /* Core */,
 				9617B845221C69E600019C4C /* Photos */,
-				A92862C81CFE417D003BC78A /* Helpers */,
 			);
 			path = ThunderCats;
 			sourceTree = "<group>";
@@ -268,42 +263,40 @@
 		9617B81F221C69E600019C4C /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				9617B820221C69E600019C4C /* NSDictionary+TCAdditions.h */,
-				9617B821221C69E600019C4C /* UIImageExtensionHelper.h */,
-				9617B822221C69E600019C4C /* UIView+TCAdditions.h */,
-				9617B823221C69E600019C4C /* UIDevice+TCAdditions.h */,
-				9617B824221C69E600019C4C /* UITextField+TCAdditions.h */,
-				9617B825221C69E600019C4C /* UICollectionViewCell+TCAdditions.h */,
-				9617B826221C69E600019C4C /* UIAlertView+TCAdditions.h */,
-				9617B827221C69E600019C4C /* UIAlertController+TCAdditions.m */,
-				9617B828221C69E600019C4C /* TCInvalidArgument.m */,
-				9617B829221C69E600019C4C /* UIControl+TCAdditions.m */,
 				9617B82A221C69E600019C4C /* NSArray+TCAdditions.h */,
-				9617B82B221C69E600019C4C /* UICollectionReusableView+TCAdditions.h */,
-				9617B82C221C69E600019C4C /* UIViewController+TCAdditions.h */,
-				9617B82D221C69E600019C4C /* NSString+TCAdditions.h */,
-				9617B82E221C69E600019C4C /* UITableViewCell+TCAdditions.h */,
-				9617B82F221C69E600019C4C /* UIColor+TCAdditions.m */,
-				9617B830221C69E600019C4C /* NSURL+TCAdditions.m */,
-				9617B831221C69E600019C4C /* TCNullabilityMacros.h */,
-				9617B832221C69E600019C4C /* UIView+TCAdditions.m */,
-				9617B833221C69E600019C4C /* NSDictionary+TCAdditions.m */,
-				9617B834221C69E600019C4C /* UIImageExtensionHelper.m */,
-				9617B835221C69E600019C4C /* UIAlertView+TCAdditions.m */,
-				9617B836221C69E600019C4C /* UICollectionViewCell+TCAdditions.m */,
-				9617B837221C69E600019C4C /* UIDevice+TCAdditions.m */,
-				9617B838221C69E600019C4C /* UITextField+TCAdditions.m */,
-				9617B839221C69E600019C4C /* NSString+TCAdditions.m */,
-				9617B83A221C69E600019C4C /* UICollectionReusableView+TCAdditions.m */,
-				9617B83B221C69E600019C4C /* UIViewController+TCAdditions.m */,
-				9617B83C221C69E600019C4C /* UIControl+TCAdditions.h */,
 				9617B83D221C69E600019C4C /* NSArray+TCAdditions.m */,
-				9617B83E221C69E600019C4C /* TCInvalidArgument.h */,
-				9617B83F221C69E600019C4C /* UIAlertController+TCAdditions.h */,
+				9617B820221C69E600019C4C /* NSDictionary+TCAdditions.h */,
+				9617B833221C69E600019C4C /* NSDictionary+TCAdditions.m */,
+				9617B82D221C69E600019C4C /* NSString+TCAdditions.h */,
+				9617B839221C69E600019C4C /* NSString+TCAdditions.m */,
 				9617B840221C69E600019C4C /* NSURL+TCAdditions.h */,
-				9617B841221C69E600019C4C /* UIColor+TCAdditions.h */,
-				9617B843221C69E600019C4C /* UITableViewCell+TCAdditions.m */,
+				9617B830221C69E600019C4C /* NSURL+TCAdditions.m */,
+				9617B83E221C69E600019C4C /* TCInvalidArgument.h */,
+				9617B828221C69E600019C4C /* TCInvalidArgument.m */,
+				9617B831221C69E600019C4C /* TCNullabilityMacros.h */,
 				9617B844221C69E600019C4C /* ThunderCats.h */,
+				9617B83F221C69E600019C4C /* UIAlertController+TCAdditions.h */,
+				9617B827221C69E600019C4C /* UIAlertController+TCAdditions.m */,
+				9617B826221C69E600019C4C /* UIAlertView+TCAdditions.h */,
+				9617B835221C69E600019C4C /* UIAlertView+TCAdditions.m */,
+				9617B82B221C69E600019C4C /* UICollectionReusableView+TCAdditions.h */,
+				9617B83A221C69E600019C4C /* UICollectionReusableView+TCAdditions.m */,
+				9617B825221C69E600019C4C /* UICollectionViewCell+TCAdditions.h */,
+				9617B836221C69E600019C4C /* UICollectionViewCell+TCAdditions.m */,
+				9617B841221C69E600019C4C /* UIColor+TCAdditions.h */,
+				9617B82F221C69E600019C4C /* UIColor+TCAdditions.m */,
+				9617B83C221C69E600019C4C /* UIControl+TCAdditions.h */,
+				9617B829221C69E600019C4C /* UIControl+TCAdditions.m */,
+				9617B823221C69E600019C4C /* UIDevice+TCAdditions.h */,
+				9617B837221C69E600019C4C /* UIDevice+TCAdditions.m */,
+				9617B82E221C69E600019C4C /* UITableViewCell+TCAdditions.h */,
+				9617B843221C69E600019C4C /* UITableViewCell+TCAdditions.m */,
+				9617B824221C69E600019C4C /* UITextField+TCAdditions.h */,
+				9617B838221C69E600019C4C /* UITextField+TCAdditions.m */,
+				9617B822221C69E600019C4C /* UIView+TCAdditions.h */,
+				9617B832221C69E600019C4C /* UIView+TCAdditions.m */,
+				9617B82C221C69E600019C4C /* UIViewController+TCAdditions.h */,
+				9617B83B221C69E600019C4C /* UIViewController+TCAdditions.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -311,19 +304,20 @@
 		9617B845221C69E600019C4C /* Photos */ = {
 			isa = PBXGroup;
 			children = (
-				9617B846221C69E600019C4C /* UIImage+TCAdditions.m */,
+				96337B69221F143B00ED17EC /* Helpers */,
 				9617B847221C69E600019C4C /* UIImage+TCAdditions.h */,
+				9617B846221C69E600019C4C /* UIImage+TCAdditions.m */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
 		};
-		A92862C81CFE417D003BC78A /* Helpers */ = {
+		96337B69221F143B00ED17EC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				A9BAEE0A1CF7EDCF00DE9271 /* UIImageExtensionHelper.h */,
-				A9BAEE0B1CF7EDCF00DE9271 /* UIImageExtensionHelper.m */,
+				96337B66221F0D5B00ED17EC /* UIImageExtensionHelper.h */,
+				96337B65221F0D5A00ED17EC /* UIImageExtensionHelper.m */,
 			);
-			name = Helpers;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +337,7 @@
 				9617B84D221C69E600019C4C /* UICollectionViewCell+TCAdditions.h in Headers */,
 				9617B864221C69E600019C4C /* UIControl+TCAdditions.h in Headers */,
 				9617B84C221C69E600019C4C /* UITextField+TCAdditions.h in Headers */,
+				96337B68221F0D5B00ED17EC /* UIImageExtensionHelper.h in Headers */,
 				9617B867221C69E600019C4C /* UIAlertController+TCAdditions.h in Headers */,
 				9617B869221C69E600019C4C /* UIColor+TCAdditions.h in Headers */,
 				9617B86C221C69E600019C4C /* ThunderCats.h in Headers */,
@@ -352,8 +347,6 @@
 				9617B853221C69E600019C4C /* UICollectionReusableView+TCAdditions.h in Headers */,
 				9617B86E221C69E600019C4C /* UIImage+TCAdditions.h in Headers */,
 				9617B855221C69E600019C4C /* NSString+TCAdditions.h in Headers */,
-				9617B849221C69E600019C4C /* UIImageExtensionHelper.h in Headers */,
-				A9BAEE0C1CF7EDCF00DE9271 /* UIImageExtensionHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +429,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9617B870221C6A7700019C4C /* Info.plist in Resources */,
+				96337B6D221F193000ED17EC /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +450,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9BAEE0D1CF7EDCF00DE9271 /* UIImageExtensionHelper.m in Sources */,
 				9617B84F221C69E600019C4C /* UIAlertController+TCAdditions.m in Sources */,
 				9617B862221C69E600019C4C /* UICollectionReusableView+TCAdditions.m in Sources */,
 				9617B861221C69E600019C4C /* NSString+TCAdditions.m in Sources */,
@@ -467,6 +459,7 @@
 				9617B865221C69E600019C4C /* NSArray+TCAdditions.m in Sources */,
 				9617B85F221C69E600019C4C /* UIDevice+TCAdditions.m in Sources */,
 				9617B863221C69E600019C4C /* UIViewController+TCAdditions.m in Sources */,
+				96337B67221F0D5B00ED17EC /* UIImageExtensionHelper.m in Sources */,
 				9617B858221C69E600019C4C /* NSURL+TCAdditions.m in Sources */,
 				9617B85B221C69E600019C4C /* NSDictionary+TCAdditions.m in Sources */,
 				9617B851221C69E600019C4C /* UIControl+TCAdditions.m in Sources */,
@@ -474,7 +467,6 @@
 				9617B85E221C69E600019C4C /* UICollectionViewCell+TCAdditions.m in Sources */,
 				9617B850221C69E600019C4C /* TCInvalidArgument.m in Sources */,
 				9617B85D221C69E600019C4C /* UIAlertView+TCAdditions.m in Sources */,
-				9617B85C221C69E600019C4C /* UIImageExtensionHelper.m in Sources */,
 				9617B86D221C69E600019C4C /* UIImage+TCAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
