@@ -39,6 +39,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Photos' do |photos|
+    photos.dependency 'ThunderCats/Core'
     photos.source_files = [
       'ThunderCats/Photos',
       'ThunderCats/Photos/**/*.{h,m,swift}'
