@@ -1,4 +1,5 @@
 Pod::Spec.new do |s|
+
   s.name         = "ThunderCats"
   s.version      = "3.0.0"
   s.summary      = "Useful categories"
@@ -21,35 +22,15 @@ Pod::Spec.new do |s|
   s.frameworks = 'Foundation', 'UIKit'
   s.requires_arc = true
 
-  s.source = { :git => "https://github.com/metova/ThunderCats.git", :tag => s.version.to_s }
-
-  s.default_subspecs = 'Core'
-
-  s.subspec 'Core' do |core|
-    core.source_files = [
-      'ThunderCats/Core',
-      'ThunderCats/Core/**/*.{h,m,swift}'
-    ]
-    core.public_header_files = [
-      'ThunderCats/Core/**/*.h'
-    ]
-    core.exclude_files = [
-      'ThunderCats/Core/Exclude'
-    ]
-  end
-
-  s.subspec 'Photos' do |photos|
-    photos.dependency 'ThunderCats/Core'
-    photos.source_files = [
-      'ThunderCats/Photos',
-      'ThunderCats/Photos/**/*.{h,m,swift}'
-    ]
-    photos.public_header_files = [
-      'ThunderCats/Photos/**/*.h'
-    ]
-    photos.exclude_files = [
-      'ThunderCats/Photos/Exclude'
-    ]
-  end
+  s.source              = { :git => "https://github.com/metova/ThunderCats.git", :tag => s.version.to_s }
+  s.source_files        = "ThunderCats", "ThunderCats/**/*.{h,m,swift}"
+  s.public_header_files = 'ThunderCats/**/*.h'
+  s.exclude_files       = "ThunderCats/Exclude"
+  s.requires_arc        = true
 
 end
+
+
+
+
+
