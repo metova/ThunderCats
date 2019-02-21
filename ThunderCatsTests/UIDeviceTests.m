@@ -84,7 +84,7 @@
 - (void)testIsVersionGreaterThan
 {
     XCTAssertTrue([UIDevice tc_isVersionGreaterThan:@"6.0"]);
-    XCTAssertFalse([UIDevice tc_isVersionGreaterThan:@"10.0"]);
+    XCTAssertFalse([UIDevice tc_isVersionGreaterThan:@"30.0"]);
 }
 
 
@@ -92,20 +92,20 @@
 {
     XCTAssertTrue([UIDevice tc_isVersionGreaterThanOrEqualTo:@"6.0"]);
     XCTAssertTrue([UIDevice tc_isVersionGreaterThanOrEqualTo:@"7.0"]);
-    XCTAssertFalse([UIDevice tc_isVersionGreaterThanOrEqualTo:@"10.0"]);
+    XCTAssertFalse([UIDevice tc_isVersionGreaterThanOrEqualTo:@"30.0"]);
 }
 
 
 - (void)testIsVersionLessThan
 {
-    XCTAssertTrue([UIDevice tc_isVersionLessThan:@"10.0"]);
+    XCTAssertTrue([UIDevice tc_isVersionLessThan:@"30.0"]);
     XCTAssertFalse([UIDevice tc_isVersionLessThan:@"7.0"]);
 }
 
 
 - (void)testIsVersionLessThanOrEqualTo
 {
-    XCTAssertTrue([UIDevice tc_isVersionLessThanOrEqualTo:@"10.0"]);
+    XCTAssertTrue([UIDevice tc_isVersionLessThanOrEqualTo:@"30.0"]);
     XCTAssertFalse([UIDevice tc_isVersionLessThanOrEqualTo:@"6.0"]);
 }
 
