@@ -9,11 +9,12 @@ env:
   - IOS_SDK=iphonesimulator12.1
   matrix:
   - DESTINATION="OS=12.1,name=iPhone X"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="YES"
+before_install:
+  - bundle install --without=documentation
 script:
   - set -o pipefail
   - xcodebuild -version
   - xcodebuild -showsdks
-  - bundle install
 
   # Build Framework in Debug and Run Tests if specified
   - if [ $RUN_TESTS == "YES" ]; then
