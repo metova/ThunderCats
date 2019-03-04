@@ -14,31 +14,6 @@
 
 @end
 
-@interface MockAssetRepresentation: ALAssetRepresentation
-
-@end
-
-@implementation MockAssetRepresentation
-
-- (CGImageRef)fullResolutionImage {
-    return [UIImage tc_imageWithColor:[UIColor redColor]].CGImage;
-}
-
-@end
-
-@interface MockAsset: ALAsset
-
-@end
-
-@implementation MockAsset
-
-- (ALAssetRepresentation *)defaultRepresentation {
-    return [[MockAssetRepresentation alloc] init];
-}
-
-
-@end
-
 @interface MockImage: UIImage
 
 @end
@@ -314,43 +289,6 @@ UIImageOrientation mockedOrientation;
     UIImage *emptyImage = [[UIImage alloc] initWithCIImage:ciImage];
     
     XCTAssertNil([UIImage tc_imageWithImage:emptyImage scaledAndCroppedToFillSize:CGSizeMake(5.0, 10.0)]);
-}
-
-- (void)testALAssetOrientationConversion {
-    
-    XCTAssertEqual(UIImageOrientationDown, [UIImage tc_imageOrientationFromAssetOrientation:ALAssetOrientationDown]);
-    XCTAssertEqual(UIImageOrientationDownMirrored, [UIImage tc_imageOrientationFromAssetOrientation:ALAssetOrientationDownMirrored]);
-    XCTAssertEqual(UIImageOrientationUp, [UIImage tc_imageOrientationFromAssetOrientation:ALAssetOrientationUp]);
-    XCTAssertEqual(UIImageOrientationUpMirrored, [UIImage tc_imageOrientationFromAssetOrientation:ALAssetOrientationUpMirrored]);
-    XCTAssertEqual(UIImageOrientationLeft, [UIImage tc_imageOrientationFromAssetOrientation:ALAssetOrientationLeft]);
-    XCTAssertEqual(UIImageOrientationLeftMirrored, [UIImage tc_imageOrientationFromAssetOrientation:ALAssetOrientationLeftMirrored]);
-    XCTAssertEqual(UIImageOrientationRight, [UIImage tc_imageOrientationFromAssetOrientation:ALAssetOrientationRight]);
-    XCTAssertEqual(UIImageOrientationRightMirrored, [UIImage tc_imageOrientationFromAssetOrientation:ALAssetOrientationRightMirrored]);
-}
-
-- (void)testImageFromAsset {
-    
-    ALAsset *asset = [[MockAsset alloc] init];
-    
-    CGSize scaleSize = CGSizeMake(5.0, 10.0);
-    
-    XCTestExpectation *expectation = [self expectationWithDescription:@"Resulting image is not as expected"];
-    
-    [UIImage tc_imageFromAsset:asset scaledToCoverSize:scaleSize completion:^(UIImage* image){
-
-        XCTAssertNotNil(image);
-        XCTAssertEqual(image.imageOrientation, UIImageOrientationUp);
-        XCTAssertEqual(image.size.width, 10.0);
-        XCTAssertEqual(image.size.height, 10.0);
-        
-        [expectation fulfill];
-    }];
-    
-    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
-        if (error) {
-            NSLog(@"Timed out while waiting for image from asset catalog");
-        }
-    }];
 }
 
 - (void)testImageOrientationUp {

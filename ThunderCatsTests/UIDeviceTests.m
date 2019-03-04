@@ -38,6 +38,39 @@
 
 @implementation UIDeviceTests
 
+- (void)testScreenSize {
+    
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    
+    XCTAssertEqual([UIDevice tc_screenSize].width, screenSize.width);
+    XCTAssertEqual([UIDevice tc_screenSize].height, screenSize.height);
+}
+
+- (void)testScreenWidth {
+    
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    XCTAssertEqual([UIDevice tc_screenWidth], screenSize.width);
+}
+
+- (void)testScreenHeight {
+    
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    XCTAssertEqual([UIDevice tc_screenHeight], screenSize.height);
+}
+
+- (void)testStatusBarSize {
+    
+    CGSize statusBarSize = [UIApplication sharedApplication].statusBarFrame.size;
+    XCTAssertEqual(statusBarSize.width, [UIDevice tc_statusBarSize].width);
+    XCTAssertEqual(statusBarSize.height, [UIDevice tc_statusBarSize].height);
+}
+
+- (void)testStatusBarHeight {
+    
+    CGFloat statusBarHeight = CGRectGetHeight([UIApplication sharedApplication].statusBarFrame);
+    XCTAssertEqualWithAccuracy(statusBarHeight, [UIDevice tc_statusBarHeight], __FLT_EPSILON__);
+}
+
 /*
  * It's kind of difficult to fully test the iOS version methods. These tests aren't as robust as they could be, but they at least provide some coverage for now.
  */
@@ -51,7 +84,7 @@
 - (void)testIsVersionGreaterThan
 {
     XCTAssertTrue([UIDevice tc_isVersionGreaterThan:@"6.0"]);
-    XCTAssertFalse([UIDevice tc_isVersionGreaterThan:@"10.0"]);
+    XCTAssertFalse([UIDevice tc_isVersionGreaterThan:@"30.0"]);
 }
 
 
@@ -59,20 +92,20 @@
 {
     XCTAssertTrue([UIDevice tc_isVersionGreaterThanOrEqualTo:@"6.0"]);
     XCTAssertTrue([UIDevice tc_isVersionGreaterThanOrEqualTo:@"7.0"]);
-    XCTAssertFalse([UIDevice tc_isVersionGreaterThanOrEqualTo:@"10.0"]);
+    XCTAssertFalse([UIDevice tc_isVersionGreaterThanOrEqualTo:@"30.0"]);
 }
 
 
 - (void)testIsVersionLessThan
 {
-    XCTAssertTrue([UIDevice tc_isVersionLessThan:@"10.0"]);
+    XCTAssertTrue([UIDevice tc_isVersionLessThan:@"30.0"]);
     XCTAssertFalse([UIDevice tc_isVersionLessThan:@"7.0"]);
 }
 
 
 - (void)testIsVersionLessThanOrEqualTo
 {
-    XCTAssertTrue([UIDevice tc_isVersionLessThanOrEqualTo:@"10.0"]);
+    XCTAssertTrue([UIDevice tc_isVersionLessThanOrEqualTo:@"30.0"]);
     XCTAssertFalse([UIDevice tc_isVersionLessThanOrEqualTo:@"6.0"]);
 }
 

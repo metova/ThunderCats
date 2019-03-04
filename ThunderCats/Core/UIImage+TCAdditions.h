@@ -28,7 +28,6 @@
 
 
 #import <UIKit/UIKit.h>
-#import <AssetsLibrary/AssetsLibrary.h>
 #import "TCNullabilityMacros.h"
 
 @interface UIImage (ImageEffects)
@@ -93,26 +92,6 @@
  *  @return An image...
  */
 - (UIImage * __tc_null_unspecified)tc_setImageOrientationUp;
-
-/**
- *  Generates a UIImage that is scaled to cover the specified size given an ALAsset.
- *
- *  @param asset      The asset.
- *  @param size       The size that the resulting image should cover.
- *  @param completion Completion block that is called once the image is generated.
- */
-+ (void)tc_imageFromAsset:(ALAsset * __tc_nonnull)asset
-        scaledToCoverSize:(CGSize)size
-               completion:(void (^ __tc_nonnull)(UIImage * __tc_null_unspecified image))completion;
-
-/**
- *  Converts an ALAssetOrientation to the equivalent UIImageOrientation.
- *
- *  @param assetOrientation An ALAssetOrientation value.
- *
- *  @return A UIImageOrientation value that is the equivalent of assetOrientation.
- */
-+ (UIImageOrientation)tc_imageOrientationFromAssetOrientation:(ALAssetOrientation)assetOrientation;
 
 /**
  *  Creates a new image that is scaled to the size that fully fits within a specific size (aspect fit).
